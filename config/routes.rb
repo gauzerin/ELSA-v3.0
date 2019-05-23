@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :beds, only: [:new, :create, :delete] do
-    resources :bookings
+    resources :bookings, only: [:index, :new, :create]
   end
 
-  resources :rooms, only: [:new, :index, :delete, :create]
-  resources :hostels
+  resources :rooms, only: [:delete]
+
+  resources :hostels do
+    resources :rooms, only: [:new, :index, :create]
+  end
 
   get 'user_dashboard', to: 'pages#user_dashboard'
   get 'partner_dashboard', to: 'pages#partner_dashboard'
