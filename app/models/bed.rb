@@ -1,4 +1,4 @@
 class Bed < ApplicationRecord
-  belongs_to :room
+  belongs_to :hostel
   has_many :bookings
 end
