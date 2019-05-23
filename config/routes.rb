@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'hostels/new'
+  get 'hostels/create'
+  get 'hostels/update'
+  get 'hostels/edit'
+  get 'hostels/destroy'
+  get 'hostels/index'
+  get 'hostels/show'
+  get 'bookings/new'
+  get 'bookings/create'
+  get 'bookings/update'
+  get 'bookings/edit'
+  get 'bookings/destroy'
+  get 'bookings/index'
+  get 'bookings/show'
   devise_for :users
   root to: 'pages#home'
 
