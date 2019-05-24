@@ -1,2 +1,44 @@
-<h1>Hostels#index</h1>
-<p>Find me in app/views/hostels/index.html.erb</p>
+<h1 class="header">Hostels</h1>
+
+<br>
+<br>
+<br>
+
+<div class="containery">
+  <% @hostels.each do |hostel| %>
+    <div class="card-trip">
+      <img src=<%= hostel.photo1 %>>
+      <div class="card-trip-infos">
+        <div>
+            <h2 class="price-and-cashback"><%= hostel.name %></h2>
+
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div id="map-container">
+  <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
+</div>
+<br>
+<br>
+<br>
+<div class="containerr">
+   <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Contact us
+    </div>
+  </div>
+</div>
