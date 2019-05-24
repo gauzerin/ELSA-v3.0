@@ -1,2 +1,15 @@
 <h1>Bookings#new</h1>
 <p>Find me in app/views/bookings/new.html.erb</p>
+
+
+<div>
+  <h3><%= @hostel.name%></h3><img src=<%=@hostel.photo1%> style="width:100%;height:100%;", class="center">
+</div>
+  <%= simple_form_for [@bed, @booking] do |f| %>
+    <div>
+      <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :guests %>
+      <%= f.submit "Book beds", class: "btn btn-primary"%>
+    </div>
+<% end %>
