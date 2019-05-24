@@ -1,0 +1,74 @@
+.banner {
+  background-image: image-url("environment-farm-field-1166209.jpeg");
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+// .bg-image {
+ // background-image: url(environment-farm-field-1166209.jpg);
+// }
+
+
+.banner h1 {
+  font-size: 75px;
+  font-weight: bold;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: 'Stylish', sans-serif;
+}
+.banner p {
+  font-size: 24px;
+  font-weight: lighter;
+  color: white;
+  margin-bottom: 20px;
+}
+
+// .container {
+//   text-align: center;
+// }
+
+.btn {
+  // color: #fff;
+  // background-color: rgb(72, 225, 194);
+  // border-color: rgb(72, 225, 194);
+  font-weight: bold;
+  font-family: 'Stylish', sans-serif;
+  // letter-spacing: 0.05em;
+  // border-radius: 0;
+  // padding: 8px;
+  margin: 12px;
+  // color: rgb(72, 225, 194);
+}
+
+.border-radius {
+  border-radius: 10px;
+}
+
+.title-index-padding {
+  padding-bottom: 30px;
+}
+
+.center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-inline padded {
+
+
+}
+
+#checkin {
+  background-color: white;
+}
+
+#checkout {
+  background-color: white;
+}
