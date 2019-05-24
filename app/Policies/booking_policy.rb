@@ -18,14 +18,14 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user
+    record.user == user # this code checks if the user who is traing to do something is the user who created it (erog has permission to perofrm the action)
   end
 
   def edit?
-    record.user == user
+    record.user == user # this code checks if the user who is traing to do something is the user who created it (erog has permission to perofrm the action)
   end
 
   def destroy?
-    record.user == user
+    record.user == user # this code checks if the user who is traing to do something is the user who created it (erog has permission to perofrm the action)
   end
 end

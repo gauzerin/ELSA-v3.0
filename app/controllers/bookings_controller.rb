@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
+    @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
     @bed = Bed.find(params[:bed_id])
     @bed.hostel = @bed
     authorize @booking
@@ -28,7 +28,7 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
-    @booking.user = current_user
+    @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
     @booking.save
   end
 
@@ -41,17 +41,17 @@ class BookingsController < ApplicationController
     end
   end
 
-  def destroy
-    authorize @booking
+  def cancel_booking # this is a destroy function meant for booking cancelations
     @booking = Booking.find(params[:id])
+    authorize @booking
     if @booking.destroy
-      redirect_to bookings_path, notice: 'Hostel was succesfully removed'
+      redirect_to bookings_path, notice: 'Booking was successfully cancelled'
     else
       render :index
     end
   end
 
   def booking_params
-    params.require(:booking).permit(:start_at, :end_at)
+    params.require(:booking).permit(:start_at, :end_at, :total_cost)
   end
 end
