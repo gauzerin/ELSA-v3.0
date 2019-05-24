@@ -76,7 +76,7 @@ class HostelsController < ApplicationController
   private
 
   def hostel_params
-    params.require(:hostel).permit(:name, :address, :city_name)
+    params.require(:hostel).permit(:name, :address, :city_name, :type)
   end
 
   def set_hostel
