@@ -1,2 +1,32 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="banner-content">
+    <h1 class="text-center">Book Hostels for Instant Cashback </h1>
+    <p></p>
+
+<div class="container">
+    <div class="center-row">
+      <div class="search-bar">
+        <form action="/hostels" class="form-inline padded">
+          <input type="text" class="form-control border-radius input-lg" placeholder="Berlin" name="city">
+          <input id="checkin" type="text" name="checkin" class="form-control border-radius input-lg datepicker" placeholder="Check-in">
+          <input id="checkout" type="text" name="checkout" class="form-control border-radius input-lg datepicker" placeholder="Check-out">
+          <div placeholder="# of Guests">
+            <select name="" id="guest-count" class="form-control border-radius input-lg">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="1">4</option>
+              <option value="2">5</option>
+              <option value="3">6</opt
+                ion>
+              <option value="2">7</option>
+              <option value="3">8</option>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-info btn-lg" value="Search">
+        </form>
+      </div>
+    </div>
+  </div> <!-- end of banner content -->
+</div>
+
