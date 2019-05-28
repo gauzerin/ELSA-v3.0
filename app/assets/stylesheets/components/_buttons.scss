@@ -1,7 +1,6 @@
 .btn-blue {
   background-color: #ff7e67;
   border: none;
-  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -19,4 +18,17 @@
   background-color:#ea3919;
   text-decoration:none;
   color:white;
+}
+
+.btn-blue a {
+  color: white !important;
+}
+
+.btn-blue a:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.btn-blue:hover {
+  opacity: 0.9;
 }
