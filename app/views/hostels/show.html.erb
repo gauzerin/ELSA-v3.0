@@ -30,7 +30,7 @@
   </div>
 
 <!-- need to add center buttons here -->
-    
+
 <ul>
   <% @bed_types.each do |bed_type| %>
     <li><%=  bed_type %></li>
@@ -39,14 +39,15 @@
   <%= f.hidden_field :hostel_id, :value => params[:id] %>
   <%= f.simple_fields_for :other do |a| %>
     <%= a.input :room_type, collection: @bed_types %>
-    <%= a.input :bed_number, collection: (1..10) %>
+    <%= a.input :bed_number, collection: (1..3) %>
+    <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
   <% end %>
   <%= f.submit  %>
   <% end %>
 </ul>
 
-<!-- This is where beds are going to be listed -->    
-    
+<!-- This is where beds are going to be listed -->
+
 
 </div>
 
