@@ -1,8 +1,50 @@
 <div class="banner">
   <div class="banner-content">
+
     <h1>Book Hostels for Instant Cashback</h1>
     <p>Elsa let's you save more by paying less</p>
     <%= link_to "Search", hostels_path, class: "btn-blue" %>
+  </div>
+</div>
+
+
+
+    <div class="container">
+      <div class="center-row">
+        <div class="form-card">
+          <h1>Book Hostels for Instant Cashback</h1>
+           <p>Elsa let's you save more by paying less</p>
+           <form action="/hostels">
+              <div class="form-row">
+                <div class="city">
+                  <input type="text" class="form-control input-lg" placeholder="City">
+                 </div>
+                <div class="col">
+                  <input id="checkin" type="text" class="form-control border-radius input-lg datepicker" placeholder="Check-in">
+                </div>
+                <div class="col">
+                  <input id="checkout" type="text" class="form-control border-radius input-lg datepicker" placeholder="Check-out">
+                </div>
+              </div>
+            </form>
+            <div placeholder="# of Guests" class="guest">
+              <select name="" id="guest-count" class="form-control border-radius input-lg">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="1">4</option>
+                <option value="2">5</option>
+                <option value="3">6</opt
+                  ion>
+                <option value="2">7</option>
+                <option value="3">8</option>
+              </select>
+            </div>
+            <input type="submit" class="btn-blue" value="Search">
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

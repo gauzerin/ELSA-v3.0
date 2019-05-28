@@ -3,4 +3,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), image-url("sea-city-landscape-sky.jpg");
+  background-size: cover;
 }
