@@ -30,13 +30,15 @@
   </div>
 
 <!-- need to add center buttons here -->
-    
+
 <ul>
   <% @bed_types.each do |bed_type| %>
     <li><%=  bed_type %></li>
   <% end %>
   <%= simple_form_for @booking do |f| %>
   <%= f.hidden_field :hostel_id, :value => params[:id] %>
+  <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"}%>
+  <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"}%>
   <%= f.simple_fields_for :other do |a| %>
     <%= a.input :room_type, collection: @bed_types %>
     <%= a.input :bed_number, collection: (1..10) %>
@@ -45,8 +47,10 @@
   <% end %>
 </ul>
 
-<!-- This is where beds are going to be listed -->    
-    
+
+
+<!-- This is where beds are going to be listed -->
+
 
 </div>
 
