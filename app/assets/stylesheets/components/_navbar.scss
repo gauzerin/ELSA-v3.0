@@ -1,13 +1,17 @@
-.navbar-elsa-brand {
+.navbar {
   justify-content: space-between;
-  background: white;
+  // background: white;
   width: 100%;
-  // overflow:hidden;
-  height: 85px;
+  overflow:hidden;
+  // height: 85px;
   display: flex;
   align-items: center;
   background-color:transparent;
+  padding-top: 0px;
+  position:absolute !important;
 }
+
+
 
 li {
   list-style: none;
@@ -19,7 +23,7 @@ img {
   background-color:transparent;
   margin-left: 10px;
   overflow:hidden;
-  background-color: transparent;
+  // background-color: transparent;
   // margin-bottom: 10px;
 }
 
@@ -48,14 +52,14 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  background-color:#07689f;
+  background-color:#FF7E66;
   margin-right: 20px;
   border-radius:5px;
   font-size:20px;
 }
 
 .button-navbar:hover {
-  background-color:#034263;
+  background-color:#ea3919;
   text-decoration:none;
 }
 

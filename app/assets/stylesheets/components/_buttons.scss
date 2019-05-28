@@ -1,7 +1,6 @@
 .btn-blue {
-  background-color: #07689F;
+  background-color: #ff7e67;
   border: none;
-  color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -9,5 +8,27 @@
   border-radius: 5px;
   height: 40px;
   width: 80px;
-  margin-top: 10px;
+  margin: 10px auto;
+  line-height: 37px;
+
+}
+
+
+.btn-blue:hover {
+  background-color:#ea3919;
+  text-decoration:none;
+  color:white;
+}
+
+.btn-blue a {
+  color: white !important;
+}
+
+.btn-blue a:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+.btn-blue:hover {
+  opacity: 0.9;
 }
