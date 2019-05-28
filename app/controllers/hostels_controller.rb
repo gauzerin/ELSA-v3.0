@@ -48,6 +48,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
         lng: @marked_hostel.longitude
       }
       # added a map on the show page
+    @booking = Booking.new
+    @bed_types = @hostel.beds.map {|bed| bed.room_type}.uniq
   end
 # EDIT
   def edit
