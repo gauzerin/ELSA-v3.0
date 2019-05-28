@@ -1,5 +1,5 @@
 .btn-blue {
-  background-color: #07689F;
+  background-color: #ff7e67;
   border: none;
   color: white;
   text-align: center;
@@ -10,4 +10,9 @@
   height: 40px;
   width: 80px;
   margin-top: 10px;
+}
+
+
+.btn-blue:hover {
+  background-color:#ea3919;
 }
