@@ -7,17 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Booking.destroy_all
 
-Hostel.all.each do |hostel|
-  hostel.destroy
-end
+Bed.destroy_all
 
-User.all.each do |user|
-  user.destroy
-end
+Hostel.destroy_all
 
-Booking.all.each do |user|
-  booking.destroy
-end
+User.destroy_all
+
+Booking.destroy_all
 
 guest = User.create!(
   email: 'guest@example.com',
