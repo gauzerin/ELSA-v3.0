@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_122254) do
+ActiveRecord::Schema.define(version: 2019_05_24_160338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beds", force: :cascade do |t|
-    t.boolean "availability"
     t.float "price"
     t.bigint "hostel_id"
     t.string "room_type"
@@ -30,10 +29,9 @@ ActiveRecord::Schema.define(version: 2019_05_24_122254) do
     t.date "end_at"
     t.float "total_cost"
     t.bigint "user_id"
-    t.bigint "bed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bed_id"], name: "index_bookings_on_bed_id"
+    t.string "beds", default: [], array: true
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -69,7 +67,6 @@ ActiveRecord::Schema.define(version: 2019_05_24_122254) do
   end
 
   add_foreign_key "beds", "hostels"
-  add_foreign_key "bookings", "beds"
   add_foreign_key "bookings", "users"
   add_foreign_key "hostels", "users"
 end
