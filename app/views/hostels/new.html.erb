@@ -5,9 +5,16 @@
   <%= f.input :address %>
   <!-- %= f.input :photo_cache, as: :hidden %> -->
   <%= f.input :city_name %>
+  <%= f.input :hostel_type %>
+  <%= f.simple_fields_for Bed.new do |a| %>
+    <%= a.input :room_type %>
+    <%= a.input :price %>
+  <% end %>
   <button class="btn btn-light"><%= f.button :submit %></button>
 
 <% end %>
+
+<!-- button link to home below -->
 
 <button class="btn btn-light"><%= link_to "Home", root_path %></button>
 

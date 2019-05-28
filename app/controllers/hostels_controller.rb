@@ -28,10 +28,14 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @hostel.user = current_user
     authorize @hostel
     if @hostel.save
+      @bed = Bed.new(bed_params[:bed])
+      @bed.hostel = @hostel
+      @bed.save
       redirect_to hostel_path(@hostel)
     else
       render :new
     end
+
   end
 # SHOW
   def show
@@ -80,7 +84,11 @@ skip_before_action :authenticate_user!, only: [:index, :show]
   private
 
   def hostel_params
-    params.require(:hostel).permit(:name, :address, :city_name, :type)
+    params.require(:hostel).permit(:name, :address, :city_name, :hostel_type)
+  end
+
+  def bed_params
+    params.require(:hostel).permit(bed: [:room_type, :price])
   end
 
   def set_hostel
