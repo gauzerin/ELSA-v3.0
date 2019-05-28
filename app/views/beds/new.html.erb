@@ -1,2 +1,9 @@
 <h1>Beds#new</h1>
-<p>Find me in app/views/beds/new.html.erb</p>
+
+<%= simple_form_for [@hostel, @bed] do |f| %>
+  <%= f.input :room_type %>
+  <%= f.input :price %>
+  <!-- %= f.input :photo_cache, as: :hidden %> -->
+  <button class="btn btn-light"><%= f.button :submit %></button>
+
+<% end %>

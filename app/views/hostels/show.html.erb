@@ -1,5 +1,9 @@
 <h1 class="text-center"><%= @hostel.name %></h1>
 
+<% if user_signed_in? && current_user.user_type == "owner" %>
+<%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
+<% end %>
+
 <!--   <div class="carouselcontainerself"> -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
@@ -30,7 +34,7 @@
   </div>
 
 <!-- need to add center buttons here -->
-    
+
 <ul>
   <% @bed_types.each do |bed_type| %>
     <li><%=  bed_type %></li>
@@ -45,8 +49,8 @@
   <% end %>
 </ul>
 
-<!-- This is where beds are going to be listed -->    
-    
+<!-- This is where beds are going to be listed -->
+
 
 </div>
 
