@@ -41,6 +41,8 @@
   <% end %>
   <%= simple_form_for @booking do |f| %>
   <%= f.hidden_field :hostel_id, :value => params[:id] %>
+  <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"}%>
+  <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"}%>
   <%= f.simple_fields_for :other do |a| %>
     <%= a.input :room_type, collection: @bed_types %>
     <%= a.input :bed_number, collection: (1..3) %>

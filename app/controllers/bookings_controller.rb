@@ -9,16 +9,15 @@ class BookingsController < ApplicationController
   # end
 
   def create
-    select_beds
-    @booking = Booking.new(booking_params)
+    attributes = booking_params
+    @booking = Booking.new(attributes)
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
 
-    @bed.hostel = @bed
     authorize @booking
-    if @booking.save
-      redirect_to checkout_path, notice: "Booking successfully created"
+    if @booking.save!
+      redirect_to hostel_path(@hostel.id), notice: "Booking successfully created"
     else
-      render :new
+      redirect_to hostel_path(@hostel.id), notice: "Booking failed"
     end
   end
 
@@ -55,12 +54,29 @@ class BookingsController < ApplicationController
 private
 
   def booking_params
-    params.require(:booking).permit(:start_at, :end_at, :total_cost)
+    params.require(:booking).permit(:start_at, :end_at, :hostel_id, other: [:room_type, :bed_number])
+    attributes = {}
+    attributes[:start_at] = Date.parse(params[:booking][:start_at])
+    attributes[:end_at] = Date.parse(params[:booking][:end_at])
+    attributes[:beds] = select_beds
+    attributes[:total_cost] = calculate_cost(attributes)
+    attributes[:beds] = map_beds_to_ids(attributes[:beds])
+    attributes
   end
 
   def select_beds
-    hostel = Hostel.find(params[:booking][:hostel_id].to_i)
-    hostel.beds.where {|bed| bed.room_type == params[:booking][:other][:room_type]}
+    @hostel = Hostel.find(params[:booking][:hostel_id].to_i)
+    @hostel.beds.select {|bed| bed.room_type == params[:booking][:other][:room_type]}
     .first(params[:booking][:other][:bed_number].to_i)
+  end
+
+  def map_beds_to_ids(beds)
+    beds.map {|bed| bed.id}
+  end
+
+  def calculate_cost(attributes)
+    number_of_dates = (attributes[:end_at] - attributes[:start_at]).to_i
+    sum_of_prices = attributes[:beds].map{|bed| bed.price}.inject(:+)
+    number_of_dates * sum_of_prices
   end
 end
