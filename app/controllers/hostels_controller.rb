@@ -58,13 +58,14 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 # EDIT
   def edit
     @hostel = Hostel.find(params[:id])
+    @beds = Bed.where(hostel_id: @hostel.id)
     authorize @hostel
   end
 # UPDATE
   def update
     set_hostel
     authorize @hostel
-    if @hostel = Hostel.update(hostels_params)
+    if @hostel == Hostel.update(hostels_params)
       redirect_to hostels_path, notice: 'Hostel was succesfully updated'
     else
       render :edit
@@ -77,7 +78,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     if @hostel.destroy!
       redirect_to hostels_path, notice: 'Hostel was succesfully removed'
     else
-      render :index
+      raise
     end
   end
 
