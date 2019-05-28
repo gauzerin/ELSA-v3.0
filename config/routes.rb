@@ -3,11 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :beds, only: [:new, :create, :delete] do
-    resources :bookings
+  resources :hostels do
+    resources :beds, only: [:new, :create]
+    resources :bookings, only: [:index]
   end
 
-  resources :hostels
+  resources :beds, only: [:edit, :update, :destroy]
+
+  resources :bookings, except: [:index]
 
   get 'user_dashboard', to: 'pages#user_dashboard'
   get 'partner_dashboard', to: 'pages#partner_dashboard'

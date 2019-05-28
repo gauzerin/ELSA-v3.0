@@ -118,3 +118,15 @@ hostel8 = Hostel.create!(
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537379/photo-1477120292453-1cad512c7c44_abklyg.jpg",
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537437/photo-1541004995602-b3e898709909_vorsdj.jpg",
 )
+
+bed1 = Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel
+  )
+
+bed2 = Bed.create!(
+  price: 12.0,
+  room_type: "8 bed",
+  hostel: hostel
+  )

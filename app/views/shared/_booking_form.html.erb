@@ -1,0 +1,5 @@
+<%= simple_form_for(@booking) do |f| %>
+<%= f.hidden_field :hostel_id, :value => params[:id] %>
+<%= f.input :bed_type, collection: {@bed_types} %>
+<%= f.input :bed_number, collection: {(1..10)} %>
+<%= f.submit  %>
