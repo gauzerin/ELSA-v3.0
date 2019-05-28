@@ -4,6 +4,10 @@
 <%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
 <% end %>
 
+<% if user_signed_in? && current_user.user_type == "owner" %>
+<%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
+<% end %>
+
 <!--   <div class="carouselcontainerself"> -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
