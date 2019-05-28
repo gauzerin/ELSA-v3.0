@@ -33,7 +33,7 @@ owner = User.create!(
 )
 owner.save!
 
-hostel = Hostel.create!(
+hostel1 = Hostel.create!(
   name: "Generator London",
   address: '37 Tavistock Pl, Saint Pancras, London WC1H 9SE',
   city_name: 'London',
@@ -115,14 +115,42 @@ hostel8 = Hostel.create!(
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537437/photo-1541004995602-b3e898709909_vorsdj.jpg",
 )
 
-bed1 = Bed.create!(
+10.times do
+  Bed.create!(
   price: 10.0,
   room_type: "10 bed",
-  hostel: hostel
+  hostel: hostel1
   )
+end
 
-bed2 = Bed.create!(
-  price: 12.0,
+8.times do
+  Bed.create!(
+  price: 15.0,
   room_type: "8 bed",
-  hostel: hostel
+  hostel: hostel1
   )
+end
+
+6.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel1
+  )
+end
+
+4.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel1
+  )
+end
+
+5.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel1
+  )
+end
