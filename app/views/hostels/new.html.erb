@@ -1,2 +1,13 @@
-<h1>Hostels#new</h1>
-<p>Find me in app/views/hostels/new.html.erb</p>
+<h1>Create a Hostel</h1>
+
+<%= simple_form_for(@hostel) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <!-- %= f.input :photo_cache, as: :hidden %> -->
+  <%= f.input :city_name %>
+  <button class="btn btn-light"><%= f.button :submit %></button>
+
+<% end %>
+
+<button class="btn btn-light"><%= link_to "Home", root_path %></button>
+
