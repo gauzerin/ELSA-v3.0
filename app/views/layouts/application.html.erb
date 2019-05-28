@@ -30,6 +30,9 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
+    <% unless params[:controller] == 'pages' && params[:action] == 'home' %>
+      <div class="spacer"></div>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
 

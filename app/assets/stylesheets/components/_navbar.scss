@@ -8,9 +8,13 @@
   align-items: center;
   background-color:transparent;
   padding-top: 0px;
-  position:absolute !important;
+  position: fixed !important;
 }
 
+.spacer {
+  height: 116px;
+  width: 100%;
+}
 
 
 li {
@@ -23,6 +27,7 @@ img {
   background-color:transparent;
   margin-left: 10px;
   overflow:hidden;
+  height: 80px;
   // background-color: transparent;
   // margin-bottom: 10px;
 }
