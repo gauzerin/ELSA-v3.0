@@ -1,0 +1,24 @@
+<div class="card-product">
+  <img src=<%= hostel.photo1 %>>
+   <div class="card-product-infos">
+    <h1><%= hostel.name %></h1>
+    <h2><% emoji reviews %></h2>
+     <p><strong>Brief Overview - </strong>xxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+     <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+    <div class="key-adjectives-hostels" role="group" aria-label="First group">
+     <button class="btn btn-secondary">Central</button>
+     <button class="btn btn-secondary">Cosy</button>
+     <button class="btn btn-secondary">Pub</button>
+    </div>
+    <h2><%= hostel.beds.count %></h2>
+    <div class="btn-group bottom" role="group" aria-label="First group">
+      <div class="button-show-more">
+       <%= link_to "Show More", hostel_path(hostel), class: "button-text" %>
+      </div>
+      <div class="button-book-now">
+       <%= link_to "Book Now", new_booking_path, class: "button-text" %>
+      </div>
+    </div>
+   </div>
+</div>
+

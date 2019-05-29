@@ -24,6 +24,11 @@
         <div class="btn-group bottom" role="group" aria-label="First group">
         <div class="btn-blue" id="button-show">
         <%= link_to "Show More", hostel_path(hostel), class: "button-text" %>
+
+      </div>
+      <div class="btn-blue" id="button-book">
+       <%= link_to "Book Now", new_booking_path, class: "button-text" %>
+
       </div>
       <div class="btn-blue" id="button-book">
        <%= link_to "Book Now", new_booking_path, class: "button-text" %>
@@ -43,9 +48,10 @@
 
 
     </div>
+   </div>
+    </div>
   <% end %>
-</div>
-<div id="map-container">
+ <div id="map-container">
   <div
     id="map"
     style="width: 100%;
@@ -53,11 +59,12 @@
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
+ </div>
 </div>
 <br>
 <br>
 <br>
-<div class="containerr">
+<div class="container">
    <div class="footer">
     <div class="footer-links">
       <a href="#"><i class="fab fa-github"></i></a>
