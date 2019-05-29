@@ -13,6 +13,11 @@ class ApplicationController < ActionController::Base
   #   flash[:alert] = "You are not authorized to perform this action."
   #   redirect_to(root_path)
   # end
+  # app/controllers/application_controller.rb
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "www.stayelsa.com" }
+  end
 
   private
 
