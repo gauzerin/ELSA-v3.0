@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color:#a2d5f2;
+
 }
 
 .key-adjectives-hostels {
@@ -111,10 +111,19 @@
  width:130px;
 }
 
-
 body {
-  background:#a2d5f2 !important ;
- }
+  /******************************************************************
+  This contains the font, Internet Explorer fall back options and
+  the background color for all of the sites
+  ******************************************************************/
+  // background: #C3E6F3 no-repeat center center fixed;
+  margin: 0 auto;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+  /* IE Fallback */
+  background-image: linear-gradient(to right top, #a2d5f2, #87c6eb, #6cb6e4, #4ea7de, #2797d7);
+  width: 100%;
+  height: 100%;
+}
 
 
 
