@@ -38,9 +38,8 @@
     </div>
 <!-- Hostel description -->
   <div class="container">
-            <div class="panel-body" role="main"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            <div class="panel-body" role="main">
+              <p><%= @hostel.description %></p>
   </div>
 
 <!-- need to add center buttons here -->
@@ -51,19 +50,19 @@
   <% end %>
   <%= simple_form_for @booking do |f| %>
   <%= f.hidden_field :hostel_id, :value => params[:id] %>
-  <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"}%>
-  <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"}%>
+  <%= f.input :start_at, as: :string, label: "Dates", placeholder: "From", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"} %>
+  <%= f.input :end_at, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"}%>
   <%= f.simple_fields_for :other do |a| %>
     <%= a.input :room_type, collection: @bed_types %>
-    <%= a.input :bed_number, collection: (1..3) %>
+    <%= a.input :bed_number, collection: (1..10) %>
     <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
+    <!-- make dynamic booking bed count by altering line 48 -->
   <% end %>
   <%= f.submit  %>
   <% end %>
 </ul>
 
 <!-- This is where beds are going to be listed -->
-
 
 </div>
 

@@ -1,0 +1,121 @@
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 300px;
+  display: inline-block;
+  margin: 20px;
+  font-family: 'Stylish', sans-serif;
+  border-radius: 5px;
+}
+
+.header {
+  text-align: center;
+}
+
+.containery {
+  // margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color:#a2d5f2;
+}
+
+.key-adjectives-hostels {
+ margin-bottom:10px;
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin:0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-trip h1 {
+  text-align:center;
+  height:96px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  text-align:center;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align:center;
+
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+  margin-left: 35px;
+}
+
+.card-product-infos {
+  text-align:center;
+  padding:10px 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card-trip-infos h2 {
+  padding: 10px;
+}
+
+#map-container {
+    height: 500px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-and-cashback {
+  color: black;
+}
+
+.btn {
+  background-color: #a2d5f2 !important;
+  border:0px !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#button-show {
+ margin-right:10px;
+ margin-top: 0px;
+ font-family: 'Open Sans', sans-serif;
+ width: 130px;
+}
+
+#button-book {
+ margin-left:10px;
+ margin-top:0px;
+ font-family: 'Open Sans', sans-serif;
+ width:130px;
+}
+
+
+body {
+  background:#a2d5f2 !important ;
+ }
+
+
+
+

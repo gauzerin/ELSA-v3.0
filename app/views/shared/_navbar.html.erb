@@ -6,9 +6,6 @@
 
   <div class="item-group">
     <li class="nav-item-dropdown">
-      <li class="item">
-          <%= link_to "Home", root_path, style: "color: black;", class: "nav-link" %>
-        </li>
         <li class="item">
           <% if user_signed_in? %>
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, style: "color: black;", class: "nav-link" %>
