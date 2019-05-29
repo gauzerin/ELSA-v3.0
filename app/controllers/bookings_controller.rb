@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     booking_params
+    binding.pry
     @booking = Booking.new(@attributes)
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
 
