@@ -1,3 +1,4 @@
+
 <h1 class="header">Hostels</h1>
 
 <br>
@@ -8,12 +9,37 @@
   <% @hostels.each do |hostel| %>
     <div class="card-trip">
       <img src=<%= hostel.photo1 %>>
-      <div class="card-trip-infos">
-        <div>
-            <h2 class="price-and-cashback"><%= hostel.name %></h2>
-
+       <div class="card-product-infos">
+        <h1><%= hostel.name %></h1>
+        <h2>emoji reviews</h2>
+        <div class="key-adjectives-hostels" role="group" aria-label="First group">
+         <button class="btn btn-secondary">Central</button>
+         <button class="btn btn-secondary">Cosy</button>
+         <button class="btn btn-secondary">Pub</button>
         </div>
+        <h2>beds available: <%= hostel.beds.count %></h2>
+        <h2>Cashback per night: £2.50</h2>
+        <div class="btn-group bottom" role="group" aria-label="First group">
+        <div class="btn-blue" id="button-show">
+        <%= link_to "Show More", hostel_path(hostel), class: "button-text" %>
       </div>
+      <div class="btn-blue" id="button-book">
+       <%= link_to "Book Now", new_booking_path, class: "button-text" %>
+      </div>
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   <% end %>
 </div>

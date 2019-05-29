@@ -1,8 +1,14 @@
 <h1 class="text-center"><%= @hostel.name %></h1>
 
-<% if user_signed_in? && current_user.user_type == "owner" %>
+<div class="buttons">
+<button class="btn-blue"><% if user_signed_in? && current_user.user_type == "owner" %>
 <%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
-<% end %>
+<% end %></button>
+
+<button class="btn-blue"><% if user_signed_in? && current_user.user_type == "owner" %>
+<%= link_to "Edit", edit_hostel_path(@hostel) %>
+<% end %></button>
+</div>
 
 <!--   <div class="carouselcontainerself"> -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -28,9 +34,8 @@
     </div>
 <!-- Hostel description -->
   <div class="container">
-            <div class="panel-body" role="main"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            <div class="panel-body" role="main">
+              <p><%= @hostel.description %></p>
   </div>
 
 <!-- need to add center buttons here -->
@@ -45,15 +50,15 @@
   <%= f.input :end_at, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"}%>
   <%= f.simple_fields_for :other do |a| %>
     <%= a.input :room_type, collection: @bed_types %>
-    <%= a.input :bed_number, collection: (1..6) %>
+    <%= a.input :bed_number, collection: (1..10) %>
     <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
+    <!-- make dynamic booking bed count by altering line 48 -->
   <% end %>
   <%= f.submit  %>
   <% end %>
 </ul>
 
 <!-- This is where beds are going to be listed -->
-
 
 </div>
 

@@ -8,21 +8,26 @@
   align-items: center;
   background-color:transparent;
   padding-top: 0px;
-  position:absolute !important;
+  position: fixed !important;
 }
 
+.spacer {
+  height: 116px;
+  width: 100%;
+}
 
 
 li {
   list-style: none;
 }
 
-img {
+.navbar img {
   margin-top: 10px;
   width:90px;
   background-color:transparent;
   margin-left: 10px;
   overflow:hidden;
+  height: 80px;
   // background-color: transparent;
   // margin-bottom: 10px;
 }
@@ -67,8 +72,12 @@ img {
   color:white;
 }
 
-
-
+.item-group {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  align-items: center;
+}
 
 
 
