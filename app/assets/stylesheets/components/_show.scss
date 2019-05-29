@@ -1,6 +1,14 @@
-#h1-head {
+#header-container {
+  margin-left: 100px;
+}
+
+.h1 {
   font-family: 'Stylish', sans-serif;
   font-size: 4.0em;
+}
+
+.h2 {
+  font-family: 'Roboto Slab', serif;
 }
 
 .table-wrapper{
@@ -113,12 +121,14 @@
 
 .carousel-item {
     height: 500px;
-    width: 500px;
+    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     img {
       margin: auto;
+      height: 550px;
+      width: 90%;
     }
   }
 
@@ -129,18 +139,17 @@ h1 {
 
 .container {
   margin: 20px;
-
-  // border: 3px solid black;
-
-   border: 3px solid black;
-
+  border: 3px solid black;
   padding: 10px;
 
 }
 
 .panel-body {
-  margin: 20px
-
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+  // width: 90%;
 }
 
 #centerbuttons {
@@ -152,8 +161,6 @@ h1 {
   color: white;
 
 }
-
-
 
 
 /******************************************************************
