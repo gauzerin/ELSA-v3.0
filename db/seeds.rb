@@ -158,7 +158,7 @@ hostel3 = Hostel.create!(
   photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452715/photo-1505576391880-b3f9d713dc4f_rxpe4n.jpg",
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452759/photo-1520605728164-b6a5c6814203_tz64zy.jpg",
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452373/DSC_0231_l7shpy.jpg",
-  decription: "You'll find Generator in the heart of the city, in the district of Mitte which is one of Berlin's oldest districts.
+  description: "You'll find Generator in the heart of the city, in the district of Mitte which is one of Berlin's oldest districts.
 
 You couldn't get a better location if you tried. Great for everything that is a must see in this great city as well as the nightlife. Oranienburger Strasse has become Mitte's hub for nightlife, galleries, art, cafes and restaurants. The hostel sits in the centre of this grand street and is a terrific hangout for locals
 
