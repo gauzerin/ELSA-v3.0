@@ -2,7 +2,9 @@ class HostelsController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
  def index
+
       @hostels = policy_scope(Hostel)
+      @hostels = Hostel.all
       # search method below:
       if params[:city].present?
         @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:city]}%")
