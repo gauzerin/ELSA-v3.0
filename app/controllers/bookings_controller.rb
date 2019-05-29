@@ -1,3 +1,5 @@
+require "pry-byebug"
+
 class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking).where(user: current_user)
@@ -9,8 +11,8 @@ class BookingsController < ApplicationController
   # end
 
   def create
-    attributes = booking_params
-    @booking = Booking.new(attributes)
+    booking_params
+    @booking = Booking.new(@attributes)
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
 
     authorize @booking
@@ -55,20 +57,40 @@ private
 
   def booking_params
     params.require(:booking).permit(:start_at, :end_at, :hostel_id, other: [:room_type, :bed_number])
-    attributes = {}
-    attributes[:start_at] = Date.parse(params[:booking][:start_at])
-    attributes[:end_at] = Date.parse(params[:booking][:end_at])
-    attributes[:beds] = select_beds
-    attributes[:total_cost] = calculate_cost(attributes)
-    attributes[:beds] = map_beds_to_ids(attributes[:beds])
-    attributes
+    @attributes = {}
+    @attributes[:start_at] = Date.parse(params[:booking][:start_at])
+    @attributes[:end_at] = Date.parse(params[:booking][:end_at])
+    @attributes[:beds] = select_beds
+    @attributes[:total_cost] = calculate_cost
+    @attributes[:beds] = map_beds_to_ids(@attributes[:beds])
+    @attributes
   end
 
   def select_beds
     @hostel = Hostel.find(params[:booking][:hostel_id].to_i)
-    # date_range = calculate date range from attributes start_at and end_at
+
+    unavailable_bookings = []
+    @hostel.beds.each do |bed|
+      unavailable_bookings << bed.bookings
+    end
+
+    unavailable_bookings.flatten!
+
+    booked_date_range = @attributes[:start_at]..@attributes[:end_at]
+    # booked_date_range = params[:start_at]..params[:end_at] # cuz attributes didnt work
+
+
+
+    unavailable_bookings.select! {|booking| (booked_date_range === booking.start_at)}
+    unavailable_beds_ids = []
+    unavailable_beds_ids = unavailable_bookings.map {|booking| booking.beds.map {|bed| bed.to_i}}.flatten!
+
+
+    available_beds = @hostel.beds.select {|bed| !unavailable_beds_ids.include?(bed.id)}
+
+    #ccalculate date range from attributes start_at and end_at
     # @hostel.beds.select {|bed| #check if bed.bookings.start_at falls inside date range
-    @hostel.beds.select {|bed| bed.room_type == params[:booking][:other][:room_type]}
+    available_beds.select {|bed| bed.room_type == params[:booking][:other][:room_type]}
     .first(params[:booking][:other][:bed_number].to_i)
   end
 
@@ -76,9 +98,13 @@ private
     beds.map {|bed| bed.id}
   end
 
-  def calculate_cost(attributes)
-    number_of_dates = (attributes[:end_at] - attributes[:start_at]).to_i
-    sum_of_prices = attributes[:beds].map{|bed| bed.price}.inject(:+)
+  def calculate_cost
+    number_of_dates = (@attributes[:end_at] - @attributes[:start_at]).to_i
+    if @attributes[:beds] == []
+      sum_of_prices = 0
+    else
+      sum_of_prices = @attributes[:beds].map{ |bed| bed.price}.inject(:+)
+    end
     final_sum = (number_of_dates * sum_of_prices).to_f
   end
 end
