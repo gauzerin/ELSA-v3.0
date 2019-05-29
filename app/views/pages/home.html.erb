@@ -6,10 +6,11 @@
         <div class="form-card">
           <h1>Book Hostels for Instant Cashback</h1>
            <p>Elsa let's you save more by paying less</p>
-           <form action="/hostels">
+           <form action="/hostels" method='get'>
               <div class="form-row">
                 <div class="city">
-                  <input type="text" class="form-control input-lg" placeholder="City">
+                  <input type="text" class="form-control input-lg" placeholder="Berlin" name="city" >
+                  <!-- the 'name="city"'' is for the search functionality -->
                  </div>
                 <div class="col">
                   <input id="checkin" type="text" class="form-control border-radius input-lg datepicker" placeholder="Check-in">
@@ -17,23 +18,23 @@
                 <div class="col">
                   <input id="checkout" type="text" class="form-control border-radius input-lg datepicker" placeholder="Check-out">
                 </div>
+                <input type='submit' class="btn-blue" value="Search"></input>
+              </div>
+              <div placeholder="# of Guests" class="guest">
+                <select name="" id="guest-count" class="form-control border-radius input-lg">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</opt
+                    ion>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
               </div>
             </form>
-            <div placeholder="# of Guests" class="guest">
-              <select name="" id="guest-count" class="form-control border-radius input-lg">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="1">4</option>
-                <option value="2">5</option>
-                <option value="3">6</opt
-                  ion>
-                <option value="2">7</option>
-                <option value="3">8</option>
-              </select>
-            </div>
-            <button class="btn-blue"><%= link_to "Search", hostels_path %></button>
-          </form>
+
         </div>
       </div>
     </div>
