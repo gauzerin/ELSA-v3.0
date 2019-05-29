@@ -9,6 +9,10 @@ class HostelPolicy < ApplicationPolicy
     true  # Anyone can view a restaurant
   end
 
+  def edit?
+    true
+  end
+
    def create?
     true  # Anyone can create a restaurant
   end
@@ -18,6 +22,6 @@ class HostelPolicy < ApplicationPolicy
   end
 
    def destroy?
-    record.user == user  # Only restaurant creator can update it
+    true  # Only restaurant creator can update it
   end
 end

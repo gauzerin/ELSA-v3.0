@@ -2,7 +2,9 @@ class HostelsController < ApplicationController
 skip_before_action :authenticate_user!, only: [:index, :show]
 
  def index
+
       @hostels = policy_scope(Hostel)
+      @hostels = Hostel.all
       # search method below:
       if params[:city].present?
         @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:city]}%")
@@ -58,13 +60,14 @@ skip_before_action :authenticate_user!, only: [:index, :show]
 # EDIT
   def edit
     @hostel = Hostel.find(params[:id])
+    @beds = Bed.where(hostel_id: @hostel.id)
     authorize @hostel
   end
 # UPDATE
   def update
     set_hostel
     authorize @hostel
-    if @hostel = Hostel.update(hostels_params)
+    if @hostel == Hostel.update(hostels_params)
       redirect_to hostels_path, notice: 'Hostel was succesfully updated'
     else
       render :edit
@@ -77,7 +80,7 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     if @hostel.destroy!
       redirect_to hostels_path, notice: 'Hostel was succesfully removed'
     else
-      render :index
+      raise
     end
   end
 

@@ -5,10 +5,16 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 300px;
   display: inline-block;
+
   margin: 0px;
   font-family: 'Stylish', sans-serif;
   border-radius: 5px;
   flex-grow: 1;
+
+
+  margin: 20px;
+  font-family: 'Stylish', sans-serif;
+  border-radius: 5px;
 
 }
 
@@ -18,6 +24,7 @@
 
 .containery {
   // margin: 10px;
+
   display: grid;
   align-items: center;
   justify-content: center;
@@ -26,6 +33,13 @@
   grid-gap:16px;
   padding-right: 650px;
   position: relative;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color:#a2d5f2;
 
 }
 
@@ -86,6 +100,7 @@
 }
 
 #map-container {
+
     height: 100vh;
     width: 40vw;
     display: inline-block;
@@ -99,6 +114,15 @@
 
     // padding-bottom: 20px;
     // margin-bottom:20px;
+}
+
+
+
+    height: 500px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -126,6 +150,7 @@
  width:130px;
 }
 
+
 body {
   /******************************************************************
   This contains the font, Internet Explorer fall back options and
@@ -139,6 +164,12 @@ body {
   width: 100%;
   height: 100%;
 }
+
+
+body {
+  background:#a2d5f2 !important ;
+ }
+
 
 
 

@@ -8,28 +8,34 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <div class="form-login text-left">
+      <div>
       <h2 class="text-center">Hostel Infos</h2>
         <br>
-        <%= simple_form_for @hostel do |f| %>
-        <%= f.input :name %>
-        <%= f.input :address %>
-        <%= f.input :city_name %>
+          <%= simple_form_for @hostel do |f| %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :city_name %>
+          <!-- button below -->
+          <%= f.button :submit, "Modify your Hostel", class: "btn btn-secondary"%>
+
         <br>
         <br>
-        <%= f.input :photo, as: :attachinary%>
         <br>
-        <h3><strong>Beds</strong></h3>
-        <%= f.input :pillow, as: :boolean, label: "Will your guest have his own pillow?" %>
-        <%= f.input :breakfast, as: :boolean, label: "Do you serve breakfast in bed?" %>
-        <br>
-        <%=  f.input :blanket_type, collection: Bed::BLANKET, label: "What kind of blanket are you providing?" %>
-        <hr>
-        <%= f.button :submit, "Modify your bed", class: "btn btn-danger"%>
-        <%= link_to "Delete #{@bed.title}", bed_path(@bed),
-        method: :delete,
-        data: { confirm: "Are you sure?" }, class: "btn btn-success"%>
         <% end %>
+
+         <%= link_to "Delete #{@hostel.name}", hostel_path(@hostel),
+          method: :delete,
+          data: { confirm: "Are you sure?" }, class: "btn btn-danger"%>
+      <!-- Beds section -->
+        <h3><strong>Beds</strong></h3>
+          <% @beds.each do |bed| %>
+          <%= bed.room_type %>
+          <%= link_to "Edit", edit_bed_path(bed) %>
+
+          <%= link_to "Remove", bed_path(bed), method: :delete %>
+          <% end %>
+        <br>
+        <hr>
       </div>
     </div>
   </div>

@@ -19,14 +19,15 @@ skip_before_action :authenticate_user!
     end
   end
 
-  def delete
+  def destroy
     set_bed
     authorize @bed
-    if @bed.destroy!
-      redirect_to hostels_path, notice: 'Hostel was succesfully removed'
-    else
-      render :index
-    end
+    @bed.destroy!
+    redirect_to hostels_path, notice: 'Hostel was succesfully removed'
+  end
+
+  def update
+    set_bed
   end
 
   private

@@ -1,3 +1,6 @@
+<% content_for :title, 'Elsa | Our Hostels' %>
+
+
 <h1 class="header">Hostels</h1>
 
 <br>
@@ -21,10 +24,29 @@
         <div class="btn-group bottom" role="group" aria-label="First group">
         <div class="btn-blue" id="button-show">
         <%= link_to "Show More", hostel_path(hostel), class: "button-text" %>
+
+      </div>
+      <div class="btn-blue" id="button-book">
+       <%= link_to "Book Now", new_booking_path, class: "button-text" %>
+
       </div>
       <div class="btn-blue" id="button-book">
        <%= link_to "Book Now", new_booking_path, class: "button-text" %>
       </div>
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
    </div>
     </div>

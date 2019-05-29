@@ -14,11 +14,11 @@ class BookingsController < ApplicationController
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
 
     authorize @booking
-    if @booking.save!
-      redirect_to hostel_path(@hostel.id), notice: "Booking successfully created"
-    else
-      redirect_to hostel_path(@hostel.id), notice: "Booking failed"
-    end
+      if @booking.save
+        redirect_to hostel_path(@hostel.id), notice: "Booking successfully created"
+      else
+        redirect_to hostel_path(@hostel.id), notice: "Booking failed"
+      end
   end
 
   def show
@@ -66,6 +66,8 @@ private
 
   def select_beds
     @hostel = Hostel.find(params[:booking][:hostel_id].to_i)
+    # date_range = calculate date range from attributes start_at and end_at
+    # @hostel.beds.select {|bed| #check if bed.bookings.start_at falls inside date range
     @hostel.beds.select {|bed| bed.room_type == params[:booking][:other][:room_type]}
     .first(params[:booking][:other][:bed_number].to_i)
   end
@@ -77,6 +79,6 @@ private
   def calculate_cost(attributes)
     number_of_dates = (attributes[:end_at] - attributes[:start_at]).to_i
     sum_of_prices = attributes[:beds].map{|bed| bed.price}.inject(:+)
-    number_of_dates * sum_of_prices
+    final_sum = (number_of_dates * sum_of_prices).to_f
   end
 end

@@ -1,30 +1,31 @@
-<div class= "navbar">
+<% home = params[:controller] == 'pages' && params[:action] == 'home' %>
+<div class= "navbar" style="background-color:<%= home ? 'transparent' : 'white'; %>">
 
     <%= link_to image_tag('elephant.svg', alt: "Elsa logo"), root_path %>
 
 
+  <div class="item-group">
     <li class="nav-item-dropdown">
-           <% if user_signed_in? %>
-            <div class="dropdown">
-              <img src='ELSA-v3.0/app/assets/images/profile.png' class="avatar"/>
-              <div class="submenu" style="display: none; ">
-            <ul class="root">
-              <li >
-               <%= link_to "Profile", user_dashboard_path %>
-              </li>
-              <li >
-               <%= link_to "My Bookings", bookings_path %>
-              </li>
-              <li>
-               <%= link_to "Sign Out", root_path %>
-              </li>
-            </ul>
-              </div>
-           <% else %>
-            <div class="button-navbar">
-             <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
-            </div>
-           <% end %>
+        <li class="item">
+          <% if user_signed_in? %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, style: "color: black;", class: "nav-link" %>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path, style: "color: black;", class: "nav-link" %>
+          <% end %>
+        </li>
+
+        <li class="item">
+          <% if user_signed_in? %>
+            <%= link_to "Profile", user_dashboard_path, style: "color: black;", class: "nav-link" %>
+          <% end %>
+          <li class="avatar">
+            <% if user_signed_in? %>
+            <%= image_tag "profile.png"%>
+            <% end %>
+          </li>
+      </li>
     </li>
+  </div>
 </div>
+
 
