@@ -1,13 +1,17 @@
-<h1 class="text-center"><%= @hostel.name %></h1>
+<h1 class="text-center" id="h1-head"><%= @hostel.name %></h1>
 
+<% if user_signed_in? && current_user.user_type == "owner" %>
 <div class="buttons">
-<button class="btn-blue"><% if user_signed_in? && current_user.user_type == "owner" %>
+<button class="btn-blue">
 <%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
-<% end %></button>
+</button>
+<% end %>
 
-<button class="btn-blue"><% if user_signed_in? && current_user.user_type == "owner" %>
+<% if user_signed_in? && current_user.user_type == "owner" %>
+<button class="btn-blue">
 <%= link_to "Edit", edit_hostel_path(@hostel) %>
-<% end %></button>
+</button>
+<% end %>
 </div>
 
 <!--   <div class="carouselcontainerself"> -->
