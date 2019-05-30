@@ -8,19 +8,19 @@
     <li class="nav-item-dropdown">
         <li class="item">
           <% if user_signed_in? %>
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, style: "color: black;", class: "nav-link" %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, style: "color: white;", class: "nav-link" %>
           <% else %>
-            <%= link_to "Sign In", new_user_session_path, style: "color: black;", class: "nav-link" %>
+            <%= link_to "Sign In", new_user_session_path, style: "color: white;", class: "nav-link" %>
           <% end %>
         </li>
 
         <li class="item">
           <% if user_signed_in? %>
-            <%= link_to "Profile", user_dashboard_path, style: "color: black;", class: "nav-link" %>
+            <%= link_to "Profile", user_dashboard_path, style: "color: white;", class: "nav-link" %>
           <% end %>
           <li class="avatar">
             <% if user_signed_in? %>
-            <%= image_tag "profile.png"%>
+              <%= image_tag "profile.png", class: 'av-img' %>
             <% end %>
           </li>
       </li>

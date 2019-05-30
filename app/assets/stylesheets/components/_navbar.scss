@@ -25,15 +25,19 @@ li {
   list-style: none;
 }
 
+.av-img {
+  object-fit: cover;
+}
+
 .navbar img {
   margin-top: 10px;
-  width:90px;
+  width:40px;
   background-color:transparent;
   margin-left: 10px;
   overflow:hidden;
-  height: 80px;
-  // background-color: transparent;
-  // margin-bottom: 10px;
+  height: 40px;
+  background-color: transparent;
+  margin-bottom: 10px;
 }
 
 
@@ -77,6 +81,7 @@ li {
 }
 
 .item-group {
+  margin-top: 15px;
   display: flex;
   justify-content: space-around;
   color: black;
@@ -87,11 +92,14 @@ li {
   border-style: outset;
   border-width: 1px;
   border-radius: 15px;
-  margin-top: 15px;
   margin-right: 10px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: #FF7E67;
+  height: 35px;
+  width: 75px;
 }
 
-
-
+.item a {
+  font-size: 12px;
+  text-align: center;
+}
 
