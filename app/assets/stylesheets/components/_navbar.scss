@@ -10,6 +10,9 @@
   padding-top: 0px;
   position: fixed !important;
   z-index:1;
+  min-height: 1px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
 }
 
 .spacer {
@@ -80,6 +83,14 @@ li {
   align-items: center;
 }
 
+.navbar .item {
+  border-style: outset;
+  border-width: 1px;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-right: 10px;
+  background-color: rgba(0,0,0,0.1);
+}
 
 
 
