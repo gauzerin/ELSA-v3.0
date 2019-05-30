@@ -52,9 +52,7 @@
 
   <div id="inputs">
     <ul>
-      <% @bed_types.each do |bed_type| %>
-        <li><%=  bed_type %></li>
-      <% end %>
+<!-- bed types was here but looked horrible -->
       <%= simple_form_for @booking do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
       <%= f.input :start_at, as: :string, label: "Dates", placeholder: "From", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"} %>
