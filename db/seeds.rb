@@ -376,7 +376,7 @@ By the end of the day let us give you an iPad then prepare you a cup of tea to u
 So easy to find us, but not so easy to leave…"
 )
 
-10.times do
+30.times do
   Bed.create!(
   price: 10.0,
   room_type: "10 bed",
@@ -384,7 +384,7 @@ So easy to find us, but not so easy to leave…"
   )
 end
 
-8.times do
+16.times do
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
@@ -392,7 +392,7 @@ end
   )
 end
 
-6.times do
+18.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -408,7 +408,7 @@ end
   )
 end
 
-5.times do
+50.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
@@ -416,7 +416,7 @@ end
   )
 end
 
-10.times do
+40.times do
   Bed.create!(
   price: 10.0,
   room_type: "10 bed",
@@ -424,7 +424,7 @@ end
   )
 end
 
-8.times do
+24.times do
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
@@ -440,7 +440,7 @@ end
   )
 end
 
-4.times do
+16.times do
   Bed.create!(
   price: 25.0,
   room_type: "4 bed",
@@ -448,7 +448,7 @@ end
   )
 end
 
-5.times do
+25.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
@@ -464,7 +464,7 @@ end
   )
 end
 
-8.times do
+32.times do
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
@@ -472,7 +472,7 @@ end
   )
 end
 
-6.times do
+24.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -480,7 +480,7 @@ end
   )
 end
 
-4.times do
+16.times do
   Bed.create!(
   price: 25.0,
   room_type: "4 bed",
@@ -488,7 +488,7 @@ end
   )
 end
 
-5.times do
+10.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
@@ -512,7 +512,7 @@ end
   )
 end
 
-6.times do
+18.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -520,7 +520,7 @@ end
   )
 end
 
-4.times do
+40.times do
   Bed.create!(
   price: 25.0,
   room_type: "4 bed",
@@ -528,7 +528,7 @@ end
   )
 end
 
-5.times do
+60.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
@@ -536,7 +536,7 @@ end
   )
 end
 
-10.times do
+100.times do
   Bed.create!(
   price: 10.0,
   room_type: "10 bed",
@@ -544,7 +544,7 @@ end
   )
 end
 
-8.times do
+80.times do
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
@@ -552,7 +552,7 @@ end
   )
 end
 
-6.times do
+36.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -560,7 +560,7 @@ end
   )
 end
 
-4.times do
+24.times do
   Bed.create!(
   price: 25.0,
   room_type: "4 bed",
@@ -568,7 +568,7 @@ end
   )
 end
 
-5.times do
+30.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
@@ -576,7 +576,7 @@ end
   )
 end
 
-10.times do
+80.times do
   Bed.create!(
   price: 10.0,
   room_type: "10 bed",
@@ -584,7 +584,7 @@ end
   )
 end
 
-8.times do
+80.times do
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
@@ -592,7 +592,7 @@ end
   )
 end
 
-6.times do
+36.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -600,7 +600,7 @@ end
   )
 end
 
-4.times do
+8.times do
   Bed.create!(
   price: 25.0,
   room_type: "4 bed",
@@ -608,7 +608,7 @@ end
   )
 end
 
-5.times do
+65.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
@@ -632,7 +632,7 @@ end
   )
 end
 
-6.times do
+36.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -640,7 +640,7 @@ end
   )
 end
 
-4.times do
+40.times do
   Bed.create!(
   price: 25.0,
   room_type: "4 bed",
@@ -648,7 +648,7 @@ end
   )
 end
 
-5.times do
+35.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
@@ -656,7 +656,7 @@ end
   )
 end
 
-10.times do
+100.times do
   Bed.create!(
   price: 10.0,
   room_type: "10 bed",
@@ -664,7 +664,7 @@ end
   )
 end
 
-8.times do
+16.times do
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
@@ -672,7 +672,7 @@ end
   )
 end
 
-6.times do
+36.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -680,7 +680,7 @@ end
   )
 end
 
-4.times do
+40.times do
   Bed.create!(
   price: 25.0,
   room_type: "4 bed",
@@ -688,7 +688,7 @@ end
   )
 end
 
-5.times do
+30.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
