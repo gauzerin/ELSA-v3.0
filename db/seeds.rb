@@ -35,7 +35,7 @@ owner.save!
 
 hostel1 = Hostel.create!(
   name: "Generator London",
-  address: '37 Tavistock Pl, Saint Pancras, London WC1H 9SE',
+  address: '37 Tavistock Pl, London WC1H 9SE',
   city_name: 'London',
   user: owner,
   photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452477/photo-1488805990569-3c9e1d76d51c_wkrmto.jpg",
