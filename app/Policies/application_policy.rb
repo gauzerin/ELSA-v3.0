@@ -38,7 +38,6 @@ class ApplicationPolicy
     true
   end
 
-
   class Scope
     attr_reader :user, :scope
 
