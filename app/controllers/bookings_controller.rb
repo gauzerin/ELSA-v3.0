@@ -1,3 +1,5 @@
+require "pry-byebug"
+
 class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking).where(user: current_user)
@@ -10,7 +12,6 @@ class BookingsController < ApplicationController
 
   def create
     booking_params
-    binding.pry
     @booking = Booking.new(@attributes)
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
 
@@ -74,31 +75,23 @@ private
     end
 
     unavailable_bookings.flatten!
-
     booked_date_range = @attributes[:start_at]..@attributes[:end_at]
-    # booked_date_range = params[:start_at]..params[:end_at] # cuz attributes didnt work
-
-
-
-    unavailable_bookings.select! {|booking| (booked_date_range === booking.start_at)}
+    unavailable_bookings.select! { |booking| (booked_date_range === booking.start_at) }
     unavailable_beds_ids = []
-    unavailable_beds_ids = unavailable_bookings.map {|booking| booking.beds.map {|bed| bed.to_i}}
+    unavailable_beds_ids = unavailable_bookings.map { |booking| booking.beds.map { |bed| bed.to_i } }
 
     if unavailable_beds_ids == []
     else
       unavailable_beds_ids.flatten!
     end
 
-    available_beds = @hostel.beds.select {|bed| !unavailable_beds_ids.include?(bed.id)}
-
-    #ccalculate date range from attributes start_at and end_at
-    # @hostel.beds.select {|bed| #check if bed.bookings.start_at falls inside date range
-    available_beds.select {|bed| bed.room_type == params[:booking][:other][:room_type]}
+    available_beds = @hostel.beds.select { |bed| !unavailable_beds_ids.include?(bed.id) }
+    available_beds.select { |bed| bed.room_type == params[:booking][:other][:room_type] }
     .first(params[:booking][:other][:bed_number].to_i)
   end
 
   def map_beds_to_ids(beds)
-    beds.map {|bed| bed.id}
+    beds.map { |bed| bed.id }
   end
 
   def calculate_cost
@@ -106,7 +99,7 @@ private
     if @attributes[:beds] == []
       sum_of_prices = 0
     else
-      sum_of_prices = @attributes[:beds].map{ |bed| bed.price}.inject(:+)
+      sum_of_prices = @attributes[:beds].map{ |bed| bed.price }.inject(:+)
     end
     final_sum = (number_of_dates * sum_of_prices).to_f
   end
