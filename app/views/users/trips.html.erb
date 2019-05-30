@@ -1,0 +1,10 @@
+<% @bookings.each do |b| %>
+<div class="card-product">
+  <div class="card-product-infos">
+    <% bed = Bed.find(b.beds.first.to_i) %>
+    <%= bed.hostel.name %>
+      <p>Booked for <%= (b.end_at - b.start_at).to_i %> nights: <%= b.start_at %> <%= b.end_at %> </p>
+      <p> $<%= b.total_cost %> <strong> of your stay.</strong> </p>
+  </div>
+</div>
+<% end %>

@@ -81,8 +81,12 @@ private
 
     unavailable_bookings.select! {|booking| (booked_date_range === booking.start_at)}
     unavailable_beds_ids = []
-    unavailable_beds_ids = unavailable_bookings.map {|booking| booking.beds.map {|bed| bed.to_i}}.flatten!
+    unavailable_beds_ids = unavailable_bookings.map {|booking| booking.beds.map {|bed| bed.to_i}}
 
+    if unavailable_beds_ids == []
+    else
+      unavailable_beds_ids.flatten!
+    end
 
     available_beds = @hostel.beds.select {|bed| !unavailable_beds_ids.include?(bed.id)}
 
@@ -101,7 +105,7 @@ private
     if @attributes[:beds] == []
       sum_of_prices = 0
     else
-      sum_of_prices = @attributes[:beds].map{ |bed| bed.price}.inject(:+)
+      sum_of_prices = @attributes[:beds].map{ |bed| bed.price }.inject(:+)
     end
     final_sum = (number_of_dates * sum_of_prices).to_f
   end
