@@ -1,5 +1,5 @@
 #header-container {
-  background-color: #CDCDCD;
+  // background-color: #CDCDCD;
 }
 
 .h1 {
@@ -83,10 +83,13 @@ h1 {
 .panel-body {
   text-align: center;
   margin-top: 20px;
-  // margin-right: 100px;
-  // margin-left: 100px;
-  width: 100%;
-  background-color: #CDCDCD;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+
+  padding: 25px;
+
 }
 
 #centerbuttons {
@@ -105,6 +108,9 @@ h1 {
   margin-right: 100px;
   margin-left: 100px;
   // width: 90%;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  padding-right: 40px;
 }
 
 #map-container2 {
@@ -114,5 +120,6 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 150px;
+    margin-top: 25px;
 }
 
