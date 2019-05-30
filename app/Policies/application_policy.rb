@@ -34,9 +34,9 @@ class ApplicationPolicy
     false
   end
 
-  def trips?
-    true
-  end
+  # def trips?
+  #   true
+  # end
 
   class Scope
     attr_reader :user, :scope
