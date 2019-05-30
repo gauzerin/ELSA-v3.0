@@ -5,6 +5,8 @@ class Booking < ApplicationRecord
   validates :start_at, :end_at, presence: true
   validates :beds, presence: true
 
+  monetize :amount_cents
+
   # def beds
   #   Bed.where(slug: attributes[:beds].map { |bed_id| bed_id.to_i })
   # end
