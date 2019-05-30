@@ -12,7 +12,10 @@
 }
 
 .header {
-  text-align: center;
+  margin-left:25px;
+  font-family:'Roboto Slab', serif;
+  // margin-top: 30px !important;
+
 }
 
 .containery {
@@ -25,6 +28,7 @@
   grid-gap:16px;
   padding-right: 650px;
   position: relative;
+  margin-top:-30px;
 
 }
 
@@ -42,20 +46,20 @@
 .card-trip h1 {
   text-align:center;
   height:96px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Stylish', sans-serif;
   text-align:center;
 }
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Stylish', sans-serif;
   text-align:center;
 }
 .card-trip .card-trip-infos {
@@ -79,13 +83,14 @@
   height: 100vh;
   width: 40vw;
   display: inline-block;
-  margin-left:10px;
-  margin-right:82px;
+  // margin-left:10px;
+  margin-right:122px;
   // margin-left: auto;
   // margin-right: auto;
   position: fixed;
   right: 0;
   top: 100;
+  margin-top: -138px !important;
 
     // padding-bottom: 20px;
     // margin-bottom:20px;
