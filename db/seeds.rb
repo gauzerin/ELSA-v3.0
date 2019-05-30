@@ -38,7 +38,7 @@ hostel1 = Hostel.create!(
   address: '37 Tavistock Pl, London WC1H 9SE',
   city_name: 'London',
   user: owner,
-  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452477/photo-1488805990569-3c9e1d76d51c_wkrmto.jpg",
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537437/photo-1541004995602-b3e898709909_vorsdj.jpg",
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452509/photo-1489171078254-c3365d6e359f_ncupzf.jpg",
   photo3: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
   description: "Generator London was the very first Generator and you'll find it in the area of Russell Square in the heart of the West End.
