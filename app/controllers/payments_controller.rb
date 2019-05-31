@@ -1,8 +1,10 @@
 class PaymentsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new]
+  skip_after_action :verify_authorized
+
   before_action :set_order
 
   def new
-    # add logic
   end
 
   def create
@@ -27,10 +29,11 @@ class PaymentsController < ApplicationController
   @booking.update(payment: charge.to_json, state: 'paid') # ???
   redirect_to booking_path(@booking)  # ???
 
+
     rescue Stripe::CardError => e
     flash[:alert] = e.message
     redirect_to new_booking_payment_path(@booking)
-    end
+    # end
   end
 
 private

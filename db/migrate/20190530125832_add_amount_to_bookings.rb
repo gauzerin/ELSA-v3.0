@@ -6,4 +6,3 @@ class AddAmountToBookings < ActiveRecord::Migration[5.2]
   end
 end
 
-<%= humanized_money_with_symbol(bed.price) %>

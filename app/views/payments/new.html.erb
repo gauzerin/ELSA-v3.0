@@ -29,9 +29,8 @@
 <!-- </body> --> -->
 
 
-<!-- app/views/payments/new.html.erb -->
 <h1>Payment for the booking <%= @booking.id %></h1>
-<%= form_tag order_payments_path(@booking) do %>
+<%= form_tag new_booking_payment_path(@booking) do %>
   <article>
     <label class="amount">
       <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
