@@ -10,7 +10,15 @@ Rails.application.routes.draw do
 
   resources :beds, only: [:edit, :update, :destroy]
 
-  resources :bookings, except: [:index]
+  resources :bookings, only: [:new, :create] do
+    resources :payments, only: [:new, :create]
+  end
+
+  resources :bookings, except: [:index, :new, :create]
+
+
+  resources :reviews, only: [:index, :new, :create]
+  # only create, show, and display all reviews
 
   get 'user_dashboard', to: 'pages#user_dashboard'
   get 'partner_dashboard', to: 'pages#partner_dashboard'
