@@ -27,7 +27,7 @@ class PaymentsController < ApplicationController
 
 
   @booking.update(payment: charge.to_json, state: 'paid') # ???
-  redirect_to booking_path(@booking)  # ???
+  redirect_to trips_path  # ???
 
 
     rescue Stripe::CardError => e
