@@ -13,6 +13,29 @@
   font-family: 'Roboto Slab', serif;
 }
 
+p {
+  font-family: 'Roboto Slab', serif;
+}
+
+#booking-button-div {
+  text-align: center;
+
+}
+
+.booking-button {
+  border: none;
+  font-family: 'Stylish', sans-serif;
+  color: white;
+  padding: 0px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color:#FF7E66;
+
+  border-radius:5px;
+  font-size:20px;
+}
+
 // .table-wrapper{
 //     margin: 10px 70px 70px;
 //     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
@@ -102,8 +125,10 @@ h1 {
 
 }
 
-#inputs {
+#inputs-container {
   text-align: center;
+  position:relative;
+
   margin-top: 20px;
   margin-right: 100px;
   margin-left: 100px;
@@ -112,6 +137,12 @@ h1 {
   border-radius: 5px;
   padding-right: 40px;
   padding-top: 20px;
+}
+
+.input-items {
+  position:relative;
+  margin:10px auto;
+  display:inline-block;
 }
 
 #map-container2 {
