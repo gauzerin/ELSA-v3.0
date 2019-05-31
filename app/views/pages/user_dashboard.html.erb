@@ -1,40 +1,42 @@
-<h1>Welcome to your dashboard!</h1>
-<div class="total-box">
-  <div class="total-cashback-box" style="background-color: #a2d5f2">
-   Total Cashback
-   <br>
-   £<%= @total_cashback %>
-  <!-- <button type="button" class="btn btn-primary">Payment Method</button> -->
+<div class="main-container">
+  <div class="dashboard-left-side-container">
+    <h1>Welcome to your dashboard!</h1>
+    <div class="total-box">
+
+      <div class="total-cashback-box" style="background-color: #a2d5f2">
+       Total Cashback
+       <br>
+       £<%= @total_cashback %>
+      <!-- <button type="button" class="btn btn-primary">Payment Method</button> -->
+      </div>
+    </div>
+
+
+    <div class="table-container">
+      <table>
+       <tr class="table-headers">
+         <th>Hostel Name</th>
+         <th>Address</th>
+         <th>Dates</th>
+       </tr>
+       <% counter = 0 %>
+        <% current_user.bookings.each do |booking| %>
+        <% counter += 1 %>
+          <tr class=<%= counter.even? ? "even" : "odd" %>>
+            <td>
+              <%= Bed.find(booking.beds.first).hostel.name %>
+            </td>
+            <td>
+              <%= Bed.find(booking.beds.first).hostel.address %>
+            </td>
+            <td>
+              <%= booking.start_at.strftime("%b %d") %>
+              <span>-</span>
+              <%= booking.end_at.strftime("%b %d") %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
   </div>
 </div>
-
-
-
-<h1>User Dashboard</h1>
-
-<div class="user-container">
-  <h2>Upcoming trips</h2>
-</div>
-<div class="grid-container">
-  <div class="grid-item">
-  <% current_user.bookings.each do |booking| %>
-    </div>
-    <div class="grid-item-1">
-      <%= Bed.find(booking.beds.first).hostel.name %>
-    </div>
-    <div class="grid-item-2">
-      <%= Bed.find(booking.beds.first).hostel.address %>
-    </div>
-    <div class="grid-item-3">
-      <%= booking.start_at %>
-    </div>
-    <div class="grid-item-4">
-      <%= booking.end_at %>
-    </div>
-   <% end %>
-</div>
-
-
-
-
-
