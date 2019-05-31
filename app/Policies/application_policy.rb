@@ -34,6 +34,10 @@ class ApplicationPolicy
     false
   end
 
+  def trips?
+    true  # Only user creator can update it
+  end
+
   class Scope
     attr_reader :user, :scope
 

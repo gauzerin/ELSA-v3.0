@@ -19,5 +19,6 @@ Rails.application.routes.draw do
 
   get 'user_dashboard', to: 'pages#user_dashboard'
   get 'partner_dashboard', to: 'pages#partner_dashboard'
+  get 'trips', to: 'users#trips'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

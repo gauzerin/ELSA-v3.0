@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_125832) do
+ActiveRecord::Schema.define(version: 2019_05_31_101754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_30_125832) do
     t.integer "amount_cents", default: 0, null: false
     t.string "state"
     t.jsonb "payment"
+    t.float "cashback"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 

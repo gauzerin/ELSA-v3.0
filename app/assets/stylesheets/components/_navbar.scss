@@ -9,6 +9,10 @@
   background-color:transparent;
   padding-top: 0px;
   position: fixed !important;
+  z-index:1;
+  min-height: 1px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
 }
 
 .spacer {
@@ -21,15 +25,19 @@ li {
   list-style: none;
 }
 
+.av-img {
+  object-fit: cover;
+}
+
 .navbar img {
   margin-top: 10px;
-  width:90px;
+  width:40px;
   background-color:transparent;
   margin-left: 10px;
   overflow:hidden;
-  height: 80px;
-  // background-color: transparent;
-  // margin-bottom: 10px;
+  height: 40px;
+  background-color: transparent;
+  margin-bottom: 10px;
 }
 
 
@@ -73,13 +81,25 @@ li {
 }
 
 .item-group {
+  margin-top: 15px;
   display: flex;
   justify-content: space-around;
   color: black;
   align-items: center;
 }
 
+.navbar .item {
+  border-style: outset;
+  border-width: 1px;
+  border-radius: 15px;
+  margin-right: 10px;
+  background-color: #FF7E67;
+  height: 35px;
+  width: 75px;
+}
 
-
-
+.item a {
+  font-size: 12px;
+  text-align: center;
+}
 
