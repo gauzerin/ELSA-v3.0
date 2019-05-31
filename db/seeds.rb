@@ -38,7 +38,7 @@ hostel1 = Hostel.create!(
   address: '37 Tavistock Pl, London WC1H 9SE',
   city_name: 'London',
   user: owner,
-  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452477/photo-1488805990569-3c9e1d76d51c_wkrmto.jpg",
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537437/photo-1541004995602-b3e898709909_vorsdj.jpg",
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452509/photo-1489171078254-c3365d6e359f_ncupzf.jpg",
   photo3: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
   description: "Generator London was the very first Generator and you'll find it in the area of Russell Square in the heart of the West End.
@@ -376,7 +376,7 @@ By the end of the day let us give you an iPad then prepare you a cup of tea to u
 So easy to find us, but not so easy to leave…"
 )
 
-10.times do
+30.times do
   Bed.create!(
   price: 10.0,
   room_type: "10 bed",
@@ -384,7 +384,7 @@ So easy to find us, but not so easy to leave…"
   )
 end
 
-8.times do
+16.times do
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
@@ -392,7 +392,7 @@ end
   )
 end
 
-6.times do
+18.times do
   Bed.create!(
   price: 20.0,
   room_type: "6 bed",
@@ -408,10 +408,290 @@ end
   )
 end
 
-5.times do
+50.times do
   Bed.create!(
   price: 40.0,
   room_type: "private",
   hostel: hostel1
+  )
+end
+
+40.times do
+  Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel2
+  )
+end
+
+24.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "8 bed",
+  hostel: hostel2
+  )
+end
+
+6.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel2
+  )
+end
+
+16.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel2
+  )
+end
+
+25.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel2
+  )
+end
+
+10.times do
+  Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel3
+  )
+end
+
+32.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "8 bed",
+  hostel: hostel3
+  )
+end
+
+24.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel3
+  )
+end
+
+16.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel3
+  )
+end
+
+10.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel3
+  )
+end
+
+10.times do
+  Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel4
+  )
+end
+
+8.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "8 bed",
+  hostel: hostel4
+  )
+end
+
+18.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel4
+  )
+end
+
+40.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel4
+  )
+end
+
+60.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel4
+  )
+end
+
+100.times do
+  Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel5
+  )
+end
+
+80.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "8 bed",
+  hostel: hostel5
+  )
+end
+
+36.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel5
+  )
+end
+
+24.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel5
+  )
+end
+
+30.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel5
+  )
+end
+
+80.times do
+  Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel6
+  )
+end
+
+80.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "8 bed",
+  hostel: hostel6
+  )
+end
+
+36.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel6
+  )
+end
+
+8.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel6
+  )
+end
+
+65.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel6
+  )
+end
+
+10.times do
+  Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel7
+  )
+end
+
+8.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "8 bed",
+  hostel: hostel7
+  )
+end
+
+36.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel7
+  )
+end
+
+40.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel7
+  )
+end
+
+35.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel7
+  )
+end
+
+100.times do
+  Bed.create!(
+  price: 10.0,
+  room_type: "10 bed",
+  hostel: hostel8
+  )
+end
+
+16.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "8 bed",
+  hostel: hostel8
+  )
+end
+
+36.times do
+  Bed.create!(
+  price: 20.0,
+  room_type: "6 bed",
+  hostel: hostel8
+  )
+end
+
+40.times do
+  Bed.create!(
+  price: 25.0,
+  room_type: "4 bed",
+  hostel: hostel8
+  )
+end
+
+30.times do
+  Bed.create!(
+  price: 40.0,
+  room_type: "private",
+  hostel: hostel8
   )
 end
