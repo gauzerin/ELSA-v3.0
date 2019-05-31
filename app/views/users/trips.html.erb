@@ -11,7 +11,7 @@
         <h4 class="card-title"><%= bed.hostel.name %>
         </h4>
         <p class="card-text">Booked for <%= (b.end_at - b.start_at).to_i %> nights: <%= b.start_at %> <%= b.end_at %>
-            $<%= b.total_cost %> <strong> of your stay.</strong>
+            $<%= b.amount %> <strong> of your stay.</strong>
         </p>
       </div>
     </div>

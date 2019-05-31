@@ -10,28 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_31_101754) do
+ActiveRecord::Schema.define(version: 2019_05_31_114929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beds", force: :cascade do |t|
-    t.float "price"
     t.bigint "hostel_id"
     t.string "room_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
     t.index ["hostel_id"], name: "index_beds_on_hostel_id"
   end
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_at"
     t.date "end_at"
-    t.float "total_cost"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "beds", default: [], array: true
+    t.integer "amount_cents", default: 0, null: false
+    t.string "state", default: "pending", null: false
+    t.jsonb "payment"
     t.float "cashback"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
