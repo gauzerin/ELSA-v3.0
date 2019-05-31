@@ -1,4 +1,4 @@
-<form class="payment">
+<!-- <form class="payment">
 
   <body>
     <div class="panel panel-default credit-card-box">
@@ -17,13 +17,33 @@
     <input type="text" size="5" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
     <label for="cardCVC">CV CODE</label>
     <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
-    <label for="couponCode">DISCOUNT CODE</label>
+  <!--   <label for="couponCode">DISCOUNT CODE</label>
     <input type="text" class="form-control" name="couponCode" />
-    <br>
-    <button class="btn btn-light" style="float:right;color:white;" type="submit"><%= link_to "Confirm Payment", my_bookings_path %></button>
-    <br><br>
-</form>
+    <br> -->
+    <!-- <button class="btn btn-light" style="float:right;color:white;" type="submit"><%= link_to "Confirm Payment", trips_path %></button> -->
+    <!-- <br><br> -->
+<!-- </form> -->
 <!-- If you're using Stripe for payments -->
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-</form>
-</body>
+<!-- <script type="text/javascript" src="https://js.stripe.com/v2/"></script> -->
+<!-- </form> -->
+<!-- </body> --> -->
+
+
+<!-- app/views/payments/new.html.erb -->
+<h1>Payment for the booking <%= @booking.id %></h1>
+<%= form_tag order_payments_path(@booking) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Booking"
+    data-email="<%= current_user.email %>"
+    data-description="ID <%= @booking.id %>"
+    data-amount="<%= @booking.amount_cents %>"
+    data-currency="<%= @booking.amount.currency %>"></script>
+
+<% end %>

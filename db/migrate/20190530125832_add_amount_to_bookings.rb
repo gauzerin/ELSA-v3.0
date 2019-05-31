@@ -5,3 +5,5 @@ class AddAmountToBookings < ActiveRecord::Migration[5.2]
     add_column :bookings, :payment, :jsonb
   end
 end
+
+<%= humanized_money_with_symbol(bed.price) %>
