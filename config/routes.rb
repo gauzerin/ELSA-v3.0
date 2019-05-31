@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   resources :bookings, except: [:index]
 
+  resources :reviews, only: [:index, :new, :create]
+  # only create, show, and display all reviews
+
   get 'user_dashboard', to: 'pages#user_dashboard'
   get 'partner_dashboard', to: 'pages#partner_dashboard'
   get 'trips', to: 'users#trips'
