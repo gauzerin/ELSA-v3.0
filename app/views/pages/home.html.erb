@@ -9,27 +9,28 @@
            <form action="/hostels" method='get'>
               <div class="form-row">
                 <div class="city">
-                  <input type="text" class="form-control input-lg" placeholder="Berlin" name="city" >
+                  <input type="text" class="form-control input-lg" placeholder="City" name="city" >
                   <!-- the 'name="city"'' is for the search functionality -->
                  </div>
                 <div class="col">
-                  <input id="checkin" type="text" class="form-control border-radius input-lg datepicker" placeholder="Check-in">
+                  <input type="text" id="booking_start_at" class="form-control border-radius input-lg datepicker" placeholder="Check-in">
                 </div>
                 <div class="col">
-                  <input id="checkout" type="text" class="form-control border-radius input-lg datepicker" placeholder="Check-out">
+                  <input type="text" id="booking_end_at" class="form-control border-radius input-lg datepicker" placeholder="Check-out">
                 </div>
               </div>
               <div placeholder="# of Guests" class="guest">
-                <select name="" id="guest-count" class="form-control border-radius input-lg">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</opt
+                <select name="" id="guest-count" class="form-control border-radius input-lg"
+                placeholder="Number of Guests">
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</opt
                     ion>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
+                  <option value="7">7 Guests</option>
+                  <option value="8">8 Guests</option>
                 </select>
               </div>
               <div placeholder="room type" class="room-type">

@@ -378,7 +378,7 @@ So easy to find us, but not so easy to leave…"
 
 30.times do
   Bed.create!(
-  price: 10.0,
+  price: 10,
   room_type: "10 bed",
   hostel: hostel1
   )
@@ -386,7 +386,7 @@ end
 
 16.times do
   Bed.create!(
-  price: 15.0,
+  price: 15,
   room_type: "8 bed",
   hostel: hostel1
   )
@@ -394,7 +394,7 @@ end
 
 18.times do
   Bed.create!(
-  price: 20.0,
+  price: 20,
   room_type: "6 bed",
   hostel: hostel1
   )
@@ -402,7 +402,7 @@ end
 
 4.times do
   Bed.create!(
-  price: 25.0,
+  price: 25,
   room_type: "4 bed",
   hostel: hostel1
   )
@@ -410,7 +410,7 @@ end
 
 50.times do
   Bed.create!(
-  price: 40.0,
+  price: 40,
   room_type: "private",
   hostel: hostel1
   )
@@ -696,8 +696,9 @@ end
   )
 end
 
+review1 = Review.create!(
+  emoji: "bad experience",
+  hostel: hostel1,
+  user: guest,
 
-
-
-
-
+  )

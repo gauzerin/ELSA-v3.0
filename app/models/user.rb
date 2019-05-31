@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_many :hostels # add an if statement depending on user_type
   has_many :bookings
+  has_many :reviews
 
 end
