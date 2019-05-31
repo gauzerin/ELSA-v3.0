@@ -1,0 +1,55 @@
+// .cards-summaries {
+//   display:flex;
+//   border-radius: 5px;
+//   width: auto;
+//   margin-top:30px;
+//   margin-bottom: 30px;
+//   // padding-top: 50px;
+
+// }
+
+h1 {
+  text-align:center;
+  // margin-left: 40px;
+}
+
+.total-box {
+  font-family: 'Stylish', sans-serif;
+  position:relative;
+}
+
+.btn {
+  background-color: #FF7E66 !important;
+  width: 500px;
+  // margin-left: 40px;
+  font-family: 'Stylish', sans-serif !important;
+  position:absolute;
+  display:inline-block;
+  bottom:0;
+  border-top-left-radius:0px !important;
+  border-top-right-radius:0px !important;
+  // margin-bottom:20px !important;
+  height:70px;
+  font-size:30px !important;
+}
+
+
+
+.total-cashback-box {
+  // padding-top:20px;
+  margin-top: 40px;
+ margin: left;
+ margin-left: 40px;
+ width: 500px;
+ height:300px;
+ display:flex;
+ justify-content:space-around;
+ align-items:center;
+ text-align: center;
+ border-radius: 5px;
+ vertical-align: middle;
+ font-family: 'Stylish', sans-serif;
+ font-size: 40px;
+ box-shadow: 0 0 20px rgba(0,0,0,0.2);
+ padding-bottom:50px;
+}
