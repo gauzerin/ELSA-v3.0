@@ -17,14 +17,15 @@ class BookingsController < ApplicationController
 
     authorize @booking
       if @booking.save
-        redirect_to new_booking_payment, notice: "Booking successfully created"
+        redirect_to new_booking_payment_path(@booking), notice: "Booking successfully created"
       else
         redirect_to hostel_path(@hostel.id), notice: "Booking failed"
       end
   end
 
   def show
-    @booking = Booking.find(params[:id]) # this is a show booking details page
+    @booking = Booking.find(params[:id])
+    @paid_booking = current_user.bookings.where(state: 'paid').find(params[:id]) # this is a show booking details page
     authorize @booking
   end
 
@@ -61,7 +62,7 @@ private
     @attributes[:start_at] = Date.parse(params[:booking][:start_at])
     @attributes[:end_at] = Date.parse(params[:booking][:end_at])
     @attributes[:beds] = select_beds
-    @attributes[:total_cost] = calculate_cost
+    @attributes[:amount] = calculate_cost
     @attributes[:beds] = map_beds_to_ids(@attributes[:beds])
     @attributes
   end
