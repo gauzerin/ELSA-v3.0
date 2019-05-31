@@ -43,28 +43,39 @@
 <hr>
 <!-- Hostel description -->
   <div class="panel-body" role="main">
-    <p class="text-center"><%= @hostel.description %></p>
+    <h1 class="text-center"><strong>Descripton</strong></h1>
+    <pre>
+      <p class="text-center"><%= @hostel.description %></p>
+    </pre>
   </div>
 
 <hr>
 
 <!-- need to add center buttons here -->
 
-  <div id="inputs">
+  <div id="inputs-container">
     <ul>
 <!-- bed types was here but looked horrible -->
       <%= simple_form_for @booking do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
-      <%= f.input :start_at, as: :string, label: "Dates", placeholder: "From", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"} %>
-      <%= f.input :end_at, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"}%>
-      <%= f.simple_fields_for :other do |a| %>
-        <%= a.input :room_type, collection: @bed_types %>
-        <%= a.input :bed_number, collection: (1..10) %>
-        <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
-        <!-- make dynamic booking bed count by altering line 48 -->
+      <div class="input-items">
+        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"} %>
+        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"}%>
+      </div>
+      <!-- line break for readability -->
+      <div class="input-items">
+        <%= f.simple_fields_for :other do |a| %>
+          <%= a.input :room_type, collection: @bed_types %>
+          <%= a.input :bed_number, collection: (1..10) %>
+          <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
+          <!-- make dynamic booking bed count by altering line 48 -->
+        <% end %>
+      </div>
+      <div id="booking-button-div">
+        <input type="submit" name="commit" value="Create Booking" class="booking-button" data-disable-with="Create Booking">
+      </div>
       <% end %>
-      <%= f.submit  %>
-      <% end %>
+
     </ul>
   </div>
 
