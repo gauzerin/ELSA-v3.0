@@ -10,8 +10,8 @@
         <div class="card-body">
         <h4 class="card-title"><%= bed.hostel.name %>
         </h4>
-        <p class="card-text">Booked for <%= (b.end_at - b.start_at).to_i %> nights: <%= b.start_at %> <%= b.end_at %>
-            $<%= b.amount %> <strong> of your stay.</strong>
+        <p class="card-text"><%= (b.end_at - b.start_at).to_i %> nights: (<%= b.start_at %> - <%= b.end_at %>)</p>
+            <p>Just  $<%= b.amount %>  <strong>for</strong> <%= (b.end_at - b.start_at).to_i %> nights and <%= b.beds.count %> beds
         </p>
       </div>
     </div>
