@@ -1,10 +1,32 @@
-<% @bookings.each do |b| %>
-<div class="card-product">
-  <div class="card-product-infos">
-    <% bed = Bed.find(b.beds.first.to_i) %>
-    <%= bed.hostel.name %>
-      <p>Booked for <%= (b.end_at - b.start_at).to_i %> nights: <%= b.start_at %> <%= b.end_at %> </p>
-      <p> $<%= b.total_cost %> <strong> of your stay.</strong> </p>
+
+
+<div class="container">
+  <h1>Your Trips:</h1>
+  <div class="cards">
+      <% @bookings.each do |b| %>
+      <% bed = Bed.find(b.beds.first.to_i) %>
+      <div class="card">
+      <img class="card-img-top" src=<%= bed.hostel.photo1 %> alt="Card image cap">
+        <div class="card-body">
+        <h4 class="card-title"><%= bed.hostel.name %>
+        </h4>
+        <p class="card-text">Booked for <%= (b.end_at - b.start_at).to_i %> nights: <%= b.start_at %> <%= b.end_at %>
+            $<%= b.total_cost %> <strong> of your stay.</strong>
+        </p>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
-<% end %>
+<!--
+
+  <img class="card-img-top" src="/images/pathToYourImage.png" alt="Card image cap">
+
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">
+      Some quick example text to build on the card title
+      and make up the bulk of the card's content.
+    </p>
+    <a href="#!" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->
