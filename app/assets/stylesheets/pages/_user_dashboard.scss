@@ -9,8 +9,8 @@
 // }
 
 h1 {
-  text-align:center;
-  // margin-left: 40px;
+  // text-align:center;
+  margin-left: 40px;
 }
 
 .total-box {
@@ -50,9 +50,18 @@ h1 {
  font-family: 'Stylish', sans-serif;
  font-size: 40px;
  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+ // flex:wrap;
  // padding-bottom:50px;
 }
 
+   #map-container {
+    display:flex;
+    right: 0px;
+    top:0px;
+    position:fixed;
+    padding-left:1000px;
+    // width:500px;
+   }
 
 table, th, td {
 }

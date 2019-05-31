@@ -10,13 +10,13 @@ const buildMap = () => {
   });
 };
 
-const addMarkersToMap = (map, markers) => {
-  markers.forEach((marker) => {
-    new mapboxgl.Marker()
-      .setLngLat([ marker.lng, marker.lat ])
-      .addTo(map);
-  });
-};
+// const addMarkersToMap = (map, markers) => {
+//   markers.forEach((marker) => {
+//     new mapboxgl.Marker()
+//       .setLngLat([ marker.lng, marker.lat ])
+//       .addTo(map);
+//   });
+// };
 
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
@@ -31,6 +31,17 @@ const initMapbox = () => {
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
   }
+
 };
 
+const addMarkersToMap = (map, markers) => {
+  markers.forEach((marker) => {
+    const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
+
+    new mapboxgl.Marker()
+      .setLngLat([ marker.lng, marker.lat ])
+      .setPopup(popup) // add this
+      .addTo(map);
+  });
+};
 export { initMapbox };
