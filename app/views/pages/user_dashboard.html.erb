@@ -1,1 +1,40 @@
+<h1>Welcome to your dashboard!</h1>
+<div class="total-box">
+  <div class="total-cashback-box" style="background-color: #a2d5f2">
+   Total Cashback
+   <br>
+   £<%= @total_cashback %>
+  <!-- <button type="button" class="btn btn-primary">Payment Method</button> -->
+  </div>
+</div>
+
+
+
 <h1>User Dashboard</h1>
+
+<div class="user-container">
+  <h2>Upcoming trips</h2>
+</div>
+<div class="grid-container">
+  <div class="grid-item">
+  <% current_user.bookings.each do |booking| %>
+    </div>
+    <div class="grid-item-1">
+      <%= Bed.find(booking.beds.first).hostel.name %>
+    </div>
+    <div class="grid-item-2">
+      <%= Bed.find(booking.beds.first).hostel.address %>
+    </div>
+    <div class="grid-item-3">
+      <%= booking.start_at %>
+    </div>
+    <div class="grid-item-4">
+      <%= booking.end_at %>
+    </div>
+   <% end %>
+</div>
+
+
+
+
+

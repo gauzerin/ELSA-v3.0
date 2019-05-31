@@ -1,2 +1,9 @@
-<h1>Bookings#show</h1>
+<h1>Bookings#show test page</h1>
 <p>Find me in app/views/bookings/show.html.erb</p>
+
+<h1>Booking</h1>
+<ul>
+  <li>Status: <%= @boking.state %></li>
+  <!-- <li>Item: <%= @bookings.teddy_sku %></li> -->
+  <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
+<ul>
