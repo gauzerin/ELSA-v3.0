@@ -1,19 +1,22 @@
 
 
-<div class="cards">
-    <% @bookings.each do |b| %>
-    <% bed = Bed.find(b.beds.first.to_i) %>
-    <div class="card">
-    <img class="card-img-top" src=<%= bed.hostel.photo1 %> alt="Card image cap">
-      <div class="card-body">
-      <h4 class="card-title"><%= bed.hostel.name %>
-      </h4>
-      <p class="card-text">Booked for <%= (b.end_at - b.start_at).to_i %> nights: <%= b.start_at %> <%= b.end_at %>
-          $<%= b.total_cost %> <strong> of your stay.</strong>
-      </p>
+<div class="container">
+  <h1>Your Trips:</h1>
+  <div class="cards">
+      <% @bookings.each do |b| %>
+      <% bed = Bed.find(b.beds.first.to_i) %>
+      <div class="card">
+      <img class="card-img-top" src=<%= bed.hostel.photo1 %> alt="Card image cap">
+        <div class="card-body">
+        <h4 class="card-title"><%= bed.hostel.name %>
+        </h4>
+        <p class="card-text">Booked for <%= (b.end_at - b.start_at).to_i %> nights: <%= b.start_at %> <%= b.end_at %>
+            $<%= b.total_cost %> <strong> of your stay.</strong>
+        </p>
+      </div>
     </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
 <!--
 

@@ -15,24 +15,16 @@
         </li>
 
           <% if user_signed_in? %>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <%= link_to "Profile", trips_path, style: "color: black;", class: "nav-link" %>
-=======
-=======
->>>>>>> 97d3a1cc900914e240114efb6ed7783a7845c0c7
+
             <li class="item">
-              <%= link_to "Bookings", user_dashboard_path, style: "color: white;", class: "nav-link" %>
+              <%= link_to "Bookings", trips_path, style: "color: white;", class: "nav-link" %>
             </li>
           <% end %>
           <% if user_signed_in? %>
             <li class="avatar">
                 <%= image_tag "profile.png", class: 'av-img' %>
             </li>
-<<<<<<< HEAD
->>>>>>> 97d3a1cc900914e240114efb6ed7783a7845c0c7
-=======
->>>>>>> 97d3a1cc900914e240114efb6ed7783a7845c0c7
           <% end %>
     </li>
   </div>
