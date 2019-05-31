@@ -59,8 +59,8 @@
       <%= simple_form_for @booking do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
       <div class="input-items">
-        <%= f.input :start_at, as: :string, label: "Dates", placeholder: "From", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"} %>
-        <%= f.input :end_at, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"}%>
+        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"} %>
+        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"}%>
       </div>
       <!-- line break for readability -->
       <div class="input-items">
