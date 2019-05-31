@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
 
     authorize @booking
       if @booking.save
-        redirect_to hostel_path(@hostel.id), notice: "Booking successfully created"
+        redirect_to new_booking_payment, notice: "Booking successfully created"
       else
         redirect_to hostel_path(@hostel.id), notice: "Booking failed"
       end
