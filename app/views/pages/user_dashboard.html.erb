@@ -1,14 +1,26 @@
-<h1>Welcome to your dashboard!</h1>
+<div class="main-container">
+  <div class="dashboard-left-side-container">
+    <h1>Welcome to your dashboard!</h1>
+    <div class="total-box">
 
-<div class="total-box">
-  <div class="total-cashback-box" style="background-color: #a2d5f2">
-   Total Cashback
-   <br>
-   £<%= @total_cashback %>
-  <!-- <button type="button" class="btn btn-primary">Payment Method</button> -->
+
+    <div id="map-container2">
+      <div
+      id="map"
+      style="width: 50%;
+      height: 100vh;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 
-
+      <div class="total-cashback-box" style="background-color: #a2d5f2">
+       Total Cashback
+       <br>
+       £<%= @total_cashback %>
+      <!-- <button type="button" class="btn btn-primary">Payment Method</button> -->
+      </div>
+    </div>
 
 
 
@@ -20,6 +32,33 @@
     padding-right:40px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+    <div class="table-container">
+      <table>
+       <tr class="table-headers">
+         <th>Hostel Name</th>
+         <th>Address</th>
+         <th>Dates</th>
+       </tr>
+       <% counter = 0 %>
+        <% current_user.bookings.each do |booking| %>
+        <% counter += 1 %>
+          <tr class=<%= counter.even? ? "even" : "odd" %>>
+            <td>
+              <%= Bed.find(booking.beds.first).hostel.name %>
+            </td>
+            <td>
+              <%= Bed.find(booking.beds.first).hostel.address %>
+            </td>
+            <td>
+              <%= booking.start_at.strftime("%b %d") %>
+              <span>-</span>
+              <%= booking.end_at.strftime("%b %d") %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+
   </div>
 </div>
-
