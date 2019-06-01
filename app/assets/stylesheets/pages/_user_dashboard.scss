@@ -9,8 +9,8 @@
 // }
 
 h1 {
-  // text-align:center;
-  margin-left: 40px;
+  text-align:center;
+
 }
 
 .total-box {
@@ -54,12 +54,23 @@ h1 {
  // padding-bottom:50px;
 }
 
+
+   .mapboxgl-canvas {
+   padding-right: 40px;
+   width:900px;
+   }
+
+
+   #map-container2 {
+
    #map-container {
+
     display:flex;
-    right: 0px;
-    top:0px;
+    // right: 0px;
+    top:180px;
     position:fixed;
-    padding-left:1000px;
+    padding-left:580px;
+    // margin-top:30px;
     // width:500px;
    }
 

@@ -23,6 +23,16 @@
     </div>
 
 
+
+  <div id="map-container2">
+    <div
+    id="map"
+    style="width: 1300px;
+    height: 100vh;
+    padding-right:40px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
     <div class="table-container">
       <table>
        <tr class="table-headers">
@@ -49,5 +59,6 @@
         <% end %>
       </table>
     </div>
+
   </div>
 </div>

@@ -11,7 +11,8 @@ class PagesController < ApplicationController
     {
       lat: Bed.find(booking.beds.first).hostel.latitude,
       lng: Bed.find(booking.beds.first).hostel.longitude,
-      infoWindow: render_to_string(partial: "hostel", locals: { hostel: Bed.find(booking.beds.first).hostel })
+      infoWindow: render_to_string(partial: "hostel", locals: { hostel: Bed.find(booking.beds.first).hostel }),
+      # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
     }
    end
   end
