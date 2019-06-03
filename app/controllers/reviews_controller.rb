@@ -10,12 +10,13 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    @review.hostel = Hostel.find(params[:hostel_id])
-    review.save
+    @review = Review.new(emoji: params[:emoji], hostel_id: params[:hostel_id], user: current_user)
+    @hostel = Hostel.find(params[:hostel_id])
+    @review.save
     # redirect_to user_dashboard_path(@_____)
     authorize @review
-    redirect_to hostel_path(@review.hostel)
+    redirect_to hostel_path(@hostel)
+    # (@review.hostel)
   end
 
   def review_params
