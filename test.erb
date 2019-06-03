@@ -1,3 +1,21 @@
+<% home = params[:controller] == 'pages' && params[:action] == 'home' %>
+<div class= "my-navbar" style="background-color:<%= home ? 'transparent' : 'white'; %>">
+  <%= link_to image_tag('elephant.svg', alt: "Elsa logo"), root_path %>
+
+  <div class="item-group">
+    <div class="nav-item-dropdown">
+      <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, style: "color: white;", class: "nav-link item" %>
+        <%= link_to "Profile", trips_path, style: "color: white;", class: "nav-link item" %>
+        <%= link_to "Bookings", trips_path, style: "color: white;", class: "nav-link item" %>
+        <%= image_tag "profile.png", class: 'av-img avatar' %>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path, style: "color: white;", class: "nav-link item" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "elephant.svg" %>
@@ -13,7 +31,7 @@
           <%= image_tag "profile.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            <%= link_to "Profile", user_dashboard_path, class: "dropdown-item" %>
+            <%= link_to "Profile", trips_path, class: "dropdown-item" %>
             <%= link_to "Bookings", trips_path, class: "dropdown-item" %>
           </div>
         </li>
@@ -25,4 +43,3 @@
     </ul>
   </div>
 </div>
-
