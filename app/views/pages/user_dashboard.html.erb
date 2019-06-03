@@ -28,6 +28,7 @@
          <th>Hostel Name</th>
          <th>Address</th>
          <th>Dates</th>
+         <th></th>
        </tr>
        <% counter = 0 %>
         <% current_user.bookings.each do |booking| %>
@@ -43,6 +44,13 @@
               <%= booking.start_at.strftime("%b %d") %>
               <span>-</span>
               <%= booking.end_at.strftime("%b %d") %>
+            </td>
+            <td class= "btn-delete-booking">
+              <%= link_to 'Cancel Booking',
+                  booking_path(booking),
+                  method: :delete,
+                  data: { confirm: 'Are you sure you want to cancel this booking?'}
+               %>
             </td>
           </tr>
         <% end %>
