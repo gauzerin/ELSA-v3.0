@@ -1,23 +1,21 @@
 <div id="header-container">
-  <h1 id="title-h1"><strong><%= @hostel.name %><strong></h1>
+  <h1 id="title-h1"><strong><%= @hostel.name %></strong></h1>
   <h2 id="title-h2"><%= @hostel.address %></h2>
 </div>
 
 <% if user_signed_in? && current_user.user_type == "owner" %>
-<div class="buttons">
-  <button class="btn-blue">
-  <%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
-  </button>
-  <% end %>
-
-  <% if user_signed_in? && current_user.user_type == "owner" %>
-  <button class="btn-blue">
-  <%= link_to "Edit", edit_hostel_path(@hostel) %>
-  </button>
-  <% end %>
-</div>
+  <div class="buttons">
+    <button class="btn-blue">
+      <%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
+    </button>
+    <button class="btn-blue">
+      <%= link_to "Edit", edit_hostel_path(@hostel) %>
+    </button>
+  </div>
+<% end %>
 
 <!--   <div class="carouselcontainerself"> -->
+<div class="container">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -30,15 +28,16 @@
         <img class="d-block h-100" alt="Third slide" src=<%= @hostel.photo3 %>>
       </div>
     </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 
 <hr>
 <!-- Hostel description -->
