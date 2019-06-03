@@ -696,7 +696,9 @@ end
   )
 end
 
-5.times do
+# reviews for hostel 1
+
+40.times do
   Review.create!(
   emoji: "bad experience",
   hostel: hostel1,
@@ -704,7 +706,7 @@ end
   )
 end
 
-10.times do
+120.times do
   Review.create!(
   emoji: "normal experience",
   hostel: hostel1,
@@ -712,7 +714,7 @@ end
   )
 end
 
-30.times do
+600.times do
   Review.create!(
   emoji: "fun experience",
   hostel: hostel1,
@@ -720,7 +722,7 @@ end
   )
 end
 
-120.times do
+550.times do
   Review.create!(
   emoji: "amazing experience",
   hostel: hostel1,
@@ -728,9 +730,248 @@ end
   )
 end
 
+# reviews for hostel 2
+
+74.times do
+  Review.create!(
+  emoji: "bad experience",
+  hostel: hostel2,
+  user: guest,
+  )
+end
+
+201.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel2,
+  user: guest,
+  )
+end
+
+600.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel2,
+  user: guest,
+  )
+end
+
+943.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel2,
+  user: guest,
+  )
+end
+
+# reviews for hostel 3
+
+52.times do
+  Review.create!(
+  emoji: "bad experience",
+  hostel: hostel3,
+  user: guest,
+  )
+end
+
+69.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel3,
+  user: guest,
+  )
+end
+
+140.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel3,
+  user: guest,
+  )
+end
+
+333.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel3,
+  user: guest,
+  )
+end
+
+# reviews for hostel 4
+
+120.times do
+  Review.create!(
+  emoji: "bad experience",
+  hostel: hostel4,
+  user: guest,
+  )
+end
+
+200.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel4,
+  user: guest,
+  )
+end
+
+540.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel4,
+  user: guest,
+  )
+end
+
+450.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel4,
+  user: guest,
+  )
+end
+
+# reviews for hostel 5
 
 
+70.times do
+  Review.create!(
+  emoji: "bad experience",
+  hostel: hostel5,
+  user: guest,
+  )
+end
 
+311.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel5,
+  user: guest,
+  )
+end
+
+476.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel5,
+  user: guest,
+  )
+end
+
+678.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel5,
+  user: guest,
+  )
+end
+
+# reviews for hostel 6
+
+
+23.times do
+  Review.create!(
+  emoji: "bad experience",
+  hostel: hostel6,
+  user: guest,
+  )
+end
+
+87.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel6,
+  user: guest,
+  )
+end
+
+288.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel6,
+  user: guest,
+  )
+end
+
+421.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel6,
+  user: guest,
+  )
+end
+
+# reviews for hostel 7
+
+45.times do
+  Review.create!(
+  emoji: "bad experience",
+  hostel: hostel7,
+  user: guest,
+  )
+end
+
+176.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel7,
+  user: guest,
+  )
+end
+
+654.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel7,
+  user: guest,
+  )
+end
+
+445.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel7,
+  user: guest,
+  )
+end
+
+# reviews for hostel 8
+
+
+112.times do
+  Review.create!(
+  emoji: "bad experience",
+  hostel: hostel8,
+  user: guest,
+  )
+end
+
+195.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel8,
+  user: guest,
+  )
+end
+
+445.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel8,
+  user: guest,
+  )
+end
+
+992.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel8,
+  user: guest,
+  )
+end
+
+# manually inputted reviews end here ^^
 
 
 
