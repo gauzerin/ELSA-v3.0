@@ -31,12 +31,12 @@
             <%= f.hidden_field :hostel_id, :value => hostel.id %>
             <%= f.hidden_field :start_at, as: :string, value: params[:checkin] %>
             <%= f.hidden_field :end_at, as: :string, value: params[:checkout] %>
-            <% f.hidden_field :other do |a| %>
-            <%= a.input :room_type, value: params[:room_type] %>
-            <%= a.input :bed_number, value: params[:bed_number] %>
+
+            <%= f.simple_fields_for :other do |a| %>
+            <%= a.hidden_field :room_type, value: params[:room_type] %>
+            <%= a.hidden_field :bed_number, value: params[:bed_number] %>
             <% end %>
-            <%= f.hidden_field :room_type, value: params[:room_type] %>
-            <%= f.hidden_field :bed_number, value: params[:bed_number] %>
+
             <%= f.submit "Book Now", class: "btn-blue", id: "button-book"%>
             <% end %>
           </div>
