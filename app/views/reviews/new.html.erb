@@ -1,1 +1,23 @@
-<%= "Hello" %>
+
+<h1 id="hostel-name"><strong><%= @review.hostel.name %><strong></h1>
+
+<h2 id="question">How was your experience?</h2>
+
+<div id="emojis-div">
+  <%= link_to hostel_reviews_path(params[:hostel_id], :emoji => "bad experience"), method: :post do %>
+    <span>😭</span>
+  <% end %>
+
+  <%= link_to hostel_reviews_path(params[:hostel_id], :emoji => "normal experience"), method: :post do %>
+    <span>😐</span>
+  <% end %>
+
+  <%= link_to hostel_reviews_path(params[:hostel_id], :emoji => "fun experience"), method: :post do %>
+    <span>😃</span>
+  <% end %>
+
+  <%= link_to hostel_reviews_path(params[:hostel_id], :emoji => "amazing experience"), method: :post do %>
+    <span>😍</span>
+  <% end %>
+<!-- end of new emoji review dib -->
+</div>
