@@ -98,7 +98,9 @@
     <% end %>
  <% end %>
   <div id="review-button-div">
+    <%= link_to new_hostel_review_path(@hostel) do %>
       <input type="submit" name="commit" value="Create Review" id="review-button" data-disable-with="Create Review">
+    <% end %>
   </div>
 </div>
 
