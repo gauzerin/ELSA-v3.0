@@ -15,7 +15,7 @@ h1 {
 
 .total-box {
   font-family: 'Stylish', sans-serif;
-  position:relative;
+  // position:relative;
 }
 
 // .btn {
@@ -55,23 +55,27 @@ h1 {
 }
 
 
-   .mapboxgl-canvas {
-   padding-right: 40px;
-   width:900px;
-   }
 
 
-   #map-container2 { }
+   // .mapboxgl-canvas {
+   // padding-right: 0px;
+   // margin-top:5px;
+   // // width:900px;
+   // }
 
-   #map-container {
 
+   #map-container3 {
+    // width:660px;
     display:flex;
-    // right: 0px;
-    top:180px;
+    top:185px;
     position:fixed;
-    padding-left:580px;
-    // margin-top:30px;
-    // width:500px;
+    padding-left:35px;
+    bottom:0px;
+    margin-left:705px;
+    right:20px;
+
+
+
    }
 
 // table, th, td {
