@@ -35,6 +35,25 @@ p {
   font-size:20px;
 }
 
+#review-button-div {
+  text-align: center;
+
+}
+
+#review-button {
+  border: none;
+  font-family: 'Stylish', sans-serif;
+  color: white;
+  padding: 0px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color:#FF7E66;
+
+  border-radius:5px;
+  font-size:20px;
+}
+
 // .table-wrapper{
 //     margin: 10px 70px 70px;
 //     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );

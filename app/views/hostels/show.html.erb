@@ -97,6 +97,9 @@
       <%= @hostel.reviews.where(emoji: emoji ).count %>
     <% end %>
  <% end %>
+  <div id="review-button-div">
+      <input type="submit" name="commit" value="Create Review" id="review-button" data-disable-with="Create Review">
+  </div>
 </div>
 
 <!-- emojis end here -->
