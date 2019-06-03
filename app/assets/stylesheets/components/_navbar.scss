@@ -123,3 +123,24 @@
   background-color: transparent;
 }
 
+.nav-link {
+  background-color: #ff7e67;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 10px auto;
+  line-height: 37px;
+  font-family: 'Stylish', sans-serif;
+  color: white !important;
+  padding-right: 0.5px 1rem;
+
+}
+
+.nav-link:hover {
+  background-color:#ea3919;
+  text-decoration:none;
+  color:white;
+}
+
+
