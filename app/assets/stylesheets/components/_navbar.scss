@@ -116,25 +116,22 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 45px;
 }
 
 .transparent {
   background-color: transparent;
 }
 
-.nav-link {
+.button-navbar {
   background-color: #ff7e67;
   border: none;
-  text-align: center;
   font-size: 18px;
   border-radius: 5px;
-  margin: 10px auto;
-  line-height: 37px;
-  font-family: 'Stylish', sans-serif;
   color: white !important;
-  padding-right: 0.5px 1rem;
-
+  font-family: 'Stylish';
+  padding: 0.5rem 1rem;
+  margin-right: 5px;
 }
 
 .nav-link:hover {
@@ -142,5 +139,3 @@
   text-decoration:none;
   color:white;
 }
-
-
