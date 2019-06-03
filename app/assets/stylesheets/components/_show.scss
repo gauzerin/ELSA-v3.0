@@ -168,3 +168,18 @@ p {
     margin-top: 0px;
 }
 
+.carousel-inner {
+  max-height: 80vh;
+}
+
+.carousel-inner > .item {
+   height: 400px;
+}
+
+.carousel-image {
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
