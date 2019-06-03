@@ -23,22 +23,22 @@
         <h2>Total Hostel Beds: <%= hostel.beds.count %></h2>
         <div class="btn-group bottom" role="group" aria-label="First group">
           <div class="btn-blue" id="button-show">
-            <%= link_to "Show More", hostel_path(hostel) + "?checkin=#{params[:checkin]}&checkout=#{params[:checkout]}&room_type=#{params[:room_type]}&beds=#{params[:beds]}", class: "button-text" %>
-
+            <%= link_to "Show More", hostel_path(hostel) + "?checkin=#{params[:checkin]}&checkout=#{params[:checkout]}&room_type=#{params[:room_type]}&beds=#{params[:bed_number]}", class: "button-text" %>
           </div>
-          <div class="btn-blue" id="button-book">
-
+          <!-- <div class="btn-blue" id="button-book"> -->
 <!-- ------------------------------------------------------------------ -->
-
-        <%= simple_form_for Booking.new do |f| %>
-        <%= f.hidden_field :hostel_id, :value => hostel.id %>
-        <%= f.hidden_field :start_at, as: :string, value: params[:checkin] %>
-        <%= f.hidden_field :end_at, as: :string, value: params[:checkout] %>
-        <%= f.hidden_field :room_type, value: params[:room_type] %>
-        <%= f.hidden_field :bed_number, value: params[:beds] %>
-        <%= f.submit "Book Now" ,class: "button-text" %>
-        <% end %>
-
+            <%= simple_form_for Booking.new do |f| %>
+            <%= f.hidden_field :hostel_id, :value => hostel.id %>
+            <%= f.hidden_field :start_at, as: :string, value: params[:checkin] %>
+            <%= f.hidden_field :end_at, as: :string, value: params[:checkout] %>
+            <% f.hidden_field :other do |a| %>
+            <%= a.input :room_type, value: params[:room_type] %>
+            <%= a.input :bed_number, value: params[:bed_number] %>
+            <% end %>
+            <%= f.hidden_field :room_type, value: params[:room_type] %>
+            <%= f.hidden_field :bed_number, value: params[:bed_number] %>
+            <%= f.submit "Book Now", class: "btn-blue", id: "button-book"%>
+            <% end %>
           </div>
         </div>
       </div>

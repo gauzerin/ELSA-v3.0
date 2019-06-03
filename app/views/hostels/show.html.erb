@@ -65,7 +65,7 @@
       <div class="input-items">
         <%= f.simple_fields_for :other do |a| %>
           <%= a.input :room_type, collection: @bed_types, selected: params[:room_type] %>
-          <%= a.input :bed_number, collection: (1..10), selected: params[:beds] %>
+          <%= a.input :bed_number, collection: (1..10), selected: params[:bed_number] %>
           <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
           <!-- make dynamic booking bed count by altering line 48 -->
         <% end %>
