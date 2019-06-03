@@ -13,9 +13,10 @@
             <%= link_to "Sign In", new_user_session_path, style: "color: white;", class: "nav-link" %>
           <% end %>
         </li>
-
+        <li class="item">
           <% if user_signed_in? %>
-            <%= link_to "Profile", trips_path, style: "color: black;", class: "nav-link" %>
+            <%= link_to "Profile", trips_path, style: "color: white;", class: "nav-link" %>
+        </li>
 
             <li class="item">
               <%= link_to "Bookings", trips_path, style: "color: white;", class: "nav-link" %>
