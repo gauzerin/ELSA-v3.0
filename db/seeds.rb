@@ -700,5 +700,19 @@ review1 = Review.create!(
   emoji: "bad experience",
   hostel: hostel1,
   user: guest,
-
   )
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
