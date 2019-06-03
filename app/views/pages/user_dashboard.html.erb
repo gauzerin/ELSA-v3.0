@@ -3,7 +3,7 @@
     <h1>Welcome to your dashboard!</h1>
     <div class="total-box">
 
-
+<!--
     <div id="map-container2">
       <div
       id="map"
@@ -12,7 +12,7 @@
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-  </div>
+  </div> -->
 
       <div class="total-cashback-box" style="background-color: #a2d5f2">
        Total Cashback
@@ -24,14 +24,17 @@
 
 
 
-  <div id="map-container2">
+  <div id="map-container3">
     <div
     id="map"
-    style="width: 1300px;
+    style="width: 600px;
     height: 100vh;
-    padding-right:40px;"
+    padding-right:20px;
+    margin-top:20px;"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
 
     <div class="table-container">
       <table>
