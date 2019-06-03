@@ -25,8 +25,6 @@
           <div class="btn-blue" id="button-show">
             <%= link_to "Show More", hostel_path(hostel) + "?checkin=#{params[:checkin]}&checkout=#{params[:checkout]}&room_type=#{params[:room_type]}&beds=#{params[:bed_number]}", class: "button-text" %>
           </div>
-          <!-- <div class="btn-blue" id="button-book"> -->
-<!-- ------------------------------------------------------------------ -->
             <%= simple_form_for Booking.new do |f| %>
             <%= f.hidden_field :hostel_id, :value => hostel.id %>
             <%= f.hidden_field :start_at, as: :string, value: params[:checkin] %>
@@ -53,7 +51,6 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
   </div>
-</div>
 <br>
 <br>
 <br>
