@@ -696,9 +696,40 @@ end
   )
 end
 
-review1 = Review.create!(
+5.times do
+  Review.create!(
   emoji: "bad experience",
   hostel: hostel1,
   user: guest,
-
   )
+end
+
+10.times do
+  Review.create!(
+  emoji: "normal experience",
+  hostel: hostel1,
+  user: guest,
+  )
+end
+
+30.times do
+  Review.create!(
+  emoji: "fun experience",
+  hostel: hostel1,
+  user: guest,
+  )
+end
+
+120.times do
+  Review.create!(
+  emoji: "amazing experience",
+  hostel: hostel1,
+  user: guest,
+  )
+end
+
+
+
+
+
+
