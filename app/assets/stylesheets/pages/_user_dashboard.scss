@@ -15,7 +15,7 @@ h1 {
 
 .total-box {
   font-family: 'Stylish', sans-serif;
-  position:relative;
+  // position:relative;
 }
 
 // .btn {
@@ -55,27 +55,16 @@ h1 {
 }
 
 
-   .mapboxgl-canvas {
-   padding-right: 20px;
-   margin-top:185px;
-   // width:900px;
-   }
-
-
-
-
-   #map-container2 { }
-
-
-
    #map-container3 {
-    width:660px;
+    // width:660px;
     display:flex;
-    top:130px;
+    top:185px;
     position:fixed;
     padding-left:35px;
-    margin-right:0px;
     bottom:0px;
+    margin-left:705px;
+    right:20px;
+
 
 
    }
