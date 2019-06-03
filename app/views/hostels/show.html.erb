@@ -83,19 +83,19 @@
 <div>
 
  <% if @hostel.reviews.present? %>
- <% @hostel.reviews.each do |r| %>
- <% case r.emoji %>
-   <% when "bad experience" %>
-    <i class="fas fa-sad-tear"></i>
-   <% when "normal experience" %>
-    <i class="fas fa-meh-rolling-eyes"></i>
-   <% when "fun experience" %>
-    <i class="far fa-smile"></i>
-   <% when "amazing experience" %>
-    <i class="fas fa-laugh-beam"></i>
- <% end %>
- <% end %>
-
+   <% ["bad experience", "normal experience", "fun experience", "amazing experience"].each do |emoji| %>
+      <% case emoji %>
+       <% when "bad experience" %>
+        <i class="fas fa-sad-tear"></i>
+       <% when "normal experience" %>
+        <i class="fas fa-meh-rolling-eyes"></i>
+       <% when "fun experience" %>
+        <i class="far fa-smile"></i>
+       <% when "amazing experience" %>
+        <i class="fas fa-laugh-beam"></i>
+      <% end %>
+      <%= @hostel.reviews.where(emoji: emoji ).count %>
+    <% end %>
  <% end %>
 
 </div>
