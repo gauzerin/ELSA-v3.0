@@ -56,19 +56,21 @@ h1 {
 
 
    .mapboxgl-canvas {
-   padding-right: 40px;
-   width:900px;
+   padding-right: 20px;
+   margin-top:185px;
+   // width:900px;
    }
 
-   #map-container {
-
+   #map-container3 {
+    width:660px;
     display:flex;
-    // right: 0px;
-    top:180px;
+    top:130px;
     position:fixed;
-    padding-left:580px;
-    // margin-top:30px;
-    // width:500px;
+    padding-left:35px;
+    margin-right:0px;
+    bottom:0px;
+
+
    }
 
 // table, th, td {
