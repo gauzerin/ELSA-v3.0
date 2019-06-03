@@ -1,6 +1,6 @@
 <div id="header-container">
-  <h1 class="h1"><%= @hostel.name %></h1>
-  <h2 class="h2"><%= @hostel.address %></h2>
+  <h1 id="title-h1"><strong><%= @hostel.name %><strong></h1>
+  <h2 id="title-h2"><%= @hostel.address %></h2>
 </div>
 
 <% if user_signed_in? && current_user.user_type == "owner" %>
@@ -43,7 +43,7 @@
 <hr>
 <!-- Hostel description -->
   <div class="panel-body" role="main">
-    <h1 class="text-center"><strong>Descripton</strong></h1>
+    <h1 class="text-center"><strong>Description</strong></h1>
     <pre>
       <p class="text-center"><%= @hostel.description %></p>
     </pre>
@@ -80,30 +80,34 @@
   </div>
 
   <hr>
-<div>
-
+<!-- emojis start below -->
+<div id="emoji-index">
  <% if @hostel.reviews.present? %>
- <% @hostel.reviews.each do |r| %>
- <% case r.emoji %>
-   <% when "bad experience" %>
-    <i class="fas fa-sad-tear"></i>
-   <% when "normal experience" %>
-    <i class="fas fa-meh-rolling-eyes"></i>
-   <% when "fun experience" %>
-    <i class="far fa-smile"></i>
-   <% when "amazing experience" %>
-    <i class="fas fa-laugh-beam"></i>
+   <% ["bad experience", "normal experience", "fun experience", "amazing experience"].each do |emoji| %>
+      <% case emoji %>
+       <% when "bad experience" %>
+        <span>😭</span>
+       <% when "normal experience" %>
+        <span>😐</span>
+       <% when "fun experience" %>
+        <span>😃</span>
+       <% when "amazing experience" %>
+        <span>😍</span>
+      <% end %>
+      <%= @hostel.reviews.where(emoji: emoji ).count %>
+    <% end %>
  <% end %>
- <% end %>
-
- <% end %>
-
+  <div id="review-button-div">
+      <input type="submit" name="commit" value="Create Review" id="review-button" data-disable-with="Create Review">
+  </div>
 </div>
+
+<!-- emojis end here -->
  <hr>
 
 <!-- This is where beds are going to be listed -->
 
-<div id="map-container2">
+<div id="map-container-show">
   <div
     id="map"
     style="width: 100%;
