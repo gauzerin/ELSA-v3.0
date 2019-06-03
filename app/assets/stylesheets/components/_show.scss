@@ -1,14 +1,13 @@
-#header-container {
-  // background-color: #CDCDCD;
-}
 
-.h1 {
+#title-h1 {
+  text-align: left;
   margin-left: 100px;
+  // margin-left: 0px;
   font-family: 'Stylish', sans-serif;
   font-size: 4.0em;
 }
 
-.h2 {
+#title-h2 {
   margin-left: 100px;
   font-family: 'Roboto Slab', serif;
 }
@@ -148,16 +147,22 @@ h1 {
   margin:10px auto;
   display:inline-block;
   width: 20%;
+}
+
+#emoji-index {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Roboto Slab', serif;
 
 }
 
-#map-container2 {
+#map-container-show {
     height: 500px;
     width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 150px;
-    margin-top: 25px;
+    margin-bottom: 175px;
+    margin-top: 0px;
 }
 
