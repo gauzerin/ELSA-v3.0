@@ -44,11 +44,11 @@ class BookingsController < ApplicationController
     end
   end
 
-  def cancel_booking # this is a destroy function meant for booking cancelations
+  def destroy # this is a destroy function meant for booking cancelations
     @booking = Booking.find(params[:id])
     authorize @booking
     if @booking.destroy
-      redirect_to bookings_path, notice: 'Booking was successfully cancelled'
+      redirect_to user_dashboard_path, notice: 'Booking was successfully cancelled'
     else
       render :index
     end
