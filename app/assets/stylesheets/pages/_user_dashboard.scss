@@ -13,6 +13,15 @@ h1 {
 
 }
 
+h2 {
+  margin-top:10px;
+}
+
+
+.my-bookings {
+  margin-top:20px;
+}
+
 .total-box {
   font-family: 'Stylish', sans-serif;
   // position:relative;
@@ -37,7 +46,7 @@ h1 {
 
 .total-cashback-box {
   // padding-top:20px;
-  margin-top: 40px;
+ margin-top: 40px;
  margin: left;
  width: 50vw;
  height: 200px;
@@ -67,12 +76,13 @@ h1 {
    #map-container3 {
     // width:660px;
     display:flex;
-    top:185px;
+    top:135px;
     position:fixed;
     padding-left:35px;
     bottom:0px;
     margin-left:705px;
     right:20px;
+    // border-radius:5px;
 
 
 
