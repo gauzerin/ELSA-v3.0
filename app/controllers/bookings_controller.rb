@@ -10,8 +10,10 @@ class BookingsController < ApplicationController
 
   def create
     booking_params
+    @hostel = Hostel.find(params[:booking][:hostel_id])
     @booking = Booking.new(@attributes)
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
+    @booking.hostel = @hostel
 
     authorize @booking
       if @booking.save!
