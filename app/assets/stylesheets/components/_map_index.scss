@@ -1,9 +1,10 @@
-.header1 {
+#header1 {
   text-align: left;
   margin-left: 25px;
   font-family: 'Stylish', sans-serif;
   font-size: 2.5em;
-
+  z-index: -1;
+  position: relative;
 }
 
 .main-container {
@@ -20,6 +21,7 @@
 }
 
 .map-index {
+  margin-top: 15px;
   height: 100vh;
   width: 35vw;
   position: sticky !important;
