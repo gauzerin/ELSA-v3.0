@@ -55,7 +55,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
     @marker =
       {
         lat: @marked_hostel.latitude,
-        lng: @marked_hostel.longitude
+        lng: @marked_hostel.longitude,
+        infoWindow: render_to_string(partial: "hostel2", locals: { hostel: @hostel })
       }
       # added a map on the show page
     @booking = Booking.new

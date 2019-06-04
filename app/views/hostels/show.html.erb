@@ -68,18 +68,14 @@
 
 <hr>
 <!-- Hostel description -->
+<div class="flex">
   <div class="panel-body" role="main">
     <h1 class="text-center"><strong>Description</strong></h1>
-    <pre>
-      <p class="text-center"><%= @hostel.description %></p>
-    </pre>
+
+      <p class="text-center"><%= simple_format(@hostel.description) %></p>
+
   </div>
-
-<hr>
-
-<!-- need to add center buttons here -->
-
-  <div id="inputs-container">
+<div id="inputs-container">
     <ul>
       <%= simple_form_for [@hostel, @booking] do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
@@ -126,7 +122,17 @@
     </ul>
   </div>
 
-  <hr>
+
+
+
+
+</div>
+
+
+<!-- need to add center buttons here -->
+
+
+
 <!-- emojis start below -->
 
 
