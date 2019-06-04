@@ -356,7 +356,7 @@ Check in from 15:00, check out til 11:00"
 
 
 hostel8 = Hostel.create!(
-  name: "We Love F. Tourists Hostel",
+  name: "We Love F. Tourists",
   address: 'R. dos Fanqueiros 267, 1100-230 Lisbon, Portugal',
   city_name: 'Lisbon',
   user: owner,

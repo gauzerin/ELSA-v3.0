@@ -26,8 +26,21 @@
             <%= link_to "Show More", hostel_path(hostel), class: "button-text" %>
 
           </div>
-          <div class="btn-blue" id="button-book">
-            <%= link_to "Book Now", new_booking_path, class: "button-text" %>
+          <div>
+            <% if params[:checkin].presence && params[:checkout].presence && params[:room_type].presence && params[:room_type].presence %>
+            <%= simple_form_for Booking.new do |f| %>
+            <%= f.hidden_field :hostel_id, :value => hostel.id %>
+            <%= f.hidden_field :start_at, as: :string, value: params[:checkin] %>
+            <%= f.hidden_field :end_at, as: :string, value: params[:checkout] %>
+            <%= f.simple_fields_for :other do |a| %>
+            <%= a.hidden_field :room_type, value: params[:room_type] %>
+            <%= a.hidden_field :bed_number, value: params[:bed_number] %>
+            <% end %>
+            <%= f.submit "Book Now", class: "btn-blue", id: "button-book"%>
+            <% else %>
+            <% link_to hostel_path(hostel)%>
+            <% end %>
+            <% end %>
           </div>
         </div>
       </div>

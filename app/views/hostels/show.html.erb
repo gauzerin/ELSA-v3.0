@@ -57,18 +57,17 @@
 
   <div id="inputs-container">
     <ul>
-<!-- bed types was here but looked horrible -->
       <%= simple_form_for @booking do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
       <div class="input-items">
-        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"} %>
-        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker"}, wrapper_html: {class: "inline_field_wrapper"}%>
+        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "inline_field_wrapper"} %>
+        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "inline_field_wrapper"}%>
       </div>
       <!-- line break for readability -->
       <div class="input-items">
         <%= f.simple_fields_for :other do |a| %>
-          <%= a.input :room_type, collection: @bed_types %>
-          <%= a.input :bed_number, collection: (1..10) %>
+          <%= a.input :room_type, collection: @bed_types, selected: params[:room_type] %>
+          <%= a.input :bed_number, collection: (1..10), selected: params[:bed_number] %>
           <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
           <!-- make dynamic booking bed count by altering line 48 -->
         <% end %>
@@ -120,3 +119,10 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 </div>
+
+<!-- This is required to make a form to choose beds in different rooms, where beds are going to be listed -->
+
+<!-- bed types was here but looked horrible -->
+      <!-- <% @bed_types.each do |bed_type| %> -->
+        <!-- <li><%=  bed_type %></li> -->
+        <!-- <% end %> -->
