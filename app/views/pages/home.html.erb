@@ -19,9 +19,10 @@
                   <input type="text" id="booking_end_at" class="form-control border-radius input-lg datepicker" placeholder="Check-out" name="checkout">
                 </div>
               </div>
-              <div placeholder="# of Guests" class="guest">
+              <div placeholder="Number of Guests" class="guest">
                 <select name="bed_number" id="beds-count" class="form-control border-radius input-lg"
-                placeholder="Beds">
+                placeholder="Number of Guests">
+                  <option value="" disabled selected hidden>Number of Guests</option>
                   <option value="1">1 beds</option>
                   <option value="2">2 beds</option>
                   <option value="3">3 beds</option>
@@ -32,8 +33,9 @@
                   <option value="8">8 beds</option>
                 </select>
               </div>
-              <div placeholder="room type" class="room-type">
-                <select name="room_type" id="room-types" class="form-control border-radius input-lg">
+              <div class="room-type">
+                <select name="room_type" id="room-types" class="form-control border-radius input-lg" placeholder="Room Type">
+                  <option value="" disabled selected hidden>Room Type</option>
                   <option value="10 bed">10 bed</option>
                   <option value="8 bed">8 bed</option>
                   <option value="6 bed">6 bed</option>
