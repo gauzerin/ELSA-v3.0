@@ -22,14 +22,17 @@
   padding-top: 10px;
 }
 
-
-#checkin {
-  background-color:white;
+.flatpickr-input[readonly] {
+    cursor: pointer;
+    background-color:white;
 }
+// #checkin {
+//   background-color:white;
+// }
 
-#checkout {
-  background-color:white;
-}
+// #checkout {
+//   background-color:white;
+// }
 
 
 .room-type {

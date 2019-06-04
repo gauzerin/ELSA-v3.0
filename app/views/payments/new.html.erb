@@ -1,5 +1,7 @@
 
 <h1>Payment for the booking <%= @booking.id %></h1>
+
+<div class="payment-card">
 <%= form_tag booking_payments_path(@booking) do %>
   <article>
     <label class="amount">
@@ -16,3 +18,4 @@
     data-currency="<%= @booking.amount.currency %>"></script>
 
 <% end %>
+</div>

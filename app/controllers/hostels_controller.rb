@@ -18,8 +18,8 @@ skip_before_action :authenticate_user!, only: [:index, :show]
       @markers = @marked_hostels.map do |hostel|
         {
         lat: hostel.latitude,
-        lng: hostel.longitude
-        # infoWindow: render_to_string(partial: "infowindow", locals: { hostel: hostel })
+        lng: hostel.longitude,
+        infoWindow: render_to_string(partial: "hostel2", locals: { hostel: hostel })
         }
       end
   end

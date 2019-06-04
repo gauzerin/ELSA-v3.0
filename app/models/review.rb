@@ -4,17 +4,16 @@ class Review < ApplicationRecord
 
   validates :emoji, presence: true
 
-  def emoji_type(emoji)
-    case emoji
-    when "bad experience"
-      😥
-    when "normal experience"
-      😐
-    when "fun experience"
-      😛
-    when "amazing experience"
-      😍
-    end
-  end
-
+  # def emoji_type(emoji)
+  #   case emoji
+  #   when "bad experience"
+  #     😥
+  #   when "normal experience"
+  #     😐
+  #   when "fun experience"
+  #     😛
+  #   when "amazing experience"
+  #     😍
+  #   end
+  # end
 end

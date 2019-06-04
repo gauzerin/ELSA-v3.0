@@ -1,14 +1,13 @@
-#header-container {
-  // background-color: #CDCDCD;
-}
 
-.h1 {
+#title-h1 {
+  text-align: left;
   margin-left: 100px;
+  // margin-left: 0px;
   font-family: 'Stylish', sans-serif;
   font-size: 4.0em;
 }
 
-.h2 {
+#title-h2 {
   margin-left: 100px;
   font-family: 'Roboto Slab', serif;
 }
@@ -23,6 +22,25 @@ p {
 }
 
 .booking-button {
+  border: none;
+  font-family: 'Stylish', sans-serif;
+  color: white;
+  padding: 0px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color:#FF7E66;
+
+  border-radius:5px;
+  font-size:20px;
+}
+
+#review-button-div {
+  text-align: center;
+
+}
+
+#review-button {
   border: none;
   font-family: 'Stylish', sans-serif;
   color: white;
@@ -78,30 +96,13 @@ p {
 //     background: #F8F8F8;
 // }
 
-.carousel-item {
-    height: 500px;
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    img {
-      margin: auto;
-      height: 550px;
-      width: 90%;
-    }
-  }
 
-h1 {
-  font-family: 'Stylish', sans-serif;
+// .container {
+//   margin: 20px;
+//   border: 3px solid black;
+//   padding: 10px;
 
-}
-
-.container {
-  margin: 20px;
-  border: 3px solid black;
-  padding: 10px;
-
-}
+// }
 
 .panel-body {
   text-align: center;
@@ -148,16 +149,37 @@ h1 {
   margin:10px auto;
   display:inline-block;
   width: 20%;
+}
+
+#emoji-index {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Roboto Slab', serif;
 
 }
 
-#map-container2 {
+#map-container-show {
     height: 500px;
     width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 150px;
-    margin-top: 25px;
+    margin-bottom: 175px;
+    margin-top: 0px;
+}
+
+.carousel-inner {
+  max-height: 80vh;
+}
+
+.carousel-inner > .item {
+   height: 400px;
+}
+
+.carousel-image {
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 

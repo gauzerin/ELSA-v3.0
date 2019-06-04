@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :hostels do
     resources :beds, only: [:new, :create]
     resources :bookings, only: [:index]
+    resources :reviews, only: [:new, :create]
   end
 
   resources :beds, only: [:edit, :update, :destroy]
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   resources :bookings, except: [:index, :new, :create]
 
 
-  resources :reviews, only: [:index, :new, :create]
+  resources :reviews, only: [:index]
   # only create, show, and display all reviews
 
   get 'user_dashboard', to: 'pages#user_dashboard'
