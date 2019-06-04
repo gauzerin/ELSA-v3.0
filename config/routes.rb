@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :hostels do
     resources :beds, only: [:new, :create]
-    resources :bookings, only: [:index]
+    resources :bookings, only: [:index, :new, :create]
     resources :reviews, only: [:new, :create]
   end
 

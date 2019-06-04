@@ -57,7 +57,7 @@
 
   <div id="inputs-container">
     <ul>
-      <%= simple_form_for @booking do |f| %>
+      <%= simple_form_for [@hostel, @booking] do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
       <div class="input-items">
         <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "inline_field_wrapper"} %>
