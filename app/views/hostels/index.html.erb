@@ -18,7 +18,8 @@
             <% end %>
             <% end %>
 
-            Cashback: £<%= (((params[:checkout].to_date - params[:checkin].to_date)*bed_price)*0.05).round(2) %>
+            <% cashback_amount = (((params[:checkout].to_date - params[:checkin].to_date)*bed_price)*0.05).round(2) %>
+            Cashback: <%= number_to_currency(cashback_amount, unit: "£") %>
 
           </div>
           <!-- cashback ends here -->
