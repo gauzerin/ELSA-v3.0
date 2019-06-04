@@ -114,6 +114,7 @@ p {
 .panel-body {
   text-align: center;
   margin-top: 20px;
+  margin-left: 20px;
   // margin-left: 100px;
   // margin-right: 100px;
   width:65vw;
@@ -139,8 +140,9 @@ p {
 
 #inputs-container {
   text-align: center;
-  position:relative;
-
+  position:sticky !important;
+  top:0;
+  height:410px;
   margin-top: 20px;
   margin-right: 100px;
   margin-left: 100px;
@@ -157,14 +159,14 @@ p {
   margin-top:10px auto;
   margin-bottom: 5px;
   display: inline-block;
-  width: 40%;
+  // width: 40%;
 }
 
 .input-items2 {
   position: relative;
   margin: 10px auto;
   // display: inline-block;
-  width: 32%;
+  // width: 32%;
 }
 
 
