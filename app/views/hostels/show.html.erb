@@ -1,18 +1,3 @@
-<div id="header-container">
-  <h1 id="title-h1"><strong><%= @hostel.name %></strong></h1>
-  <h2 id="title-h2"><%= @hostel.address %></h2>
-</div>
-
-<% if user_signed_in? && current_user.user_type == "owner" %>
-  <div class="buttons">
-    <button class="btn-blue">
-      <%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
-    </button>
-    <button class="btn-blue">
-      <%= link_to "Edit", edit_hostel_path(@hostel) %>
-    </button>
-  </div>
-<% end %>
 
 <!--   <div class="carouselcontainerself"> -->
 <div class="container">
@@ -42,36 +27,93 @@
   </div>
 </div>
 
+<div class="introduction-show">
+ <div id="header-container">
+  <h1 id="title-h1"><strong><%= @hostel.name %></strong></h1>
+  <h2 id="title-h2"><%= @hostel.address %></h2>
+ </div>
+
+ <div id="emoji-index">
+  <% if @hostel.reviews.present? %>
+    <% ["bad experience", "normal experience", "fun experience", "amazing experience"].each do |emoji| %>
+       <% case emoji %>
+        <% when "bad experience" %>
+         <span>😭</span>
+        <% when "normal experience" %>
+         <span>😐</span>
+        <% when "fun experience" %>
+         <span>😃</span>
+        <% when "amazing experience" %>
+         <span>😍</span>
+       <% end %>
+       <%= @hostel.reviews.where(emoji: emoji ).count %>
+     <% end %>
+  <% end %>
+ </div>
+</div>
+
+
+<% if user_signed_in? && current_user.user_type == "owner" %>
+  <div class="buttons">
+    <button class="btn-blue">
+      <%= link_to "Add Room", new_hostel_bed_path(@hostel) %>
+    </button>
+    <button class="btn-blue">
+      <%= link_to "Edit", edit_hostel_path(@hostel) %>
+    </button>
+  </div>
+<% end %>
+
+<!-- emojis end here -->
+
 <hr>
 <!-- Hostel description -->
+<div class="flex">
   <div class="panel-body" role="main">
     <h1 class="text-center"><strong>Description</strong></h1>
-    <pre>
-      <p class="text-center"><%= @hostel.description %></p>
-    </pre>
+
+      <p class="text-center"><%= simple_format(@hostel.description) %></p>
+
   </div>
-
-<hr>
-
-<!-- need to add center buttons here -->
-
-  <div id="inputs-container">
+<div id="inputs-container">
     <ul>
-      <%= simple_form_for @booking do |f| %>
+      <%= simple_form_for [@hostel, @booking] do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
-      <div class="input-items">
-        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "inline_field_wrapper"} %>
-        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "inline_field_wrapper"}%>
+      <div class="input-items1">
+        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "input-items1"} %>
+        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "input-items1"}%>
       </div>
       <!-- line break for readability -->
-      <div class="input-items">
-        <%= f.simple_fields_for :other do |a| %>
-          <%= a.input :room_type, collection: @bed_types, selected: params[:room_type] %>
-          <%= a.input :bed_number, collection: (1..10), selected: params[:bed_number] %>
+        <div class="input-items">
+
+          <div class="form-group select required booking_other_bed_number input-items2"><label class="form-control-label select required" for="booking_other_bed_number">Number of Guests <abbr title="required">*</abbr></label><select class="form-control select required" name="booking[other][bed_number]" id="booking_other_bed_number">
+            <option value="" disabled selected hidden>Number of Guests</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option></select>
+          </div>
+          <div class="form-group select required booking_other_room_type input-items2"><label class="form-control-label select required" for="booking_other_room_type">Room Type <abbr title="required">*</abbr></label>
+            <select class="form-control select required" placeholder="Room Type" name="booking[other][room_type]" id="booking_other_room_type">
+              <option value="" disabled selected hidden>Room Type</option>
+              <option value="10 bed">10 bed</option>
+              <option value="8 bed">8 bed</option>
+              <option value="6 bed">6 bed</option>
+              <option value="4 bed">4 bed</option>
+              <option value="private">private</option>
+            </select>
+          </div>
           <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
           <!-- make dynamic booking bed count by altering line 48 -->
-        <% end %>
-      </div>
+        </div>
+          <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
+          <!-- make dynamic booking bed count by altering line 48 -->
       <div id="booking-button-div">
         <input type="submit" name="commit" value="Create Booking" class="booking-button" data-disable-with="Create Booking">
       </div>
@@ -80,30 +122,19 @@
     </ul>
   </div>
 
-  <hr>
-<!-- emojis start below -->
-<div id="emoji-index">
- <% if @hostel.reviews.present? %>
-   <% ["bad experience", "normal experience", "fun experience", "amazing experience"].each do |emoji| %>
-      <% case emoji %>
-       <% when "bad experience" %>
-        <span>😭</span>
-       <% when "normal experience" %>
-        <span>😐</span>
-       <% when "fun experience" %>
-        <span>😃</span>
-       <% when "amazing experience" %>
-        <span>😍</span>
-      <% end %>
-      <%= @hostel.reviews.where(emoji: emoji ).count %>
-    <% end %>
- <% end %>
-  <div id="review-button-div">
-    <%= link_to new_hostel_review_path(@hostel) do %>
-      <input type="submit" name="commit" value="Create Review" id="review-button" data-disable-with="Create Review">
-    <% end %>
-  </div>
+
+
+
+
 </div>
+
+
+<!-- need to add center buttons here -->
+
+
+
+<!-- emojis start below -->
+
 
 <!-- emojis end here -->
  <hr>

@@ -1,25 +1,16 @@
+<h1>Welcome to your dashboard!</h1>
 
 <div class="main-container">
+
   <div class="dashboard-left-side-container">
-    <h1>Welcome to your dashboard!</h1>
     <div class="total-box">
       <div class="total-cashback-box" style="background-color: #a2d5f2">
-       Total Cashback
+      Total Cashback
        <br>
        £<%= @total_cashback %>
       </div>
     </div>
-  <div id="map-container3">
-    <div
-    id="map"
-    style="width: 640px;
-    height: 80vh;
-    padding-right:40px;
-    margin-top:20px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-  </div>
+
   <div class="my-bookings">
   <h2>My Bookings</h2>
     <div class="table-container">
@@ -28,6 +19,7 @@
          <th>Hostel Name</th>
          <th>Address</th>
          <th>Dates</th>
+         <th></th>
          <th></th>
        </tr>
        <% counter = 0 %>
@@ -45,6 +37,10 @@
               <span>-</span>
               <%= booking.end_at.strftime("%b %d") %>
             </td>
+            <td class= "btn-review-hostel">
+              <%= link_to 'Review Hostel',
+                  new_hostel_review_path(Bed.find(booking.beds.first).hostel) %>
+            </td>
             <td class= "btn-delete-booking">
               <%= link_to 'Cancel Booking',
                   booking_path(booking),
@@ -55,7 +51,15 @@
           </tr>
         <% end %>
       </table>
-    </div>
-  </div>
   </div>
 </div>
+  </div>
+
+  <div id="map-container3">
+    <div id="map" class="map-index" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+</div>
+
+

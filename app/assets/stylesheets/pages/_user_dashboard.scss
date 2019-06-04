@@ -8,9 +8,9 @@
 
 // }
 
-h1 {
-  text-align:center;
-
+.main-container {
+  display:flex;
+  justify-content:center;
 }
 
 h2 {
@@ -46,7 +46,7 @@ h2 {
 
 .total-cashback-box {
   // padding-top:20px;
- margin-top: 40px;
+ // margin-top: 40px;
  margin: left;
  width: 50vw;
  height: 200px;
@@ -73,15 +73,21 @@ h2 {
    // }
 
 
+
+
+
+
    #map-container3 {
+    // height:100vh;
+    // position:fixed;
     // width:660px;
-    display:flex;
-    top:135px;
-    position:fixed;
-    padding-left:35px;
-    bottom:0px;
-    margin-left:705px;
-    right:20px;
+    // display:flex;
+    // top:135px;
+    // position:fixed;
+    // padding-left:35px;
+    // bottom:0px;
+    // margin-left:705px;
+    // right:20px;
     // border-radius:5px;
 
 
@@ -121,6 +127,7 @@ th, td {
 .dashboard-left-side-container {
   margin-left: 20px;
   margin-bottom: 200px;
+  margin-right: 6vw;
 }
 
 .table-headers {

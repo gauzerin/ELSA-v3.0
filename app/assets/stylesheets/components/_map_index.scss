@@ -1,3 +1,12 @@
+#header1 {
+  text-align: left;
+  margin-left: 25px;
+  font-family: 'Stylish', sans-serif;
+  font-size: 2.5em;
+  z-index: -1;
+  position: relative;
+}
+
 .main-container {
   display: flex;
 }
@@ -12,6 +21,7 @@
 }
 
 .map-index {
+  margin-top: 15px;
   height: 100vh;
   width: 35vw;
   position: sticky !important;
@@ -135,12 +145,14 @@
   border:0px !important;
   font-family: 'Roboto Slab', serif;
 }
+
 #button-show {
  margin-right:10px;
  margin-top: 0px;
  font-family: 'Stylish', serif;
  height: 40px;
 }
+
 #button-book {
  margin-left:10px;
  margin-top:0px;

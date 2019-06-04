@@ -5,7 +5,8 @@ class ReviewsController < ApplicationController
   end
 
   def new
-    @review = Review.new(hostel: Hostel.find(params[:hostel_id]))
+    @hostel = Hostel.find(params[:hostel_id])
+    @review = Review.new(hostel: @hostel)
     authorize @review
   end
 
@@ -15,7 +16,7 @@ class ReviewsController < ApplicationController
     @review.save
     # redirect_to user_dashboard_path(@_____)
     authorize @review
-    redirect_to hostel_path(@hostel)
+    redirect_to user_dashboard_path(@review.user)
     # (@review.hostel)
   end
 

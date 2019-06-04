@@ -1,5 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
+  belongs_to :hostel
 
   validate :end_must_be_after_start
   validates :start_at, :end_at, presence: true

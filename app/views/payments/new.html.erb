@@ -1,21 +1,50 @@
 
-<h1>Payment for the booking <%= @booking.id %></h1>
+<!-- <h1>Payment for the booking <%#= @booking.id %></h1> -->
+<div class="background-container">
+  <div class="payment-container">
+    <div class="row">
+      <div class="col-md-3 offset-md-1">
+        <div class="payment-card">
+          <h2>Your information</h2>
+          <%= form_tag booking_payments_path(@booking) do %>
+        <!--   <label for="first-name-form">Enter first name</label> -->
+          <input type="text" id="first-name-form" name="user[first_name]" placeholder="Enter last name">
+          <input type="text" id="last-name-form" name="user[last_name]" placeholder="Enter last name">
+        <!--   <label for="phone-number-form">Enter phone number</label> -->
+          <input type="text" id="phone-number-form" name="user[phone_number]" placeholder="Enter phone number">
+          <article>
+            <label class="amount">
+              <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
+            </label>
+          </article>
 
-<div class="payment-card">
-<%= form_tag booking_payments_path(@booking) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
-    </label>
-  </article>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-name="My Booking"
+            data-email="<%= current_user.email %>"
+            data-description="ID <%= @booking.id %>"
+            data-amount="<%= @booking.amount_cents %>"
+            data-currency="<%= @booking.amount.currency %>"></script>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Booking"
-    data-email="<%= current_user.email %>"
-    data-description="ID <%= @booking.id %>"
-    data-amount="<%= @booking.amount_cents %>"
-    data-currency="<%= @booking.amount.currency %>"></script>
+          <% end %>
+        </div>
+      </div>
 
-<% end %>
+      <div class="col-md-6">
+        <div class="flex-container">
+          <h2>Your booking</h2>
+          <div class="cards">
+            <div class="card" style="width:400px">
+              <img class="card-img-top" src=<%= @booking.hostel.photo2 %> alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title"><%= @booking.hostel.name %></h4>
+                  <p class="card-text">Check-in: <%= @booking.start_at %></p>
+                  <p class="card-text">Check-out: <%= @booking.end_at %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
