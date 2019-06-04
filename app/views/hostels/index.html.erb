@@ -23,11 +23,22 @@
         <h2>Total Hostel Beds: <%= hostel.beds.count %></h2>
         <div class="btn-group bottom" role="group" aria-label="First group">
           <div class="btn-blue" id="button-show">
-            <%= link_to "Show More", hostel_path(hostel), class: "button-text" %>
-
+            <%= link_to "Show More", hostel_path(hostel) + "?checkin=#{params[:checkin]}&checkout=#{params[:checkout]}&room_type=#{params[:room_type]}&beds=#{params[:bed_number]}", class: "button-text" %>
           </div>
-          <div class="btn-blue" id="button-book">
-            <%= link_to "Book Now", new_booking_path, class: "button-text" %>
+          <!-- <div class="btn-blue" id="button-book"> -->
+<!-- ------------------------------------------------------------------ -->
+            <%= simple_form_for Booking.new do |f| %>
+            <%= f.hidden_field :hostel_id, :value => hostel.id %>
+            <%= f.hidden_field :start_at, as: :string, value: params[:checkin] %>
+            <%= f.hidden_field :end_at, as: :string, value: params[:checkout] %>
+
+            <%= f.simple_fields_for :other do |a| %>
+            <%= a.hidden_field :room_type, value: params[:room_type] %>
+            <%= a.hidden_field :bed_number, value: params[:bed_number] %>
+            <% end %>
+
+            <%= f.submit "Book Now", class: "btn-blue", id: "button-book"%>
+            <% end %>
           </div>
         </div>
       </div>
