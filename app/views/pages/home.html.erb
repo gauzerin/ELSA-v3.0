@@ -1,12 +1,12 @@
-<div class="banner">
+<div class="background">
+  <%= video_tag "travel_copy.mp4",controls: true, autoplay: :autoplay, loop: :loop, muted: true, class: "video" %>
   <div class="banner-content">
-
     <div class="container-home">
       <div class="center-row">
         <div class="form-card">
           <h1>Book Hostels for Instant Cashback</h1>
-           <p>Travel more. Travel Longer</p>
-           <form action="/hostels" method='get'>
+            <p>Travel more. Travel Longer. Continue to Wonder</p>
+            <form action="/hostels" method='get'>
               <div class="form-row">
                 <div class="city">
                   <input type="text" class="form-control input-lg" placeholder="City" name="city" >
@@ -23,14 +23,14 @@
                 <select name="bed_number" id="beds-count" class="form-control border-radius input-lg"
                 placeholder="Number of Guests">
                   <option value="" disabled selected hidden>Number of Guests</option>
-                  <option value="1">1 beds</option>
-                  <option value="2">2 beds</option>
-                  <option value="3">3 beds</option>
-                  <option value="4">4 beds</option>
-                  <option value="5">5 beds</option>
-                  <option value="6">6 beds</option>
-                  <option value="7">7 beds</option>
-                  <option value="8">8 beds</option>
+                  <option value="1">1 guest</option>
+                  <option value="2">2 guests</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                  <option value="5">5 guests</option>
+                  <option value="6">6 guests</option>
+                  <option value="7">7 guests</option>
+                  <option value="8">8 guests</option>
                 </select>
               </div>
               <div class="room-type">
@@ -43,32 +43,11 @@
                   <option value="private">private</option>
                 </select>
               </div>
-              <input type='submit' class="btn-blue" value="Search"></input>
+              <div class="text-center">
+                <input type='submit' class="btn-blue" value="Search"></input>
+              </div>
             </form>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://images.pexels.com/photos/739407/pexels-photo-739407.jpeg?cs=srgb&dl=architecture-buildings-city-739407.jpg&fm=jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://images.pexels.com/photos/753639/pexels-photo-753639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://images.pexels.com/photos/1615815/pexels-photo-1615815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> -->
