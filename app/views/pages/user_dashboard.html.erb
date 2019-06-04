@@ -29,6 +29,7 @@
          <th>Address</th>
          <th>Dates</th>
          <th></th>
+         <th></th>
        </tr>
        <% counter = 0 %>
         <% current_user.bookings.each do |booking| %>
@@ -44,6 +45,10 @@
               <%= booking.start_at.strftime("%b %d") %>
               <span>-</span>
               <%= booking.end_at.strftime("%b %d") %>
+            </td>
+            <td class= "btn-review-hostel">
+              <%= link_to 'Review Hostel',
+                  new_hostel_review_path(Bed.find(booking.beds.first).hostel) %>
             </td>
             <td class= "btn-delete-booking">
               <%= link_to 'Cancel Booking',

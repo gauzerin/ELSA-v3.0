@@ -2,6 +2,7 @@
 <h1>Payment for the booking <%= @booking.id %></h1>
 
 <div class="payment-card">
+  <h2>Your information</h2>
 <%= form_tag booking_payments_path(@booking) do %>
   <label for="first-name-form">Enter first name</label>
   <input type="text" id="first-name-form" name="user[first_name]">
@@ -24,4 +25,17 @@
     data-currency="<%= @booking.amount.currency %>"></script>
 
 <% end %>
+</div>
+
+<div class="container">
+  <h1>Your Booking</h1>
+  <div class="cards">
+     <div class="card">
+      <img class="card-img-top" src=<%= @booking.hostel.photo2 %> alt="Card image cap">
+        <div class="card-body">
+        <h4 class="card-title"><%= @booking.hostel.name %>
+        </h4>
+      </div>
+    </div>
+  </div>
 </div>
