@@ -1,0 +1,7 @@
+document.querySelector("body").insertAdjacentHTML("beforeend", '<script src="https://checkout.stripe.com/checkout.js" \
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"\
+    data-name="My Booking"\
+    data-email="<%= current_user.email %>"\
+    data-description="ID <%= @booking.id %>"\
+    data-amount="<%= @booking.amount_cents %>"\
+    data-currency="<%= @booking.amount.currency %>"></script>')
