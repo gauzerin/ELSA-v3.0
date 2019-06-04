@@ -36,7 +36,9 @@ ActiveRecord::Schema.define(version: 2019_06_04_125736) do
     t.string "state", default: "pending", null: false
     t.jsonb "payment"
 
+
     t.float "cashback"
+
     t.bigint "hostel_id"
     t.index ["hostel_id"], name: "index_bookings_on_hostel_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"

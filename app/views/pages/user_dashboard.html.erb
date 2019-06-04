@@ -1,25 +1,16 @@
+<h1>Welcome to your dashboard!</h1>
 
 <div class="main-container">
+
   <div class="dashboard-left-side-container">
-    <h1>Welcome to your dashboard!</h1>
     <div class="total-box">
       <div class="total-cashback-box" style="background-color: #a2d5f2">
-       Total Cashback
+      Total Cashback
        <br>
        £<%= @total_cashback %>
       </div>
     </div>
-  <div id="map-container3">
-    <div
-    id="map"
-    style="width: 640px;
-    height: 80vh;
-    padding-right:40px;
-    margin-top:20px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-  </div>
+
   <div class="my-bookings">
   <h2>My Bookings</h2>
     <div class="table-container">
@@ -60,7 +51,15 @@
           </tr>
         <% end %>
       </table>
-    </div>
-  </div>
   </div>
 </div>
+  </div>
+
+  <div id="map-container3">
+    <div id="map" class="map-index" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+</div>
+
+
