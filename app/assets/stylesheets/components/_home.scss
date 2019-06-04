@@ -1,14 +1,41 @@
-.banner {
-  background-image: image-url("environment-farm-field-1166209.jpeg");
-  text-align: center;
-  height: 100vh;
+// .banner {
+//   background-image: image-url("environment-farm-field-1166209.jpeg");
+//   text-align: center;
+//   height: 98vh;
+//   background-size: cover !important;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-bottom: 30px;
+//   color: white;
+// }
+
+.video {
+  width: 100vw;
+  min-height: 100%;
   background-size: cover !important;
-  display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
-  color: white;
+  z-index: -1;
+  filter: brightness(80%);
 }
+
+.background{
+    background-color: #07689F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 180px;
+  left: 50px;
+  opacity: 0.9;
+}
+
 
 // .bg-image {
  // background-image: url(environment-farm-field-1166209.jpg);
