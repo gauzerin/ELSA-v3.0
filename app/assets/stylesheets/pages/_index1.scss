@@ -1,143 +1,142 @@
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 300px;
-  display: inline-block;
-  margin: 0px;
-  font-family: 'Stylish', sans-serif;
-  border-radius: 5px;
-  flex-grow: 1;
-
-}
-
-.header {
-  margin-left:25px;
-  font-family:'Roboto Slab', serif;
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 0px;
-}
-
-.containery {
-  // margin: 10px;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  grid-template-columns: 350px 350px;
-  grid-gap:16px;
-  padding-right: 650px;
-  position: relative;
-  margin-top:-30px;
-
-}
-
-.key-adjectives-hostels {
- margin-bottom:10px;
-}
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-  margin:0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.card-trip h1 {
-  text-align: center;
-  height: 30px;
-  font-family: 'Stylish', serif;
-  font-size: 25px;
-  padding-top: 0px;
-  padding-right: 5px;
-  padding-left: 5px;
-
-}
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-family: 'Roboto Slab', sans-serif;
-  text-align:center;
-}
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-  font-family: 'Roboto Slab', sans-serif;
-  text-align:center;
-}
-.card-trip .card-trip-infos {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  text-align: center;
-  margin-left: 35px;
-}
-.card-product-infos {
-  text-align:center;
-  padding:20px 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-.card-trip-infos h2 {
-  padding: 10px;
-}
-
-#map-container {
-  // height: 100vh;
-  width: 40vw;
-  display: inline-block;
-  // margin-left:10px;
-  margin-right:122px;
-  // margin-left: auto;
-  // margin-right: auto;
-  position: fixed;
-  right: 0;
-  // top: 100;
-  // margin-top: -138px !important;
-
-    // padding-bottom: 20px;
-    // margin-bottom:20px;
-}
-
-
-.price-and-cashback {
-  color: black;
-}
-.btn {
-  background-color: #a2d5f2 !important;
-  border:0px !important;
-  font-family: 'Roboto Slab', serif;
-}
-#button-show {
- margin-right:10px;
- margin-top: 0px;
- font-family: 'Stylish', serif;
- height: 40px;
-}
-#button-book {
- margin-left:10px;
- margin-top:0px;
- font-family: 'Stylish', serif;
- height: 40px;
-}
-// body {
-//   /******************************************************************
-//   This contains the font, Internet Explorer fall back options and
-//   the background color for all of the sites
-//   ******************************************************************/
-//   // background: #C3E6F3 no-repeat center center fixed;
-//   margin: 0 auto;
-//   font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
-//   /* IE Fallback */
-//   // background-image: linear-gradient(to right top, #a2d5f2, #87c6eb, #6cb6e4, #4ea7de, #2797d7);
-//   width: 100%;
-//   height: 100%;
+// .card-trip {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   width: 300px;
+//   display: inline-block;
+//   margin: 0px;
+//   font-family: 'Stylish', sans-serif;
+//   border-radius: 5px;
+//   flex-grow: 1;
 // }
-// //   background:#a2d5f2 !important ;
-// //  }
+
+// .header {
+//   margin-left:25px;
+//   font-family:'Roboto Slab', serif;
+//   font-size: 30px;
+//   margin-top: 30px;
+//   margin-bottom: 0px;
+// }
+
+// .containery {
+//   // margin: 10px;
+//   display: grid;
+//   align-items: center;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   grid-template-columns: 350px 350px;
+//   grid-gap:16px;
+//   padding-right: 650px;
+//   position: relative;
+//   margin-top:-30px;
+
+// }
+
+// .key-adjectives-hostels {
+//  margin-bottom:10px;
+// }
+// .card-trip > img {
+//   height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+//   margin:0;
+//   border-top-left-radius: 5px;
+//   border-top-right-radius: 5px;
+// }
+// .card-trip h1 {
+//   text-align: center;
+//   height: 30px;
+//   font-family: 'Stylish', serif;
+//   font-size: 25px;
+//   padding-top: 0px;
+//   padding-right: 5px;
+//   padding-left: 5px;
+
+// }
+// .card-trip h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin-bottom: 10px;
+//   font-family: 'Roboto Slab', sans-serif;
+//   text-align:center;
+// }
+// .card-trip p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+//   font-family: 'Roboto Slab', sans-serif;
+//   text-align:center;
+// }
+// .card-trip .card-trip-infos {
+//   padding: 20px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   text-align: center;
+//   margin-left: 35px;
+// }
+// .card-product-infos {
+//   text-align:center;
+//   padding:20px 20px;
+//   font-family: 'Open Sans', sans-serif;
+// }
+// .card-trip-infos h2 {
+//   padding: 10px;
+// }
+
+// #map-container {
+//   // height: 100vh;
+//   width: 40vw;
+//   display: inline-block;
+//   // margin-left:10px;
+//   margin-right:122px;
+//   // margin-left: auto;
+//   // margin-right: auto;
+//   position: fixed;
+//   right: 0;
+//   // top: 100;
+//   // margin-top: -138px !important;
+
+//     // padding-bottom: 20px;
+//     // margin-bottom:20px;
+// }
+
+
+// .price-and-cashback {
+//   color: black;
+// }
+// .btn {
+//   background-color: #a2d5f2 !important;
+//   border:0px !important;
+//   font-family: 'Roboto Slab', serif;
+// }
+// #button-show {
+//  margin-right:10px;
+//  margin-top: 0px;
+//  font-family: 'Stylish', serif;
+//  height: 40px;
+// }
+// #button-book {
+//  margin-left:10px;
+//  margin-top:0px;
+//  font-family: 'Stylish', serif;
+//  height: 40px;
+// }
+// // body {
+// //   /******************************************************************
+// //   This contains the font, Internet Explorer fall back options and
+// //   the background color for all of the sites
+// //   ******************************************************************/
+// //   // background: #C3E6F3 no-repeat center center fixed;
+// //   margin: 0 auto;
+// //   font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+// //   /* IE Fallback */
+// //   // background-image: linear-gradient(to right top, #a2d5f2, #87c6eb, #6cb6e4, #4ea7de, #2797d7);
+// //   width: 100%;
+// //   height: 100%;
+// // }
+// // //   background:#a2d5f2 !important ;
+// // //  }
 
 
 

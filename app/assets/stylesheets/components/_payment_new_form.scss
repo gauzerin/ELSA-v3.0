@@ -1,294 +1,294 @@
-/* Table Styles */
+// /* Table Styles */
 
-.table-wrapper{
-    margin: 10px 70px 70px;
-    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
-}
+// .table-wrapper{
+//     margin: 10px 70px 70px;
+//     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+// }
 
-.fl-table {
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: normal;
-    border: none;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
-    background-color: white;
-}
+// .fl-table {
+//     border-radius: 5px;
+//     font-size: 12px;
+//     font-weight: normal;
+//     border: none;
+//     border-collapse: collapse;
+//     width: 100%;
+//     max-width: 100%;
+//     white-space: nowrap;
+//     background-color: white;
+// }
 
-.fl-table td, .fl-table th {
-    text-align: center;
-    padding: 8px;
-}
+// .fl-table td, .fl-table th {
+//     text-align: center;
+//     padding: 8px;
+// }
 
-.fl-table td {
-    border-right: 1px solid #f8f8f8;
-    font-size: 12px;
-}
+// .fl-table td {
+//     border-right: 1px solid #f8f8f8;
+//     font-size: 12px;
+// }
 
-.fl-table thead th {
-    color: #ffffff;
-    background: #4FC3A1;
-}
-
-
-.fl-table thead th:nth-child(odd) {
-    color: #ffffff;
-    background: #324960;
-}
-
-.fl-table tr:nth-child(even) {
-    background: #F8F8F8;
-}
-
-/* Responsive */
-
-@media (max-width: 767px) {
-    .fl-table {
-        display: block;
-        width: 100%;
-    }
-    .table-wrapper:before{
-        content: "Scroll horizontally >";
-        display: block;
-        text-align: right;
-        font-size: 11px;
-        color: white;
-        padding: 0 0 10px;
-    }
-    .fl-table thead, .fl-table tbody, .fl-table thead th {
-        display: block;
-    }
-    .fl-table thead th:last-child{
-        border-bottom: none;
-    }
-    .fl-table thead {
-        float: left;
-    }
-    .fl-table tbody {
-        width: auto;
-        position: relative;
-        overflow-x: auto;
-    }
-    .fl-table td, .fl-table th {
-        padding: 20px .625em .625em .625em;
-        height: 60px;
-        vertical-align: middle;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: auto;
-        width: 120px;
-        font-size: 13px;
-        text-overflow: ellipsis;
-    }
-    .fl-table thead th {
-        text-align: left;
-        border-bottom: 1px solid #f7f7f9;
-    }
-    .fl-table tbody tr {
-        display: table-cell;
-    }
-    .fl-table tbody tr:nth-child(odd) {
-        background: none;
-    }
-    .fl-table tr:nth-child(even) {
-        background: transparent;
-    }
-    .fl-table tr td:nth-child(odd) {
-        background: #F8F8F8;
-        border-right: 1px solid #E6E4E4;
-    }
-    .fl-table tr td:nth-child(even) {
-        border-right: 1px solid #E6E4E4;
-    }
-    .fl-table tbody td {
-        display: block;
-        text-align: center;
-    }
-}
+// .fl-table thead th {
+//     color: #ffffff;
+//     background: #4FC3A1;
+// }
 
 
+// .fl-table thead th:nth-child(odd) {
+//     color: #ffffff;
+//     background: #324960;
+// }
+
+// .fl-table tr:nth-child(even) {
+//     background: #F8F8F8;
+// }
+
+// /* Responsive */
+
+// @media (max-width: 767px) {
+//     .fl-table {
+//         display: block;
+//         width: 100%;
+//     }
+//     .table-wrapper:before{
+//         content: "Scroll horizontally >";
+//         display: block;
+//         text-align: right;
+//         font-size: 11px;
+//         color: white;
+//         padding: 0 0 10px;
+//     }
+//     .fl-table thead, .fl-table tbody, .fl-table thead th {
+//         display: block;
+//     }
+//     .fl-table thead th:last-child{
+//         border-bottom: none;
+//     }
+//     .fl-table thead {
+//         float: left;
+//     }
+//     .fl-table tbody {
+//         width: auto;
+//         position: relative;
+//         overflow-x: auto;
+//     }
+//     .fl-table td, .fl-table th {
+//         padding: 20px .625em .625em .625em;
+//         height: 60px;
+//         vertical-align: middle;
+//         box-sizing: border-box;
+//         overflow-x: hidden;
+//         overflow-y: auto;
+//         width: 120px;
+//         font-size: 13px;
+//         text-overflow: ellipsis;
+//     }
+//     .fl-table thead th {
+//         text-align: left;
+//         border-bottom: 1px solid #f7f7f9;
+//     }
+//     .fl-table tbody tr {
+//         display: table-cell;
+//     }
+//     .fl-table tbody tr:nth-child(odd) {
+//         background: none;
+//     }
+//     .fl-table tr:nth-child(even) {
+//         background: transparent;
+//     }
+//     .fl-table tr td:nth-child(odd) {
+//         background: #F8F8F8;
+//         border-right: 1px solid #E6E4E4;
+//     }
+//     .fl-table tr td:nth-child(even) {
+//         border-right: 1px solid #E6E4E4;
+//     }
+//     .fl-table tbody td {
+//         display: block;
+//         text-align: center;
+//     }
+// }
 
 
 
-.carousel-item {
-    height: 500px;
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    img {
-      margin: auto;
-    }
-  }
-
-h1 {
-  font-family: 'Stylish', sans-serif;
-
-}
-
-.container {
-  margin: 20px;
-
-  // border: 3px solid black;
-
-  border: 3px solid black;
-
-  padding: 10px;
-
-}
-
-.panel-body {
-  margin: 20px
-
-}
-
-#centerbuttons {
-  margin: auto;
-
-}
-
-.button {
-  color: white;
-
-}
 
 
+// .carousel-item {
+//     height: 500px;
+//     width: 50%;
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     img {
+//       margin: auto;
+//     }
+//   }
 
-body {
-  /******************************************************************
-  This contains the font, Internet Explorer fall back options and
-  the background color for all of the sites
-  ******************************************************************/
-  background: #C3E6F3 no-repeat center center fixed;
-  margin: 0 auto;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
-  /* IE Fallback */
-  background: #c3e6f4;
-  width: 100%;
-  height: 100%;
-}
-/******************************************************************
-Below is the code for the red and blue button class which will be
-for all of the buttons in the program including the submit, next,
-cancel, etc.
-******************************************************************/
+// h1 {
+//   font-family: 'Stylish', sans-serif;
 
-.blueButton {
-  -moz-box-shadow: inset 0px -3px 7px 0px #29bbff;
-  -webkit-box-shadow: inset 0px -3px 7px 0px #29bbff;
-  box-shadow: inset 0px -3px 7px 0px #29bbff;
-  background-color: #0088BB;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #0088BB;
-  display: inline-block;
-  cursor: pointer;
-  color: #fff;
-  font-family: Arial;
-  font-size: 15px;
-  padding: 9px 23px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #263666;
-}
+// }
 
-.blueButton:hover {
-  background-color: #369cb8;
-}
+// .container {
+//   margin: 20px;
 
-.blueButton:active {
-  position: relative;
-  top: 1px;
-}
+//   // border: 3px solid black;
 
-/******************************************************************
-Below is the code for the confirm order page, it displays the material ID and cost of the order
-******************************************************************/
+//   border: 3px solid black;
 
-.payment input[type=text] {
-  width: 95%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: none;
-  text-align: left;
-}
+//   padding: 10px;
 
-.payment input[type=text]:focus {
-  border: 1px solid #a8a8a8;
-}
+// }
 
-.payment input[type=submit],
-.payment input[type=button] {
-  float: right;
-  margin: -20px 20px 10px 0px;
-}
+// .panel-body {
+//   margin: 20px
 
-.payment {
-  border-radius: 5px;
-  background-color: #f8f8f8;
-  padding: 40px;
-  width: 40%;
-  margin: 0 auto;
-  margin-top: 20px;
-  box-shadow: 1px 1px 5px #888888;
-}
+// }
+
+// #centerbuttons {
+//   margin: auto;
+
+// }
+
+// .button {
+//   color: white;
+
+// }
 
 
-/******************************************************************
-Below is the form for the confirm order table
-******************************************************************/
 
-/* CSS for Credit Card Payment form */
-.credit-card-box .panel-title {
-    display: inline;
-    font-weight: bold;
-}
-.credit-card-box .form-control.error {
-    border-color: red;
-    outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
-}
-.credit-card-box label.error {
-  font-weight: bold;
-  color: red;
-  padding: 2px 8px;
-  margin-top: 2px;
-}
-.credit-card-box .payment-errors {
-  font-weight: bold;
-  color: red;
-  padding: 2px 8px;
-  margin-top: 2px;
-}
-.credit-card-box label {
-    display: block;
-}
-/* The old "center div vertically" hack */
-.credit-card-box .display-table {
-    display: table;
-}
-.credit-card-box .display-tr {
-    display: table-row;
-}
-.credit-card-box .display-td {
-    display: table-cell;
-    vertical-align: middle;
-    width: 50%;
-}
-.credit-card-box .panel-heading img {
-    min-width: 180px;
-}
+// body {
+//   /******************************************************************
+//   This contains the font, Internet Explorer fall back options and
+//   the background color for all of the sites
+//   ******************************************************************/
+//   background: #C3E6F3 no-repeat center center fixed;
+//   margin: 0 auto;
+//   font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+//   /* IE Fallback */
+//   background: #c3e6f4;
+//   width: 100%;
+//   height: 100%;
+// }
+// /******************************************************************
+// Below is the code for the red and blue button class which will be
+// for all of the buttons in the program including the submit, next,
+// cancel, etc.
+// ******************************************************************/
 
-#map-container2 {
-    height: 500px;
-    width: 1140px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+// .blueButton {
+//   -moz-box-shadow: inset 0px -3px 7px 0px #29bbff;
+//   -webkit-box-shadow: inset 0px -3px 7px 0px #29bbff;
+//   box-shadow: inset 0px -3px 7px 0px #29bbff;
+//   background-color: #0088BB;
+//   -moz-border-radius: 3px;
+//   -webkit-border-radius: 3px;
+//   border-radius: 3px;
+//   border: 1px solid #0088BB;
+//   display: inline-block;
+//   cursor: pointer;
+//   color: #fff;
+//   font-family: Arial;
+//   font-size: 15px;
+//   padding: 9px 23px;
+//   text-decoration: none;
+//   text-shadow: 0px 1px 0px #263666;
+// }
+
+// .blueButton:hover {
+//   background-color: #369cb8;
+// }
+
+// .blueButton:active {
+//   position: relative;
+//   top: 1px;
+// }
+
+// /******************************************************************
+// Below is the code for the confirm order page, it displays the material ID and cost of the order
+// ******************************************************************/
+
+// .payment input[type=text] {
+//   width: 95%;
+//   padding: 12px 20px;
+//   margin: 8px 0;
+//   display: block;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   box-sizing: border-box;
+//   resize: none;
+//   text-align: left;
+// }
+
+// .payment input[type=text]:focus {
+//   border: 1px solid #a8a8a8;
+// }
+
+// .payment input[type=submit],
+// .payment input[type=button] {
+//   float: right;
+//   margin: -20px 20px 10px 0px;
+// }
+
+// .payment {
+//   border-radius: 5px;
+//   background-color: #f8f8f8;
+//   padding: 40px;
+//   width: 40%;
+//   margin: 0 auto;
+//   margin-top: 20px;
+//   box-shadow: 1px 1px 5px #888888;
+// }
+
+
+// /******************************************************************
+// Below is the form for the confirm order table
+// ******************************************************************/
+
+// /* CSS for Credit Card Payment form */
+// .credit-card-box .panel-title {
+//     display: inline;
+//     font-weight: bold;
+// }
+// .credit-card-box .form-control.error {
+//     border-color: red;
+//     outline: 0;
+//     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(255,0,0,0.6);
+// }
+// .credit-card-box label.error {
+//   font-weight: bold;
+//   color: red;
+//   padding: 2px 8px;
+//   margin-top: 2px;
+// }
+// .credit-card-box .payment-errors {
+//   font-weight: bold;
+//   color: red;
+//   padding: 2px 8px;
+//   margin-top: 2px;
+// }
+// .credit-card-box label {
+//     display: block;
+// }
+// /* The old "center div vertically" hack */
+// .credit-card-box .display-table {
+//     display: table;
+// }
+// .credit-card-box .display-tr {
+//     display: table-row;
+// }
+// .credit-card-box .display-td {
+//     display: table-cell;
+//     vertical-align: middle;
+//     width: 50%;
+// }
+// .credit-card-box .panel-heading img {
+//     min-width: 180px;
+// }
+
+// #map-container2 {
+//     height: 500px;
+//     width: 1140px;
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
