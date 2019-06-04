@@ -21,8 +21,14 @@
             <% end %>
             <% end %>
 
-            <% cashback_amount = (((params[:checkout].to_date - params[:checkin].to_date)*bed_price)*0.05).round(2) %>
-            Cashback: <%= number_to_currency(cashback_amount, unit: "£") %>
+            <% if params[:checkin].presence && params[:checkout].presence && params[:room_type].presence && params[:room_type].presence %>
+            <!-- spacing for readability -->
+              <% cashback_amount = (((params[:checkout].to_date - params[:checkin].to_date)*bed_price)*0.05).round(2) %>
+              <!-- presence dictates whether cashback logic will be displayed -->
+              Cashback: <%= number_to_currency(cashback_amount, unit: "£") %>
+              <% else %>
+              Booking Dates Needed!
+            <% end %>
 
           </div>
           <!-- cashback ends here -->
