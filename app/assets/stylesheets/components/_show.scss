@@ -1,4 +1,6 @@
-
+.flex {
+  display:flex;
+}
 
 #header-container {
   width: 25vw
@@ -112,8 +114,9 @@ p {
 .panel-body {
   text-align: center;
   margin-top: 20px;
-  margin-left: 100px;
-  margin-right: 100px;
+  // margin-left: 100px;
+  // margin-right: 100px;
+  width:65vw;
   border: 1px solid #e9ecef;
   border-radius: 5px;
 

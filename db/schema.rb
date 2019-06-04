@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_125736) do
+ActiveRecord::Schema.define(version: 2019_06_04_161627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,10 +35,6 @@ ActiveRecord::Schema.define(version: 2019_06_04_125736) do
     t.integer "amount_cents", default: 0, null: false
     t.string "state", default: "pending", null: false
     t.jsonb "payment"
-
-
-    t.float "cashback"
-
     t.bigint "hostel_id"
     t.index ["hostel_id"], name: "index_bookings_on_hostel_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
@@ -57,7 +53,7 @@ ActiveRecord::Schema.define(version: 2019_06_04_125736) do
     t.string "photo3"
     t.float "latitude"
     t.float "longitude"
-    t.string "description"
+    t.text "description"
     t.index ["user_id"], name: "index_hostels_on_user_id"
   end
 
