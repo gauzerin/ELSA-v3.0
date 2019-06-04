@@ -2,7 +2,7 @@ class PaymentsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new]
   skip_after_action :verify_authorized
 
-  before_action :set_order
+  before_action :set_booking
 
   def new
   end
@@ -26,9 +26,9 @@ class PaymentsController < ApplicationController
     currency:     @booking.amount.currency
   )
 
+  current_user.update(user_params)
   @booking.update(payment: charge.to_json, state: 'paid') # ???
   redirect_to trips_path  # ???
-
 
     rescue Stripe::CardError => e
     flash[:alert] = e.message
@@ -38,7 +38,11 @@ class PaymentsController < ApplicationController
 
 private
 
-  def set_order
+  def set_booking
     @booking = current_user.bookings.where(state: 'pending').find(params[:booking_id])
+  end
+
+  def user_params
+    params.require(:user).permit(:first_name, :phone_number, :last_name)
   end
 end
