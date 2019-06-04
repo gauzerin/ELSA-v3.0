@@ -378,7 +378,7 @@ So easy to find us, but not so easy to leave…"
 
 30.times do
   Bed.create!(
-  price: 10,
+  price: 12.0,
   room_type: "10 bed",
   hostel: hostel1
   )
@@ -386,7 +386,7 @@ end
 
 16.times do
   Bed.create!(
-  price: 15,
+  price: 16.0,
   room_type: "8 bed",
   hostel: hostel1
   )
@@ -394,7 +394,7 @@ end
 
 18.times do
   Bed.create!(
-  price: 20,
+  price: 24.0,
   room_type: "6 bed",
   hostel: hostel1
   )
@@ -402,7 +402,7 @@ end
 
 4.times do
   Bed.create!(
-  price: 25,
+  price: 27.0,
   room_type: "4 bed",
   hostel: hostel1
   )
@@ -410,7 +410,7 @@ end
 
 50.times do
   Bed.create!(
-  price: 40,
+  price: 38.0,
   room_type: "private",
   hostel: hostel1
   )
@@ -418,7 +418,7 @@ end
 
 40.times do
   Bed.create!(
-  price: 10.0,
+  price: 17.0,
   room_type: "10 bed",
   hostel: hostel2
   )
@@ -426,7 +426,7 @@ end
 
 24.times do
   Bed.create!(
-  price: 15.0,
+  price: 19.0,
   room_type: "8 bed",
   hostel: hostel2
   )
@@ -434,7 +434,7 @@ end
 
 6.times do
   Bed.create!(
-  price: 20.0,
+  price: 23.5,
   room_type: "6 bed",
   hostel: hostel2
   )
@@ -442,7 +442,7 @@ end
 
 16.times do
   Bed.create!(
-  price: 25.0,
+  price: 28.0,
   room_type: "4 bed",
   hostel: hostel2
   )
@@ -450,7 +450,7 @@ end
 
 25.times do
   Bed.create!(
-  price: 40.0,
+  price: 49.0,
   room_type: "private",
   hostel: hostel2
   )
@@ -458,7 +458,7 @@ end
 
 10.times do
   Bed.create!(
-  price: 10.0,
+  price: 11.0,
   room_type: "10 bed",
   hostel: hostel3
   )
@@ -466,7 +466,7 @@ end
 
 32.times do
   Bed.create!(
-  price: 15.0,
+  price: 13.0,
   room_type: "8 bed",
   hostel: hostel3
   )
@@ -474,7 +474,7 @@ end
 
 24.times do
   Bed.create!(
-  price: 20.0,
+  price: 22.0,
   room_type: "6 bed",
   hostel: hostel3
   )
@@ -482,7 +482,7 @@ end
 
 16.times do
   Bed.create!(
-  price: 25.0,
+  price: 28.0,
   room_type: "4 bed",
   hostel: hostel3
   )
@@ -490,7 +490,7 @@ end
 
 10.times do
   Bed.create!(
-  price: 40.0,
+  price: 45.0,
   room_type: "private",
   hostel: hostel3
   )
@@ -498,7 +498,7 @@ end
 
 10.times do
   Bed.create!(
-  price: 10.0,
+  price: 8.0,
   room_type: "10 bed",
   hostel: hostel4
   )
@@ -514,7 +514,7 @@ end
 
 18.times do
   Bed.create!(
-  price: 20.0,
+  price: 23.0,
   room_type: "6 bed",
   hostel: hostel4
   )
@@ -522,7 +522,7 @@ end
 
 40.times do
   Bed.create!(
-  price: 25.0,
+  price: 28.5,
   room_type: "4 bed",
   hostel: hostel4
   )
@@ -530,7 +530,7 @@ end
 
 60.times do
   Bed.create!(
-  price: 40.0,
+  price: 65.0,
   room_type: "private",
   hostel: hostel4
   )
@@ -538,7 +538,7 @@ end
 
 100.times do
   Bed.create!(
-  price: 10.0,
+  price: 12.5,
   room_type: "10 bed",
   hostel: hostel5
   )
@@ -546,7 +546,7 @@ end
 
 80.times do
   Bed.create!(
-  price: 15.0,
+  price: 16.5,
   room_type: "8 bed",
   hostel: hostel5
   )
@@ -554,7 +554,7 @@ end
 
 36.times do
   Bed.create!(
-  price: 20.0,
+  price: 20.75,
   room_type: "6 bed",
   hostel: hostel5
   )
@@ -562,7 +562,7 @@ end
 
 24.times do
   Bed.create!(
-  price: 25.0,
+  price: 26.0,
   room_type: "4 bed",
   hostel: hostel5
   )
@@ -570,7 +570,7 @@ end
 
 30.times do
   Bed.create!(
-  price: 40.0,
+  price: 45.0,
   room_type: "private",
   hostel: hostel5
   )
@@ -578,7 +578,7 @@ end
 
 80.times do
   Bed.create!(
-  price: 10.0,
+  price: 15.0,
   room_type: "10 bed",
   hostel: hostel6
   )
@@ -586,7 +586,7 @@ end
 
 80.times do
   Bed.create!(
-  price: 15.0,
+  price: 19.0,
   room_type: "8 bed",
   hostel: hostel6
   )
@@ -594,7 +594,7 @@ end
 
 36.times do
   Bed.create!(
-  price: 20.0,
+  price: 35.0,
   room_type: "6 bed",
   hostel: hostel6
   )
@@ -602,7 +602,7 @@ end
 
 8.times do
   Bed.create!(
-  price: 25.0,
+  price: 41.0,
   room_type: "4 bed",
   hostel: hostel6
   )
@@ -610,7 +610,7 @@ end
 
 65.times do
   Bed.create!(
-  price: 40.0,
+  price: 66.0,
   room_type: "private",
   hostel: hostel6
   )
@@ -618,7 +618,7 @@ end
 
 10.times do
   Bed.create!(
-  price: 10.0,
+  price: 11.5,
   room_type: "10 bed",
   hostel: hostel7
   )
@@ -626,7 +626,7 @@ end
 
 8.times do
   Bed.create!(
-  price: 15.0,
+  price: 16.0,
   room_type: "8 bed",
   hostel: hostel7
   )
@@ -634,7 +634,7 @@ end
 
 36.times do
   Bed.create!(
-  price: 20.0,
+  price: 27.0,
   room_type: "6 bed",
   hostel: hostel7
   )
@@ -642,7 +642,7 @@ end
 
 40.times do
   Bed.create!(
-  price: 25.0,
+  price: 33.0,
   room_type: "4 bed",
   hostel: hostel7
   )
@@ -650,7 +650,7 @@ end
 
 35.times do
   Bed.create!(
-  price: 40.0,
+  price: 52.0,
   room_type: "private",
   hostel: hostel7
   )
@@ -658,7 +658,7 @@ end
 
 100.times do
   Bed.create!(
-  price: 10.0,
+  price: 15.0,
   room_type: "10 bed",
   hostel: hostel8
   )
@@ -666,7 +666,7 @@ end
 
 16.times do
   Bed.create!(
-  price: 15.0,
+  price: 18.0,
   room_type: "8 bed",
   hostel: hostel8
   )
@@ -674,7 +674,7 @@ end
 
 36.times do
   Bed.create!(
-  price: 20.0,
+  price: 26.0,
   room_type: "6 bed",
   hostel: hostel8
   )
@@ -682,7 +682,7 @@ end
 
 40.times do
   Bed.create!(
-  price: 25.0,
+  price: 31.5,
   room_type: "4 bed",
   hostel: hostel8
   )
@@ -690,7 +690,7 @@ end
 
 30.times do
   Bed.create!(
-  price: 40.0,
+  price: 42.0,
   room_type: "private",
   hostel: hostel8
   )

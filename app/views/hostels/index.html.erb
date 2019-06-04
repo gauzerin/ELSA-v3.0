@@ -1,8 +1,9 @@
 <% content_for :title, 'Elsa | Our Hostels' %>
 
+<div>
+  <h1 id="header1"><strong>We have curated <%= @hostels.count %> Hostels<strong></h1>
+</div>
 
-
-<h1 class="header">We have found <%= @hostels.count %> Hostels:</h1>
 <div class="main-container">
   <div class="cards-trip">
     <% @hostels.each do |hostel| %>
@@ -10,6 +11,21 @@
         <img src=<%= hostel.photo1 %>>
         <div class="card-product-infos">
           <h1><%= hostel.name %></h1>
+          <!-- cashback begins here -->
+          <div id="cashback-btn" class="btn">
+
+            <% bed_price = 0 %>
+            <% hostel.beds.each do |bed| %>
+            <% if bed.room_type == params[:room_type] %>
+              <% bed_price = (bed.price_cents / 100) %>
+            <% end %>
+            <% end %>
+
+            <% cashback_amount = (((params[:checkout].to_date - params[:checkin].to_date)*bed_price)*0.05).round(2) %>
+            Cashback: <%= number_to_currency(cashback_amount, unit: "£") %>
+
+          </div>
+          <!-- cashback ends here -->
           <h2>Total Hostel Beds: <%= hostel.beds.count %></h2>
           <div class="btn-group bottom" role="group" aria-label="First group">
             <div class="btn-blue" id="button-show">
@@ -29,11 +45,13 @@
             <% else %>
               <% link_to hostel_path(hostel)%>
               <% end %>
-            <% end %>
+              <% end %>
+
           </div>
           </div>
         </div>
       </div>
+    <!-- card div ends at the following end -->
     <% end %>
   </div>
   <div id="map" class="map-index" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">

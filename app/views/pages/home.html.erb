@@ -19,21 +19,23 @@
                   <input type="text" id="booking_end_at" class="form-control border-radius input-lg datepicker" placeholder="Check-out" name="checkout">
                 </div>
               </div>
-              <div placeholder="# of Guests" class="guest">
+              <div placeholder="Number of Guests" class="guest">
                 <select name="bed_number" id="beds-count" class="form-control border-radius input-lg"
-                placeholder="Beds">
-                  <option value="1">1 beds</option>
-                  <option value="2">2 beds</option>
-                  <option value="3">3 beds</option>
-                  <option value="4">4 beds</option>
-                  <option value="5">5 beds</option>
-                  <option value="6">6 beds</option>
-                  <option value="7">7 beds</option>
-                  <option value="8">8 beds</option>
+                placeholder="Number of Guests">
+                  <option value="" disabled selected hidden>Number of Guests</option>
+                  <option value="1">1 guest</option>
+                  <option value="2">2 guests</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                  <option value="5">5 guests</option>
+                  <option value="6">6 guests</option>
+                  <option value="7">7 guests</option>
+                  <option value="8">8 guests</option>
                 </select>
               </div>
-              <div placeholder="room type" class="room-type">
-                <select name="room_type" id="room-types" class="form-control border-radius input-lg">
+              <div class="room-type">
+                <select name="room_type" id="room-types" class="form-control border-radius input-lg" placeholder="Room Type">
+                  <option value="" disabled selected hidden>Room Type</option>
                   <option value="10 bed">10 bed</option>
                   <option value="8 bed">8 bed</option>
                   <option value="6 bed">6 bed</option>
@@ -41,8 +43,10 @@
                   <option value="private">private</option>
                 </select>
               </div>
-              <input type='submit' class="btn-blue" value="Search"></input>
-             </form>
+              <div class="text-center">
+                <input type='submit' class="btn-blue" value="Search"></input>
+              </div>
+            </form>
         </div>
       </div>
     </div>
