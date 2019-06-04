@@ -3,6 +3,12 @@
 
 <div class="payment-card">
 <%= form_tag booking_payments_path(@booking) do %>
+  <label for="first-name-form">Enter first name</label>
+  <input type="text" id="first-name-form" name="user[first_name]">
+  <label for="last-name-form">Enter last name</label>
+  <input type="text" id="last-name-form" name="user[last_name]">
+  <label for="phone-number-form">Enter phone number</label>
+  <input type="text" id="phone-number-form" name="user[phone_number]">
   <article>
     <label class="amount">
       <span>Amount: <%= humanized_money_with_symbol(@booking.amount) %></span>

@@ -1,5 +1,3 @@
-require "pry-byebug"
-
 class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking).where(user: current_user)
@@ -16,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
 
     authorize @booking
-      if @booking.save
+      if @booking.save!
         redirect_to new_booking_payment_path(@booking), notice: "Booking successfully created"
       else
         redirect_to hostel_path(@hostel.id), notice: "Booking failed"
@@ -74,7 +72,6 @@ private
     @hostel.beds.each do |bed|
       unavailable_bookings << bed.bookings
     end
-
     unavailable_bookings.flatten!
     booked_date_range = @attributes[:start_at]..@attributes[:end_at]
     unavailable_bookings.select! { |booking| (booked_date_range === booking.start_at) }
@@ -85,10 +82,9 @@ private
     else
       unavailable_beds_ids.flatten!
     end
-
     available_beds = @hostel.beds.select { |bed| !unavailable_beds_ids.include?(bed.id) }
     available_beds.select { |bed| bed.room_type == params[:booking][:other][:room_type] }
-    .first(params[:booking][:other][:bed_number].to_i)
+                  .first(params[:booking][:other][:bed_number].to_i)
   end
 
   def map_beds_to_ids(beds)
