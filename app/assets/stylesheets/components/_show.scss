@@ -144,12 +144,21 @@ p {
 
 }
 
-.input-items {
+.input-items1 {
   position:relative;
-  margin:10px auto;
-  display:inline-block;
-  width: 20%;
+  margin-top:10px auto;
+  margin-bottom: 5px;
+  display: inline-block;
+  width: 40%;
 }
+
+.input-items2 {
+  position: relative;
+  margin: 10px auto;
+  // display: inline-block;
+  width: 32%;
+}
+
 
 #emoji-index {
   text-align: center;
