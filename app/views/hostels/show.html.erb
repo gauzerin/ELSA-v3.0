@@ -38,15 +38,14 @@
     <% ["bad experience", "normal experience", "fun experience", "amazing experience"].each do |emoji| %>
        <% case emoji %>
         <% when "bad experience" %>
-         <span>😭</span>
+         <span id="crying-emoji">😭 <%= @hostel.reviews.where(emoji: emoji ).count  %> bad experiences</span>
         <% when "normal experience" %>
-         <span>😐</span>
+         <span id="normal-emoji">😐 <%= @hostel.reviews.where(emoji: emoji ).count %> normal experiences</span>
         <% when "fun experience" %>
-         <span>😃</span>
+         <span id="happy-emoji">😃 <%= @hostel.reviews.where(emoji: emoji ).count %> fun experiences</span>
         <% when "amazing experience" %>
-         <span>😍</span>
+         <span>😍 <%= @hostel.reviews.where(emoji: emoji ).count %> amazing experiences</span>
        <% end %>
-       <%= @hostel.reviews.where(emoji: emoji ).count %>
      <% end %>
   <% end %>
  </div>
