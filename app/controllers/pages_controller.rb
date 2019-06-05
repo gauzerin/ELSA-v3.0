@@ -19,9 +19,6 @@ class PagesController < ApplicationController
 
   private
 
-
-
-
   def total_cashback
     arr_cashback_for_each_booking = []
       sum = 0.0
