@@ -4,9 +4,12 @@ skip_before_action :authenticate_user!, only: [:index, :show]
  def index
       @hostels = policy_scope(Hostel)
       @hostels = Hostel.all
+
+      # raise
       # search method below:
       if params[:city].present?
-        @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:city]}%")
+        @hostels = Hostel.near(params[:city], 10)
+        # @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:city]}%")
       end
 
 # second search param is below:
