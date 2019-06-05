@@ -1,4 +1,4 @@
-<h1>Welcome to your dashboard!</h1>
+<h1 id="user-dash-h1">Welcome to your dashboard <%= current_user.first_name %>!</h1>
 
 <div class="main-container">
 
@@ -55,7 +55,7 @@
 </div>
   </div>
 
-  <div id="map-container3">
+  <div id="map-container-userdash">
     <div id="map" class="map-index" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>

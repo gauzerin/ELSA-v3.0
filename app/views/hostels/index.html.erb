@@ -60,8 +60,12 @@
     <!-- card div ends at the following end -->
     <% end %>
   </div>
-  <div id="map" class="map-index" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+
+  <div id="map-container-index">
+    <div id="map" class="map-index" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
+
 </div>
 
 
