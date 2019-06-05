@@ -28,7 +28,7 @@ class PaymentsController < ApplicationController
 
   current_user.update(user_params)
   @booking.update(payment: charge.to_json, state: 'paid') # ???
-  redirect_to user_dashboard_path, notice: "Booking failed"
+  redirect_to user_dashboard_path, notice: "Booking successful!"
 
     rescue Stripe::CardError => e
     flash[:alert] = e.message

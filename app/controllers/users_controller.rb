@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def trips
     @bookings = Booking.where(user: current_user)
     authorize @bookings
