@@ -17,7 +17,7 @@
   background-size: cover !important;
   align-items: center;
   justify-content: center;
-  z-index: -1;
+  z-index: -100;
   filter: brightness(80%);
 }
 
@@ -31,12 +31,14 @@
 
 .banner-content {
   position: absolute;
-  bottom: 180px;
-  left: 50px;
+  bottom: 25vh;
+  left: 10vw;
   opacity: 0.9;
 }
 
-
+.search-home {
+  width: 100%;
+}
 // .bg-image {
  // background-image: url(environment-farm-field-1166209.jpg);
 // }
