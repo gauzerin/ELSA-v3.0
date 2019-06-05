@@ -10,3 +10,9 @@ README.txt
 8. Compute total_cost and pass it with the form.
 9. Pass this to stripe.
 10. If test transaction successfull redirec the user to hostel.
+
+
+<!-- bed types was here but looked horrible -->
+      <!-- <% @bed_types.each #do |bed_type| %> -->
+        <!-- <li><%=  bed_type %></li> -->
+        <!-- <% #end %> -->
