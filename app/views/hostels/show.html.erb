@@ -80,8 +80,8 @@
       <%= simple_form_for [@hostel, @booking] do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
       <div class="input-items1">
-        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "input-items1"} %>
-        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "input-items1"}%>
+        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker", value: params[:checkin]} %>
+        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker", value: params[:checkout]} %>
       </div>
       <!-- line break for readability -->
         <div class="input-items">
