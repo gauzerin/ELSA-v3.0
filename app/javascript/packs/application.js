@@ -3,8 +3,10 @@ import "../plugins/flatpickr"
 
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 import { initMapbox } from '../plugins/init_mapbox';
+import { price } from '../plugins/price';
 import { initAutocomplete } from '../plugins/init_autocomplete'
 initAutocomplete();
+
 const url = window.location;
 
 const navbarTransparent = (() => {
@@ -14,4 +16,5 @@ const navbarTransparent = (() => {
 $(document).ready(() => {
   initMapbox();
   if (url.pathname === '/') { navbarTransparent(); }
+  if (/hostels\/[1-9]*/.test(url.pathname)) { price(); }
 })
