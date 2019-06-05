@@ -38,6 +38,7 @@
 .background-container {
   background-color: #A1D5F2;
   padding: 2rem 0;
+  min-height: calc(100vh - 146px);
 }
 
 .flex-container {
