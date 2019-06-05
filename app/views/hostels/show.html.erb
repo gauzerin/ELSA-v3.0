@@ -78,10 +78,10 @@
     <ul>
       <%= simple_form_for [@hostel, @booking] do |f| %>
       <%= f.hidden_field :hostel_id, :value => params[:id] %>
-      <div class="input-items1">
-        <%= f.input :start_at, as: :string, label: "Start Date", placeholder: "From", required: true, input_html: {class: "datepicker", value: params[:checkin]} %>
-        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "To", required: true, input_html: {class: "datepicker", value: params[:checkout]} %>
-      </div>
+      <!-- <div class="input-items1"> -->
+        <%= f.input :start_at, as: :string, required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "input-items1"}, placeholder: "Check-in" %>
+        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "Check-out", required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "input-items1"}, id: "end_at"%>
+      <!-- </div> -->
       <!-- line break for readability -->
         <div class="input-items">
 
@@ -179,9 +179,18 @@
   ></div>
 </div>
 
+<script>
+  const start = document.getElementById("booking_start_at");
+  const end = document.getElementById("booking_end_at");
+  const r_type = document.getElementById("booking_other_room_type")
+  const price = document.getElementById("booking_other_bed_number")
+
+  element.addEventListener("change", (event) => {
+    console.log(event);
+  });
+  var length = Date.parse(start) - Date.parse(end);
+  var price = length
+</script>
+
 <!-- This is required to make a form to choose beds in different rooms, where beds are going to be listed -->
 
-<!-- bed types was here but looked horrible -->
-      <!-- <% @bed_types.each do |bed_type| %> -->
-        <!-- <li><%=  bed_type %></li> -->
-        <!-- <% end %> -->

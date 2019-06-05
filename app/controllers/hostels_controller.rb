@@ -61,11 +61,17 @@ skip_before_action :authenticate_user!, only: [:index, :show]
       # added a map on the show page
     @booking = Booking.new
     @bed_types = @hostel.beds.map {|bed| bed.room_type}.uniq
+
     @private = {price: @hostel.beds.where(room_type: "private").first.price_cents, type: @hostel.beds.where(room_type: "private").first.room_type}
     @tenbed = {price: @hostel.beds.where(room_type: "10 bed").first.price_cents, type: @hostel.beds.where(room_type: "10 bed").first.room_type}
     @eightbed = {price: @hostel.beds.where(room_type: "8 bed").first.price_cents, type: @hostel.beds.where(room_type: "8 bed").first.room_type}
     @sixbed = {price: @hostel.beds.where(room_type: "6 bed").first.price_cents, type: @hostel.beds.where(room_type: "6 bed").first.room_type};
     @fourbed = {price: @hostel.beds.where(room_type: "4 bed").first.price_cents, type: @hostel.beds.where(room_type: "4 bed").first.room_type}
+
+
+    @bed_prices = @hostel.beds.map { |bed| bed.room_type }
+    # this needs to be a hash of room types and their associated prices (currently an array)
+
   end
 # EDIT
   def edit
