@@ -1,16 +1,12 @@
-// .cards-summaries {
-//   display:flex;
-//   border-radius: 5px;
-//   width: auto;
-//   margin-top:30px;
-//   margin-bottom: 30px;
-//   // padding-top: 50px;
+.map-index-2 {
+  width: 100%;
 
-// }
+}
 
 .main-container {
   display:flex;
   justify-content:center;
+
 }
 
 h2 {
@@ -73,26 +69,10 @@ h2 {
    // }
 
 
+ #map-container-userdash {
+  width: 100%;
 
-
-
-
-   #map-container3 {
-    // height:100vh;
-    // position:fixed;
-    // width:660px;
-    // display:flex;
-    // top:135px;
-    // position:fixed;
-    // padding-left:35px;
-    // bottom:0px;
-    // margin-left:705px;
-    // right:20px;
-    // border-radius:5px;
-
-
-
-   }
+ }
 
 // table, th, td {
 // }
@@ -127,7 +107,8 @@ th, td {
 .dashboard-left-side-container {
   margin-left: 20px;
   margin-bottom: 200px;
-  margin-right: 6vw;
+  margin-right: 2vw;
+  margin-top: 15px;
 }
 
 .table-headers {
@@ -140,3 +121,5 @@ th, td {
 .even {
   background-color: rgba(7, 104, 159, 0.1);
 }
+
+
