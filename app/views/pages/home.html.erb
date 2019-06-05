@@ -1,5 +1,5 @@
 <div class="background">
-  <%= video_tag "travel_copy.mp4", controls: true, autoplay: :autoplay, loop: :loop, muted: true, class: "video" %>
+  <%= video_tag "travel_copy.mp4", autoplay: :autoplay, loop: :loop, muted: true, class: "video" %>
   <div class="banner-content">
     <div class="container-home">
       <div class="center-row">
@@ -9,7 +9,7 @@
             <form action="/hostels" method='get'>
               <div class="form-row">
                 <div class="city">
-                  <input type="text" class="form-control input-lg" placeholder="City" name="city" >
+                  <input type="text" class="form-control border-radius input-lg" placeholder="City" name="city" >
                   <!-- the 'name="city"'' is for the search functionality -->
                  </div>
                 <div class="col">
@@ -44,7 +44,7 @@
                 </select>
               </div>
               <div class="text-center">
-                <input type='submit' class="btn-blue" value="Search"></input>
+                <input type='submit' class="btn-blue search-home" value="Search"></input>
               </div>
             </form>
         </div>
