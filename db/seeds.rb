@@ -380,7 +380,7 @@ So easy to find us, but not so easy to leave…"
   Bed.create!(
   price: 12.0,
   room_type: "10 bed",
-  hostel: hostel1
+  hostel: hostel1,
   )
 end
 
