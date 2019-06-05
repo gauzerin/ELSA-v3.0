@@ -1,5 +1,6 @@
-
-
+.table-headers {
+  font-weight: bold;
+}
 
 
 .container {
@@ -167,18 +168,21 @@ p {
 
 }
 
+#price-display{
+  margin-top: 30px;
+}
 
 
 .input-items1 {
 
-  display:flex !important;
+  display:inline-block;
   position:relative;
   margin-top:10px auto;
   margin-bottom: 5px;
   // justify-content:space-between;
   // display: inline-block !important;
   // display:flex;
-   // width: 40%;
+   width: 48%;
 }
 
 .input-items2 {
