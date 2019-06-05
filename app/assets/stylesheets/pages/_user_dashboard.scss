@@ -1,3 +1,8 @@
+#user-dash-h1 {
+margin-left: 20px;
+
+}
+
 .map-index-2 {
   width: 100%;
 
@@ -6,6 +11,7 @@
 .main-container {
   display:flex;
   justify-content:center;
+  margin-top: 15px;
 
 }
 
@@ -21,6 +27,11 @@ h2 {
 .total-box {
   font-family: 'Stylish', sans-serif;
   // position:relative;
+}
+
+#map-container-userdash {
+  height: 100vh;
+
 }
 
 // .btn {
@@ -108,7 +119,7 @@ th, td {
   margin-left: 20px;
   margin-bottom: 200px;
   margin-right: 2vw;
-  margin-top: 15px;
+
 }
 
 .table-headers {

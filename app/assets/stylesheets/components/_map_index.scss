@@ -21,12 +21,18 @@
 }
 
 .map-index {
+  height: 100%;
+}
+
+#map-container-index {
   margin-top: 15px;
   height: 100vh;
   width: 35vw;
   position: sticky !important;
   top: 0;
 }
+
+
 
 // /*needed for old page, remove after merge of new frontend module*/
 // #gmap_map {
