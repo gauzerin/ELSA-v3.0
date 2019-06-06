@@ -81,7 +81,7 @@
       <!-- <div class="input-items1"> -->
       <div class="form-width">
         <%= f.input :start_at, as: :string, required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "input-items1"}, placeholder: "Check-in" %>
-        <%= f.input :end_at, as: :string, required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "input-items1"}, id: "end_at"%>
+        <%= f.input :end_at, as: :string, required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "input-items1"}, placeholder: "Check-out" %>
       </div>
 
       <div class="input-items">
@@ -192,6 +192,5 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 </div>
-
 <!-- This is required to make a form to choose beds in different rooms, where beds are going to be listed -->
 
