@@ -1,10 +1,22 @@
 #price-table {
   table-layout: fixed;
+  width: 30vw;
+  margin-left: 40px;
 
+}
+
+.form-control {
+  border-radius: 5px;
 }
 
 .table-headers {
   font-weight: bold;
+}
+
+#booking_start_at {
+  padding: 8px;
+  color: #000000;
+
 }
 
 
@@ -40,10 +52,12 @@ p {
 
 #booking-button-div {
   text-align: center;
+  margin-top: 20px;
 
 }
 
 .booking-button {
+  width: 100%;
   border: none;
   font-family: 'Stylish', sans-serif;
   color: white;
@@ -157,7 +171,7 @@ p {
 }
 
 #inputs-container {
-  text-align: center;
+  // text-align: center;
   position:sticky !important;
   top:0%;
   height:645px;
@@ -165,11 +179,12 @@ p {
   // margin-right: 100px;
   // margin-left: 100px;
   // width: 90%;
-  border: 1px solid #e9ecef;
+  // border: 1px solid #e9ecef;
   border-radius: 5px;
-  padding-right: 40px;
+  // padding-right: 40px;
   padding-top: 20px;
-  margin-right:10px;
+  margin-right:40px;
+  margin-bottom: 40px;
 
 }
 
