@@ -591,6 +591,7 @@ end
   price: 19.0,
   room_type: "8 bed",
   hostel: hostel6,
+  )
 end
 
 36.times do
