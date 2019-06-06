@@ -19,14 +19,19 @@ const price = () => {
     switch(roomType) {
       case "private":
         priceOfRoom = roomPrices[0];
+        break;
       case "4 bed":
         priceOfRoom = roomPrices[1];
+        break;
       case "6 bed":
         priceOfRoom = roomPrices[2];
+        break;
       case "8 bed":
         priceOfRoom = roomPrices[3];
+        break;
       case "10 bed":
         priceOfRoom = roomPrices[4];
+        break;
     }
     const price = `<div class="price-container2">Price: £${priceOfRoom * numDays * numGuests} <br>`;
     const cashback = `Cashback: £${Math.round(priceOfRoom * numDays * numGuests * 0.05)}</div>`;
