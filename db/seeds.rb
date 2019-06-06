@@ -404,7 +404,7 @@ end
 
 4.times do
   Bed.create!(
-  price: 27.0,
+  price: 26.5,
   room_type: "4 bed",
   hostel: hostel1
   )
@@ -444,7 +444,7 @@ end
 
 16.times do
   Bed.create!(
-  price: 28.0,
+  price: 29.25,
   room_type: "4 bed",
   hostel: hostel2
   )
@@ -484,7 +484,7 @@ end
 
 16.times do
   Bed.create!(
-  price: 28.0,
+  price: 31.0,
   room_type: "4 bed",
   hostel: hostel3
   )
@@ -524,7 +524,7 @@ end
 
 40.times do
   Bed.create!(
-  price: 28.5,
+  price: 33.0,
   room_type: "4 bed",
   hostel: hostel4
   )
