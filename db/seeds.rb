@@ -390,7 +390,7 @@ end
   Bed.create!(
   price: 16.0,
   room_type: "8 bed",
-  hostel: hostel1
+  hostel: hostel1,
   )
 end
 
@@ -398,15 +398,15 @@ end
   Bed.create!(
   price: 24.0,
   room_type: "6 bed",
-  hostel: hostel1
+  hostel: hostel1,
   )
 end
 
 4.times do
   Bed.create!(
-  price: 27.0,
+  price: 26.5,
   room_type: "4 bed",
-  hostel: hostel1
+  hostel: hostel1,
   )
 end
 
@@ -414,7 +414,7 @@ end
   Bed.create!(
   price: 38.0,
   room_type: "private",
-  hostel: hostel1
+  hostel: hostel1,
   )
 end
 
@@ -422,7 +422,7 @@ end
   Bed.create!(
   price: 17.0,
   room_type: "10 bed",
-  hostel: hostel2
+  hostel: hostel2,
   )
 end
 
@@ -430,7 +430,7 @@ end
   Bed.create!(
   price: 19.0,
   room_type: "8 bed",
-  hostel: hostel2
+  hostel: hostel2,
   )
 end
 
@@ -438,15 +438,15 @@ end
   Bed.create!(
   price: 23.5,
   room_type: "6 bed",
-  hostel: hostel2
+  hostel: hostel2,
   )
 end
 
 16.times do
   Bed.create!(
-  price: 28.0,
+  price: 29.25,
   room_type: "4 bed",
-  hostel: hostel2
+  hostel: hostel2,
   )
 end
 
@@ -454,7 +454,7 @@ end
   Bed.create!(
   price: 49.0,
   room_type: "private",
-  hostel: hostel2
+  hostel: hostel2,
   )
 end
 
@@ -462,7 +462,7 @@ end
   Bed.create!(
   price: 11.0,
   room_type: "10 bed",
-  hostel: hostel3
+  hostel: hostel3,
   )
 end
 
@@ -470,7 +470,7 @@ end
   Bed.create!(
   price: 13.0,
   room_type: "8 bed",
-  hostel: hostel3
+  hostel: hostel3,
   )
 end
 
@@ -478,15 +478,15 @@ end
   Bed.create!(
   price: 22.0,
   room_type: "6 bed",
-  hostel: hostel3
+  hostel: hostel3,
   )
 end
 
 16.times do
   Bed.create!(
-  price: 28.0,
+  price: 31.0,
   room_type: "4 bed",
-  hostel: hostel3
+  hostel: hostel3,
   )
 end
 
@@ -494,7 +494,7 @@ end
   Bed.create!(
   price: 45.0,
   room_type: "private",
-  hostel: hostel3
+  hostel: hostel3,
   )
 end
 
@@ -502,7 +502,7 @@ end
   Bed.create!(
   price: 8.0,
   room_type: "10 bed",
-  hostel: hostel4
+  hostel: hostel4,
   )
 end
 
@@ -510,7 +510,7 @@ end
   Bed.create!(
   price: 15.0,
   room_type: "8 bed",
-  hostel: hostel4
+  hostel: hostel4,
   )
 end
 
@@ -518,127 +518,7 @@ end
   Bed.create!(
   price: 23.0,
   room_type: "6 bed",
-  hostel: hostel4
-  )
-end
-
-40.times do
-  Bed.create!(
-  price: 28.5,
-  room_type: "4 bed",
-  hostel: hostel4
-  )
-end
-
-60.times do
-  Bed.create!(
-  price: 65.0,
-  room_type: "private",
-  hostel: hostel4
-  )
-end
-
-100.times do
-  Bed.create!(
-  price: 12.5,
-  room_type: "10 bed",
-  hostel: hostel5
-  )
-end
-
-80.times do
-  Bed.create!(
-  price: 16.5,
-  room_type: "8 bed",
-  hostel: hostel5
-  )
-end
-
-36.times do
-  Bed.create!(
-  price: 20.75,
-  room_type: "6 bed",
-  hostel: hostel5
-  )
-end
-
-24.times do
-  Bed.create!(
-  price: 26.0,
-  room_type: "4 bed",
-  hostel: hostel5
-  )
-end
-
-30.times do
-  Bed.create!(
-  price: 45.0,
-  room_type: "private",
-  hostel: hostel5
-  )
-end
-
-80.times do
-  Bed.create!(
-  price: 15.0,
-  room_type: "10 bed",
-  hostel: hostel6
-  )
-end
-
-80.times do
-  Bed.create!(
-  price: 19.0,
-  room_type: "8 bed",
-  hostel: hostel6
-  )
-end
-
-36.times do
-  Bed.create!(
-  price: 35.0,
-  room_type: "6 bed",
-  hostel: hostel6
-  )
-end
-
-8.times do
-  Bed.create!(
-  price: 41.0,
-  room_type: "4 bed",
-  hostel: hostel6
-  )
-end
-
-65.times do
-  Bed.create!(
-  price: 66.0,
-  room_type: "private",
-  hostel: hostel6
-  )
-end
-
-10.times do
-  Bed.create!(
-  price: 11.5,
-  room_type: "10 bed",
-  hostel: hostel7
-  )
-end
-
-8.times do
-  Bed.create!(
-  price: 16.0,
-  room_type: "8 bed",
-  hostel: hostel7
-  )
-end
-
-36.times do
-  Bed.create!(
-  price: 27.0,
-  room_type: "6 bed",
-  hostel: hostel7
+  hostel: hostel4,
   )
 end
 
@@ -646,7 +526,126 @@ end
   Bed.create!(
   price: 33.0,
   room_type: "4 bed",
-  hostel: hostel7
+  hostel: hostel4,
+  )
+end
+
+60.times do
+  Bed.create!(
+  price: 65.0,
+  room_type: "private",
+  hostel: hostel4,
+  )
+end
+
+100.times do
+  Bed.create!(
+  price: 12.5,
+  room_type: "10 bed",
+  hostel: hostel5,
+  )
+end
+
+80.times do
+  Bed.create!(
+  price: 16.5,
+  room_type: "8 bed",
+  hostel: hostel5,
+  )
+end
+
+36.times do
+  Bed.create!(
+  price: 20.75,
+  room_type: "6 bed",
+  hostel: hostel5,
+  )
+end
+
+24.times do
+  Bed.create!(
+  price: 26.0,
+  room_type: "4 bed",
+  hostel: hostel5,
+  )
+end
+
+30.times do
+  Bed.create!(
+  price: 45.0,
+  room_type: "private",
+  hostel: hostel5,
+  )
+end
+
+80.times do
+  Bed.create!(
+  price: 15.0,
+  room_type: "10 bed",
+  hostel: hostel6,
+  )
+end
+
+80.times do
+  Bed.create!(
+  price: 19.0,
+  room_type: "8 bed",
+  hostel: hostel6,
+end
+
+36.times do
+  Bed.create!(
+  price: 35.0,
+  room_type: "6 bed",
+  hostel: hostel6,
+  )
+end
+
+8.times do
+  Bed.create!(
+  price: 41.0,
+  room_type: "4 bed",
+  hostel: hostel6,
+  )
+end
+
+65.times do
+  Bed.create!(
+  price: 66.0,
+  room_type: "private",
+  hostel: hostel6,
+  )
+end
+
+10.times do
+  Bed.create!(
+  price: 11.5,
+  room_type: "10 bed",
+  hostel: hostel7,
+  )
+end
+
+8.times do
+  Bed.create!(
+  price: 16.0,
+  room_type: "8 bed",
+  hostel: hostel7,
+  )
+end
+
+36.times do
+  Bed.create!(
+  price: 27.0,
+  room_type: "6 bed",
+  hostel: hostel7,
+  )
+end
+
+40.times do
+  Bed.create!(
+  price: 33.0,
+  room_type: "4 bed",
+  hostel: hostel7,
   )
 end
 
@@ -654,7 +653,7 @@ end
   Bed.create!(
   price: 52.0,
   room_type: "private",
-  hostel: hostel7
+  hostel: hostel7,
   )
 end
 
@@ -662,7 +661,7 @@ end
   Bed.create!(
   price: 15.0,
   room_type: "10 bed",
-  hostel: hostel8
+  hostel: hostel8,
   )
 end
 
@@ -670,7 +669,7 @@ end
   Bed.create!(
   price: 18.0,
   room_type: "8 bed",
-  hostel: hostel8
+  hostel: hostel8,
   )
 end
 
@@ -678,7 +677,7 @@ end
   Bed.create!(
   price: 26.0,
   room_type: "6 bed",
-  hostel: hostel8
+  hostel: hostel8,
   )
 end
 
@@ -686,7 +685,7 @@ end
   Bed.create!(
   price: 31.5,
   room_type: "4 bed",
-  hostel: hostel8
+  hostel: hostel8,
   )
 end
 
@@ -694,7 +693,7 @@ end
   Bed.create!(
   price: 42.0,
   room_type: "private",
-  hostel: hostel8
+  hostel: hostel8,
   )
 end
 
