@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user # this sets booking.user to current user, this means the booking in the future will be avialable only to user who created it
     @booking.hostel = @hostel
 
-    @booking.cashback = ((@booking.end_at - @booking.start_at)*(@booking.amount_cents / 100))*0.05
+    @booking.cashback = (@booking.amount_cents / 100)*0.05
 
     authorize @booking
       if @booking.save!

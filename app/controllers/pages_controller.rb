@@ -27,8 +27,9 @@ class PagesController < ApplicationController
           sum += booking.cashback unless booking.cashback.nil?
         end
       end
-      arr_cashback_for_each_booking << sum
-  arr_cashback_for_each_booking.reduce(0) { |sum, num| sum + num }
+      return sum
+  #     arr_cashback_for_each_booking << sum
+  # arr_cashback_for_each_booking.reduce(0) { |sum, num| sum + num }
     end
   end
 
