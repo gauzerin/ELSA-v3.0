@@ -28,14 +28,14 @@
               Cashback: <%= number_to_currency(cashback_amount, unit: "£") %>
               <% else %>
               Booking Dates Needed!
-            <% end %>
+              <% end %>
 
           </div>
           <!-- cashback ends here -->
           <h2>Total Hostel Beds: <%= hostel.beds.count %></h2>
           <div class="btn-group bottom" role="group" aria-label="First group">
             <div class="btn-blue" id="button-show">
-              <%= link_to "Show More", hostel_path(hostel), class: "button-text" %>
+              <%= link_to "Show More", hostel_path(hostel) + "?checkin=#{params[:checkin]}&checkout=#{params[:checkout]}&room_type=#{params[:room_type]}&beds=#{params[:bed_number]}", class: "button-text" %>
             </div>
           <div>
             <% if params[:checkin].presence && params[:checkout].presence && params[:room_type].presence && params[:room_type].presence %>
@@ -43,15 +43,15 @@
               <%= f.hidden_field :hostel_id, :value => hostel.id %>
               <%= f.hidden_field :start_at, as: :string, value: params[:checkin] %>
               <%= f.hidden_field :end_at, as: :string, value: params[:checkout] %>
-                <%= f.simple_fields_for :other do |a| %>
-                  <%= a.hidden_field :room_type, value: params[:room_type] %>
-                  <%= a.hidden_field :bed_number, value: params[:bed_number] %>
-                <% end %>
-              <%= f.submit "Book Now", class: "btn-blue", id: "button-book"%>
-            <% else %>
-              <% link_to hostel_path(hostel)%>
+              <%= f.simple_fields_for :other do |a| %>
+              <%= a.hidden_field :room_type, value: params[:room_type] %>
+              <%= a.hidden_field :bed_number, value: params[:bed_number] %>
               <% end %>
-              <% end %>
+            <%= f.submit "Book Now", class: "btn-blue", id: "button-book"%>
+          <% else %>
+            <% link_to hostel_path(hostel)%>
+            <% end %>
+            <% end %>
 
           </div>
           </div>

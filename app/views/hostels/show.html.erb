@@ -81,14 +81,21 @@
       <!-- <div class="input-items1"> -->
       <div class="form-width">
         <%= f.input :start_at, as: :string, required: true, input_html: {class: "datepicker", value: params[:checkin]}, wrapper_html: {class: "input-items1"}, placeholder: "Check-in" %>
-        <%= f.input :end_at, as: :string, label: 'End Date'.html_safe, placeholder: "Check-out", required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "input-items1"}, id: "end_at"%>
+        <%= f.input :end_at, as: :string, required: true, input_html: {class: "datepicker", value: params[:checkout]}, wrapper_html: {class: "input-items1"}, id: "end_at"%>
       </div>
-      <!-- </div> -->
-      <!-- line break for readability -->
-        <div class="input-items">
 
+      <div class="input-items">
+        <%= f.simple_fields_for :other do |a| %>
+          <%= a.input :bed_number, collection: (1..10), selected: params[:beds], id: "booking_other_bed_number" %>
+          <%= a.input :room_type, collection: @bed_types, selected: params[:room_type], id: "booking_other_room_type"  %>
+          <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
+          <!-- make dynamic booking bed count by altering line 48 -->
+        <% end %>
+      </div>
+      <!-- line break for readability -->
+        <!-- <div class="input-items">
           <div class="form-group select required booking_other_bed_number input-items2"><label class="form-control-label select required" for="booking_other_bed_number">Number of Guests <abbr title="required">*</abbr></label><select class="form-control select required" name="booking[other][bed_number]" id="booking_other_bed_number">
-            <option value="" disabled selected hidden>Number of Guests</option>
+            <option value="" hidden>Number of Guests</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -101,18 +108,17 @@
             <option value="10">10</option></select>
           </div>
           <div class="form-group select required booking_other_room_type input-items2"><label class="form-control-label select required" for="booking_other_room_type">Room Type <abbr title="required">*</abbr></label>
-            <select class="form-control select required" placeholder="Room Type" name="booking[other][room_type]" id="booking_other_room_type">
-              <option value="" disabled selected hidden>Room Type</option>
+            <select class="form-control select required"  name="booking[other][room_type]" id="booking_other_room_type" value="">
               <option value="10 bed">10 bed</option>
               <option value="8 bed">8 bed</option>
               <option value="6 bed">6 bed</option>
               <option value="4 bed">4 bed</option>
-              <option value="Private">private</option>
+              <option value="private">private</option>
             </select>
           </div>
-          <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
+          # Need to add reg_ex to ensure that users can only choose an appropriate number of bds for the room type -->
           <!-- make dynamic booking bed count by altering line 48 -->
-        </div>
+        <!-- </div> -->
           <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
           <!-- make dynamic booking bed count by altering line 48 -->
       <div id="booking-button-div">
