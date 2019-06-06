@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(version: 2019_06_04_161627) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "beds", default: [], array: true
+    t.float "cashback"
     t.integer "amount_cents", default: 0, null: false
     t.string "state", default: "pending", null: false
     t.jsonb "payment"
-    t.float "cashback"
     t.bigint "hostel_id"
     t.index ["hostel_id"], name: "index_bookings_on_hostel_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
