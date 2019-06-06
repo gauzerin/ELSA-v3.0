@@ -1,4 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+
+
+\# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -800,7 +802,7 @@ end
 
 # reviews for hostel 4
 
-120.times do
+33.times do
   Review.create!(
   emoji: "bad experience",
   hostel: hostel4,
@@ -808,7 +810,7 @@ end
   )
 end
 
-200.times do
+101.times do
   Review.create!(
   emoji: "normal experience",
   hostel: hostel4,
@@ -816,7 +818,7 @@ end
   )
 end
 
-540.times do
+211.times do
   Review.create!(
   emoji: "fun experience",
   hostel: hostel4,
@@ -851,7 +853,7 @@ end
   )
 end
 
-476.times do
+321.times do
   Review.create!(
   emoji: "fun experience",
   hostel: hostel5,
@@ -859,7 +861,7 @@ end
   )
 end
 
-678.times do
+450.times do
   Review.create!(
   emoji: "amazing experience",
   hostel: hostel5,
@@ -870,7 +872,7 @@ end
 # reviews for hostel 6
 
 
-23.times do
+13.times do
   Review.create!(
   emoji: "bad experience",
   hostel: hostel6,
@@ -878,7 +880,7 @@ end
   )
 end
 
-87.times do
+56.times do
   Review.create!(
   emoji: "normal experience",
   hostel: hostel6,
@@ -886,7 +888,7 @@ end
   )
 end
 
-288.times do
+199.times do
   Review.create!(
   emoji: "fun experience",
   hostel: hostel6,
@@ -894,7 +896,7 @@ end
   )
 end
 
-421.times do
+302.times do
   Review.create!(
   emoji: "amazing experience",
   hostel: hostel6,
@@ -920,7 +922,7 @@ end
   )
 end
 
-654.times do
+200.times do
   Review.create!(
   emoji: "fun experience",
   hostel: hostel7,
@@ -928,7 +930,7 @@ end
   )
 end
 
-445.times do
+320.times do
   Review.create!(
   emoji: "amazing experience",
   hostel: hostel7,
@@ -939,7 +941,7 @@ end
 # reviews for hostel 8
 
 
-112.times do
+50.times do
   Review.create!(
   emoji: "bad experience",
   hostel: hostel8,
@@ -947,7 +949,7 @@ end
   )
 end
 
-195.times do
+75.times do
   Review.create!(
   emoji: "normal experience",
   hostel: hostel8,
@@ -955,7 +957,7 @@ end
   )
 end
 
-445.times do
+150.times do
   Review.create!(
   emoji: "fun experience",
   hostel: hostel8,
@@ -963,7 +965,7 @@ end
   )
 end
 
-992.times do
+250.times do
   Review.create!(
   emoji: "amazing experience",
   hostel: hostel8,
