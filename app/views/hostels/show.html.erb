@@ -121,38 +121,31 @@
 
     </ul>
     <div id="price-display">
-      <!-- pricing table below -->
    <table id="price-table">
     <tr class="table-headers">
       <th>Room Type</th>
       <th>Price</th>
-      <th>Cashback / Night</th>
     </tr>
     <tr>
-      <td><%= @tenbed[:type] %></td>
-      <td><%= number_to_currency((@tenbed[:price] / 100), unit: "£") %></td>
-      <td><%= number_to_currency((@tenbed[:price] / 100)*0.05, unit: "£") %></td>
-      <!-- cashback row test above -->
+      <th><%= @tenbed[:type] %></th>
+      <th><%= number_to_currency((@tenbed[:price] / 100), unit: "£") %></th>
     </tr>
     <tr>
-      <td><%= @eightbed[:type] %></td>
-      <td><%= number_to_currency(@eightbed[:price] / 100, unit: "£") %></td>
-      <td><%= number_to_currency((@eightbed[:price] / 100)*0.05, unit: "£") %></td>
+      <th><%= @eightbed[:type] %></th>
+      <th><%= number_to_currency(@eightbed[:price] / 100, unit: "£") %></th>
     </tr>
     <tr>
-      <td><%= @sixbed[:type] %></td>
-      <td><%= number_to_currency(@sixbed[:price] / 100, unit: "£") %></td>
-      <td><%= number_to_currency((@sixbed[:price] / 100)*0.05, unit: "£") %></td>
+      <th><%= @sixbed[:type] %></th>
+      <th><%= number_to_currency(@sixbed[:price] / 100, unit: "£") %></th>
     </tr>
     <tr>
-      <td><%= @fourbed[:type] %></td>
-      <td><%= number_to_currency(@fourbed[:price] / 100, unit: "£") %></td>
-     <td><%= number_to_currency((@fourbed[:price] / 100)*0.05, unit: "£") %></td>
+      <th><%= @fourbed[:type] %></th>
+      <th>
+    <%= number_to_currency(@fourbed[:price] / 100, unit: "£") %></th>
     </tr>
     <tr>
-      <td><%= @private[:type] %></td>
-      <td><%= number_to_currency(@private[:price] / 100, unit: "£") %></td>
-      <td><%= number_to_currency((@private[:price] / 100)*0.05, unit: "£")%></td>
+      <th><%= @private[:type] %></th>
+      <th><%= number_to_currency(@private[:price] / 100, unit: "£") %></th>
     </tr>
    </table>
   </div>
