@@ -14,7 +14,7 @@ const price = () => {
     const numGuests = document.getElementById("booking_other_bed_number").value;
     const roomType = roomTypeSelect.value;
     const numDays = date_diff_indays(new Date(startDate), new Date(endDate));
-    const roomPrices = [38, 27, 24, 16, 12]
+    const roomPrices = [65, 33, 23, 15, 8]
     let priceOfRoom = 0
     switch(roomType) {
       case "private":
@@ -34,7 +34,7 @@ const price = () => {
         break;
     }
     const price = `<div class="price-container2">Price: £${priceOfRoom * numDays * numGuests} <br>`;
-    const cashback = `Cashback: £${Math.round(priceOfRoom * numDays * numGuests * 0.05)}</div>`;
+    const cashback = `Cashback: £${Math.round((priceOfRoom * numDays * numGuests) * 0.05)}</div>`;
     priceContainer.html(price + cashback);
   });
 }
