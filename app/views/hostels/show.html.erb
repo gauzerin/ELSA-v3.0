@@ -86,7 +86,7 @@
 
       <div class="input-items">
         <%= f.simple_fields_for :other do |a| %>
-          <%= a.input :bed_number, collection: (1..10), selected: params[:beds], id: "booking_other_bed_number" %>
+          <%= a.input :bed_number, label: "Number of Guests", collection: (1..10), selected: params[:beds], id: "booking_other_bed_number" %>
           <%= a.input :room_type, collection: @bed_types, selected: params[:room_type], id: "booking_other_room_type"  %>
           <!-- Need to add reg_ex to ensure that users can only choose an appropriate number of beds for the room type -->
           <!-- make dynamic booking bed count by altering line 48 -->
@@ -127,41 +127,41 @@
       <% end %>
       <div id="price-container"></div>
 
+      <div id="price-display">
+       <table id="price-table">
+        <tr class="table-headers">
+          <th>Room Type</th>
+          <th>Price</th>
+          <th>Cashback / Night</th>
+        </tr>
+        <tr>
+          <td><%= @tenbed[:type] %></td>
+          <td><%= number_to_currency((@tenbed[:price] / 100), unit: "£") %></td>
+          <td><%= number_to_currency((@tenbed[:price] / 100)*0.05, unit: "£") %></td>
+        </tr>
+        <tr>
+          <td><%= @eightbed[:type] %></td>
+          <td><%= number_to_currency(@eightbed[:price] / 100, unit: "£") %></td>
+          <td><%= number_to_currency((@eightbed[:price] / 100)*0.05, unit: "£") %></td>
+        </tr>
+        <tr>
+          <td><%= @sixbed[:type] %></td>
+          <td><%= number_to_currency(@sixbed[:price] / 100, unit: "£") %></td>
+          <td><%= number_to_currency((@sixbed[:price] / 100)*0.05, unit: "£") %></td>
+        </tr>
+        <tr>
+          <td><%= @fourbed[:type] %></td>
+          <td><%= number_to_currency(@fourbed[:price] / 100, unit: "£") %></td>
+          <td><%= number_to_currency((@fourbed[:price] / 100)*0.05, unit: "£") %></td>
+        </tr>
+        <tr>
+          <td><%= @private[:type] %></td>
+          <td><%= number_to_currency(@private[:price] / 100, unit: "£") %></td>
+          <td><%= number_to_currency((@private[:price] / 100)*0.05, unit: "£")%></td>
+        </tr>
+       </table>
     </ul>
-    <div id="price-display">
-   <table id="price-table">
-    <tr class="table-headers">
-      <th>Room Type</th>
-      <th>Price</th>
-      <th>Cashback / Night</th>
-    </tr>
-    <tr>
-      <td><%= @tenbed[:type] %></td>
-      <td><%= number_to_currency((@tenbed[:price] / 100), unit: "£") %></td>
-      <td><%= number_to_currency((@tenbed[:price] / 100)*0.05, unit: "£") %></td>
-    </tr>
-    <tr>
-      <td><%= @eightbed[:type] %></td>
-      <td><%= number_to_currency(@eightbed[:price] / 100, unit: "£") %></td>
-      <td><%= number_to_currency((@eightbed[:price] / 100)*0.05, unit: "£") %></td>
-    </tr>
-    <tr>
-      <td><%= @sixbed[:type] %></td>
-      <td><%= number_to_currency(@sixbed[:price] / 100, unit: "£") %></td>
-      <td><%= number_to_currency((@sixbed[:price] / 100)*0.05, unit: "£") %></td>
-    </tr>
-    <tr>
-      <td><%= @fourbed[:type] %></td>
-      <td><%= number_to_currency(@fourbed[:price] / 100, unit: "£") %></td>
-      <td><%= number_to_currency((@fourbed[:price] / 100)*0.05, unit: "£") %></td>
-    </tr>
-    <tr>
-      <td><%= @private[:type] %></td>
-      <td><%= number_to_currency(@private[:price] / 100, unit: "£") %></td>
-      <td><%= number_to_currency((@private[:price] / 100)*0.05, unit: "£")%></td>
-    </tr>
-   </table>
-  </div>
+    </div>
   </div>
   <div id="cashback-display">
 

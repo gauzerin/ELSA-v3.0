@@ -1,7 +1,8 @@
 #price-table {
   table-layout: fixed;
-  width: 30vw;
-  margin-left: 40px;
+  width: 100%;
+  // margin-left: 40px;
+
 
 }
 
@@ -186,7 +187,8 @@ p {
   // padding-right: 40px;
   padding-top: 20px;
   margin-right:40px;
-  margin-bottom: 40px;
+  margin-bottom: 3px;
+  max-width: 40vw;
 
 }
 
@@ -204,7 +206,7 @@ p {
   // justify-content:space-between;
   // display: inline-block !important;
   // display:flex;
-   width: 48%;
+   width: 50%;
 }
 
 .input-items2 {
@@ -261,7 +263,7 @@ p {
 
 
 .form-group {
-  margin-right:0px !important;
+  margin-right:-2px !important;
 }
 
 
