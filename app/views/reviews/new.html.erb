@@ -3,7 +3,7 @@
 
 <h2 id="question">How was your experience?</h2>
 
-<div id="emojis-div">
+<div class="emojis-div d-flex">
   <%= link_to hostel_reviews_path(params[:hostel_id], :emoji => "bad experience"), method: :post do %>
     <span>😭</span>
   <% end %>
