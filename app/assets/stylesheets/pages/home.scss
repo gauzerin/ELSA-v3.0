@@ -1,0 +1,29 @@
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .banner-content {
+  position: absolute;
+  margin: 15px;
+  opacity: 0.9;
+}
+// .video {
+//   // height: 100vw;
+//   background-position:
+//   // width: auto;
+//   min-height: 100%;
+//   background-size: cover !important;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: -100;
+//   filter: brightness(80%);
+// }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+
+}

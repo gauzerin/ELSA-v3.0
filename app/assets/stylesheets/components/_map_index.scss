@@ -5,6 +5,9 @@
   font-size: 2.5em;
   z-index: -1;
   position: relative;
+  flex-grow: 1;
+  display: frid;
+  grid-template-columns: 1fr;
 }
 
 .main-container {
@@ -53,19 +56,34 @@
   .map-index {
     display: none;
   }
+  #map-container-index {
+  display: none;
+}
 }
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .cards-trip {
     grid-template-columns: 1fr 1fr;
   }
   .map-index {
     display: none;
   }
+  #map-container-index {
+  display: none;
+}
 }
 
 /*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .cards-trip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .map-index {
+    display: block;
+  }
+}
+
 @media (min-width: 1200px) {
   .cards-trip {
     grid-template-columns: 1fr 1fr 1fr;
